@@ -33,7 +33,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/', // serve the docs at the site's route
+          // routeBasePath: '/', // serve the docs at the site's route
 
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -89,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Research Graph',
-                to: '/docs/category/research-graph',
+                to: '/docs/intro',
               },
             ],
           },
