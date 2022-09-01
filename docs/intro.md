@@ -2,46 +2,23 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome! 
 
-Let's discover **Docusaurus in less than 5 minutes**.
+The OpenAIRE Research Graph is one of the largest open scholarly record collections worldwide, key in fostering Open Science and establishing its practices in the daily research activities.
+Conceived as a public and transparent good, populated out of data sources trusted by scientists, the Graph aims at bringing discovery, monitoring, and assessment of science back in the hands of the scientific community.
 
-## Getting Started
+Imagine a vast collection of research products all linked together, contextualised and openly available. For the past ten years OpenAIRE has been working to gather this valuable record. It is a massive collection of metadata and links between scientific products such as articles, datasets, software, and other research products, entities like organisations, funders, funding streams, projects, communities, and data sources.
 
-Get started by **creating a new site**.
+As of today, the OpenAIRE Research Graph aggregates around 450Mi metadata records with links collecting from 10K data sources trusted by scientists, including:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+* Repositories registered in OpenDOAR or re3data.org (soon FAIRSharing.org)
+* Open Access journals registered in DOAJ
+* Crossref
+* Unpaywall
+* ORCID
+* Microsoft Academic Graph
+* Datacite
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+After cleaning, deduplication, enrichment and full-text mining processes, the graph is analysed to produce statistics for the [OpenAIRE MONITOR](https://monitor.openaire.eu), the [Open Science Observatory](https://osobservatory.openaire.eu), made discoverable via the [OpenAIRE EXPLORE](https://explore.openaire.eu) and programmatically accessible as described at 
+<span className="todo">https://develop.openaire.eu</span>.
+Json dumps are also published on Zenodo.
