@@ -1,6 +1,6 @@
 # Data model
 
-The OpenAIRE Research Graph comprises several types of entities and relationships among them.
+The OpenAIRE Research Graph comprises several types of [entities](./category/entities) and [relationships](./relationships) among them.
 
 The latest version of the JSON schema can be found on [Bulk downloads](../download).
 
