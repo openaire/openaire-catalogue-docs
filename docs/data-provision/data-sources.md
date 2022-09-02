@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
+sidebar_position: 1
 ---
 
-# License
+# Data sources
 <span className="todo">TODO</span>
