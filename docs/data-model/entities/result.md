@@ -5,8 +5,9 @@ sidebar_position: 1
 # Result
 
 Results are intended as digital objects, described by metadata, resulting from a scientific process.
+In this page, we descibe the properties of the `Result` object.
 
-There are four sub-types of a `Result`:
+Moreover, there are the following sub-types of a `Result`, that inherit all its properties and further extend it:
 * [Publication](#publication)
 * [Dataset](#dataset)
 * [Software](#software)
@@ -138,7 +139,7 @@ Subject, keyword, classification code, or key phrase describing the resource.
 
 ## Sub-types
 
-There are the following four sub-types of `Result`. Each inherits all its fields and extends them with the following.
+There are the following sub-types of `Result`. Each inherits all its fields and extends them with the following.
 
 ### Publication
 
@@ -204,11 +205,152 @@ Information about tool useful for the interpretation and/or re-use of the resear
 
 
 ### Author
+
+Represents the result author.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+{
+    "fullname":"Turunen, Heidi",
+    "name":"Heidi",
+    "surname":"Turunen",
+    "rank":1,
+    "pid":{
+        "id":{
+            "scheme":"orcid",
+            "value":"0000-0001-7169-1177" 
+        },
+        "provenance":{
+            "provenance":"Harvested",
+            "trust":"0.9" 
+        }
+    }
+}
+```
+</details>
+
+#### fullname
+_Type: String &bull; Cardinality: ONE_
+
+Author's full name.
+
+#### name
+_Type: String &bull; Cardinality: ONE_
+
+Author's given name.
+
+#### surname
+_Type: String &bull; Cardinality: ONE_
+
+Author's family name.
+
+#### rank
+_Type: String &bull; Cardinality: ONE_
+
+Author's order in the list of authors for the given result.
+
+#### pid
+_Type: [AuthorPid](#authorpid) &bull; Cardinality: ONE_
+
+Persistent identifier associated with this author.
+
+### AuthorPid
+
+The author's persistent identifier.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+{
+    "id":{
+        "scheme":"orcid",
+        "value":"0000-0001-7169-1177" 
+    },
+    "provenance":{
+        "provenance":"Inferred by OpenAIRE",
+        "trust":"0.85" 
+    }
+}
+```
+</details>
+
+#### id 
+_Type: [AuthorPidSchemaValue](#authorpidschemavalue) &bull; Cardinality: ONE_
+
+#### provenance
+_Type: [Provenance](#provenance-1) &bull; Cardinality: ONE_
+
+### AuthorPidSchemaValue
+Type used to represent the scheme and value for the author's pid.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+{
+	"scheme" : "orcid",
+	"value" : "0000-1111-2222-3333"
+}
+```
+</details>
+
+#### schema
+_Type: String &bull; Cardinality: ONE_
+
+The author's pid scheme. OpenAIRE currently supports ORCID.
+
+#### value
+_Type: String &bull; Cardinality: ONE_
+
+The author's pid value.
+
 ### BestAccessRight
 ### Container
 ### GeoLocation
 ### ResultCountry
 ### Instance
 ### Language
+### Provenance
+Indicates the process that produced (or provided) the information, and the trust associated to the information.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+[
+	{
+		"provenance":"Harvested",
+		"trust":"0.9"
+	},
+	{
+		"provenance":"Inferred by OpenAIRE",
+		"trust":"0.875"
+	},
+	{
+		"provenance":"Linked by user",
+		"trust":"0.8"
+	}
+]
+```
+
+</details>
+
+#### provenance
+_Type: String &bull; Cardinality: ONE_
+
+provenance term from the vocabulary [dnet:provenanceActions](https://api.openaire.eu/vocabularies/dnet:provenanceActions).
+
+#### trust
+_Type: String &bull; Cardinality: ONE_
+
+Trust, expressed as a number in the range [0-1].
+
 ### ResultPid
 ### Subject
