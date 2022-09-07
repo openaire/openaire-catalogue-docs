@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Result
+# Result (Research Product)
 
 Results are intended as digital objects, described by metadata, resulting from a scientific process.
 In this page, we descibe the properties of the `Result` object.
@@ -18,17 +18,13 @@ Moreover, there are the following sub-types of a `Result`, that inherit all its 
 ## Properties 
 
 ### id
-_Type: String_
-
-_Cardinality: ONE_
+_Type: String &bull; Cardinality: ONE_
 
 Main entity identifier, created according to 
 <span className="todo">[OpenAIRE entity identifier and PID mapping policy](https://support.openaire.eu/projects/docs/wiki/OpenAIRE_entity_identifier_and_PID_mapping_policy)</span>.
 
 ### type
-_Type: String_
-
-_Cardinality: ONE_
+_Type: String  &bull; Cardinality: ONE_
 
 Type of the result. Possible types: 
 
@@ -55,12 +51,12 @@ _Type: String &bull; Cardinality: ONE_
 Explanatory or alternative name by which a scientific result is known.
 
 ### author
-_Type: [Author](#author-1) &bull; Cardinality: MANY_
+_Type: [Author](other#author) &bull; Cardinality: MANY_
 
 The main researchers involved in producing the data, or the authors of the publication.
 
 ### bestaccessright
-_Type: [BestAccessRight](#bestaccessright-1) &bull; Cardinality: ONE_
+_Type: [BestAccessRight](other#bestaccessright) &bull; Cardinality: ONE_
 
 The most open access right associated to the manifestations of this research results.
 
@@ -70,7 +66,7 @@ _Type: String &bull; Cardinality: MANY_
 The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource.
 
 ### country
-_Type: [ResultCountry](#resultcountry) &bull; Cardinality: MANY_
+_Type: [ResultCountry](other#resultcountry) &bull; Cardinality: MANY_
 
 Country associated with the result because it is the country of the organisation that manages the institutional repository or national aggregator or CRIS system from which this record was collected
 Country of affiliations of authors can be found instead in the affiliation rel.
@@ -96,12 +92,12 @@ _Type: String &bull; Cardinality: ONE_
 Date when the embargo ends and this result turns Open Access. <span className="todo">TODO: we should indicate the used date format</span>
 
 ### instance
-_Type: [Instance](#instance-1) &bull; Cardinality: MANY_
+_Type: [Instance](other#instance) &bull; Cardinality: MANY_
 
 Specific materialization or version of the result. For example, you can have one result with three instances: one is the pre-print, one is the post-print, one is the published version
 
 ### language
-_Type: [Language](#language-1) &bull; Cardinality: ONE_
+_Type: [Language](other#language) &bull; Cardinality: ONE_
 
 The `alpha-3/ISO 639-2` code of the language. Values controlled by the [dnet:languages vocabulary](https://api.openaire.eu/vocabularies/dnet:languages)
 
@@ -111,7 +107,7 @@ _Type: Long &bull; Cardinality: ONE_
 Timestamp of last update of the record in OpenAIRE.
 
 ### pid
-_Type: [ResultPid](#resultpid) &bull; Cardinality: MANY_
+_Type: [ResultPid](other#resultpid) &bull; Cardinality: MANY_
 
 Persistent identifiers of the result. See also <span className="todo">[OpenAIRE entity identifier and PID mapping policy](https://support.openaire.eu/projects/docs/wiki/OpenAIRE_entity_identifier_and_PID_mapping_policy)</span> to learn more.
 
@@ -131,7 +127,7 @@ _Type: String &bull; Cardinality: MANY_
 A related resource from which the described resource is derived. See definition of Dublin Core field [dc:source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/source).
 
 ### subjects
-_Type: [Subject](#subject) &bull; Cardinality: MANY_
+_Type: [Subject](other#subject) &bull; Cardinality: MANY_
 
 Subject, keyword, classification code, or key phrase describing the resource.
 
@@ -144,7 +140,7 @@ There are the following sub-types of `Result`. Each inherits all its fields and 
 ### Publication
 
 #### container 
-_Type: [Container](#container-1) &bull; Cardinality: ONE_
+_Type: [Container](other#container) &bull; Cardinality: ONE_
 
 Container has information about the conference or journal where the result has been presented or published.
 
@@ -161,7 +157,7 @@ _Type: String &bull; Cardinality: ONE_
 The version of the dataset.
 
 #### geolocation
-_Type: [GeoLocation](#geolocation-1) &bull; Cardinality: MANY_
+_Type: [GeoLocation](other#geolocation) &bull; Cardinality: MANY_
 
 The list of geolocations associated with the dataset.
 
@@ -199,158 +195,3 @@ _Type: String &bull; Cardinality: MANY_
 
 Information about tool useful for the interpretation and/or re-use of the research product.
 
----
-
-## Other component objects
-
-
-### Author
-
-Represents the result author.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "fullname":"Turunen, Heidi",
-    "name":"Heidi",
-    "surname":"Turunen",
-    "rank":1,
-    "pid":{
-        "id":{
-            "scheme":"orcid",
-            "value":"0000-0001-7169-1177" 
-        },
-        "provenance":{
-            "provenance":"Harvested",
-            "trust":"0.9" 
-        }
-    }
-}
-```
-</details>
-
-#### fullname
-_Type: String &bull; Cardinality: ONE_
-
-Author's full name.
-
-#### name
-_Type: String &bull; Cardinality: ONE_
-
-Author's given name.
-
-#### surname
-_Type: String &bull; Cardinality: ONE_
-
-Author's family name.
-
-#### rank
-_Type: String &bull; Cardinality: ONE_
-
-Author's order in the list of authors for the given result.
-
-#### pid
-_Type: [AuthorPid](#authorpid) &bull; Cardinality: ONE_
-
-Persistent identifier associated with this author.
-
-### AuthorPid
-
-The author's persistent identifier.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "id":{
-        "scheme":"orcid",
-        "value":"0000-0001-7169-1177" 
-    },
-    "provenance":{
-        "provenance":"Inferred by OpenAIRE",
-        "trust":"0.85" 
-    }
-}
-```
-</details>
-
-#### id 
-_Type: [AuthorPidSchemaValue](#authorpidschemavalue) &bull; Cardinality: ONE_
-
-#### provenance
-_Type: [Provenance](#provenance-1) &bull; Cardinality: ONE_
-
-### AuthorPidSchemaValue
-Type used to represent the scheme and value for the author's pid.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-	"scheme" : "orcid",
-	"value" : "0000-1111-2222-3333"
-}
-```
-</details>
-
-#### schema
-_Type: String &bull; Cardinality: ONE_
-
-The author's pid scheme. OpenAIRE currently supports ORCID.
-
-#### value
-_Type: String &bull; Cardinality: ONE_
-
-The author's pid value.
-
-### BestAccessRight
-### Container
-### GeoLocation
-### ResultCountry
-### Instance
-### Language
-### Provenance
-Indicates the process that produced (or provided) the information, and the trust associated to the information.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-[
-	{
-		"provenance":"Harvested",
-		"trust":"0.9"
-	},
-	{
-		"provenance":"Inferred by OpenAIRE",
-		"trust":"0.875"
-	},
-	{
-		"provenance":"Linked by user",
-		"trust":"0.8"
-	}
-]
-```
-
-</details>
-
-#### provenance
-_Type: String &bull; Cardinality: ONE_
-
-provenance term from the vocabulary [dnet:provenanceActions](https://api.openaire.eu/vocabularies/dnet:provenanceActions).
-
-#### trust
-_Type: String &bull; Cardinality: ONE_
-
-Trust, expressed as a number in the range [0-1].
-
-### ResultPid
-### Subject
