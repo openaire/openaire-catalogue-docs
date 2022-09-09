@@ -4,6 +4,7 @@ sidebar_position: 6
 
 # Other helper objects
 
+Here, we describe other helper objects that are used as part of the main graph entities.
 
 ## AccessRight
 _Type: One of `{ gold, green, hybrid, bronze }` &bull; Cardinality: ONE_
@@ -261,20 +262,6 @@ _Type: String &bull; Cardinality: ONE_
 
 The date of the conference.
 
-## GeoLocation
-Represents the geolocation information.
-
-### point
-_Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
-
-### box
-_Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
-
-### place
-_Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
 
 ## ControlledField
 <span className="todo">TODO: similar to AlternateIdentifier and ResultPid?</span>
@@ -319,31 +306,22 @@ _Type: String &bull; Cardinality: ONE_
 
 The country label (i.e. Italy).
 
-## ResultCountry
-It is for the country associated to the result. 
-It is a subclass of [Country](#country) and extends it with provenance information.
 
-<details>
-  <summary>Example</summary>
-  
 
-```json 
-{
-    "code" : "IT",
-    "label": "Italy",
-    "provenance" : {
-         "provenance": "inferred by OpenAIRE",
-         "trust": "0.85"
-     }
-}
-```
+## GeoLocation
+Represents the geolocation information.
 
-</details>
+### point
+_Type: String &bull; Cardinality: ONE_
+<span className="todo">TODO</span>
 
-### provenance
-_Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
+### box
+_Type: String &bull; Cardinality: ONE_
+<span className="todo">TODO</span>
 
-Indicates the reason why this country is associated to this result
+### place
+_Type: String &bull; Cardinality: ONE_
+<span className="todo">TODO</span>
 
 ## Instance
 An instance is one specific materialization or version of the result. For example, you can have one result with three instances as result of deduplication:
@@ -443,6 +421,32 @@ _Type: String &bull; Cardinality: ONE_
 
 Language label in English
 
+## OrganizationPid	
+
+The schema and value for identifiers of the organization.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+{ 
+  "scheme" : "GRID",
+  "value" : "grid.7119.e" 
+}
+```
+
+</details>
+
+### scheme
+_Type: String &bull; Cardinality: ONE_
+
+Vocabulary reference (i.e. isni).
+
+### value
+_Type: String &bull; Cardinality: ONE_
+
+Value from the given scheme/vocabulary (i.e. 0000000090326370).
 
 ## Provenance
 Indicates the process that produced (or provided) the information, and the trust associated to the information.
@@ -473,12 +477,38 @@ Indicates the process that produced (or provided) the information, and the trust
 ### provenance
 _Type: String &bull; Cardinality: ONE_
 
-provenance term from the vocabulary [dnet:provenanceActions](https://api.openaire.eu/vocabularies/dnet:provenanceActions).
+Provenance term from the vocabulary [dnet:provenanceActions](https://api.openaire.eu/vocabularies/dnet:provenanceActions).
 
 ### trust
 _Type: String &bull; Cardinality: ONE_
 
 Trust, expressed as a number in the range [0-1].
+
+## ResultCountry
+It is for the country associated to the result. 
+It is a subclass of [Country](#country) and extends it with provenance information.
+
+<details>
+  <summary>Example</summary>
+  
+
+```json 
+{
+    "code" : "IT",
+    "label": "Italy",
+    "provenance" : {
+         "provenance": "inferred by OpenAIRE",
+         "trust": "0.85"
+     }
+}
+```
+
+</details>
+
+### provenance
+_Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
+
+Indicates the reason why this country is associated to this result.
 
 ## ResultPid
 Type used to represent the information associated to persistent identifiers for the result that have been forged by an authority for that pid type.

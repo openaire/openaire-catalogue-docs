@@ -6,10 +6,12 @@ sidebar_position: 2
 
 OpenAIRE entity instances are created out of data collected from various data sources of different kinds, such as publication repositories, dataset archives, CRIS systems, funder databases, etc. Data sources export information packages (e.g., XML records, HTTP responses, RDF data, JSON) that may contain information on one or more of such entities and possibly relationships between them. For example, a metadata record about a project carries information for the creation of a Project entity and its participants (as Organization entities). It is important, once each piece of information is extracted from such packages and inserted into the OpenAIRE information space as an entity, for such pieces to keep provenance information relative to the originating data source. This is to give visibility to the data source, but also to enable the reconstruction of the very same piece of information if problems arise.
 
-Definitions for the re3data specific elements from: https://gfzpublic.gfz-potsdam.de/rest/items/item_758898_6/component/file_775891/content
+
+<span className="todo">Definitions for the re3data specific elements from: https://gfzpublic.gfz-potsdam.de/rest/items/item_758898_6/component/file_775891/content</span>
+
 --- 
 
-## Properties 
+## The `DataSource` object 
 
 ### id
 _Type: String &bull; Cardinality: ONE_

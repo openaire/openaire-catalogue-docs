@@ -15,7 +15,7 @@ Moreover, there are the following sub-types of a `Result`, that inherit all its 
 
 --- 
 
-## Properties 
+## The `Result` object 
 
 ### id
 _Type: String &bull; Cardinality: ONE_
