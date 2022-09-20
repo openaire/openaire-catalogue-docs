@@ -11,15 +11,15 @@ const config = {
   title: 'OpenAIRE Documentation',
   tagline: 'Open Access Infrastructure for Research in Europe',
   url: 'http://snf-23385.ok-kno.grnetcloud.net',
-  baseUrl: '/openaire/',
+  baseUrl: '/', // serve the website at route
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'schatzopoulos', // Usually your GitHub org/user name.
-  projectName: 'openaire-docs', // Usually your repo name.
+  organizationName: 'openaire', // Usually your GitHub org/user name.
+  projectName: 'openaire-graph-docs', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -35,20 +35,22 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // routeBasePath: '/', // serve the docs at the site's route
+          routeBasePath: '/', // serve the docs at the site's route
 
           sidebarPath: require.resolve('./sidebars.js'),
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          
+          remarkPlugins: [ math ],
+          rehypePlugins: [ katex ],
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
+        // {
+        //   showReadingTime: true,
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
