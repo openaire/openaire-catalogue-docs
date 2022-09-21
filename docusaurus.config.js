@@ -5,6 +5,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const math = require('remark-math');
 const katex = require('rehype-katex');
+const { filterItems } = require('./sidebar-utils');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,7 +39,16 @@ const config = {
           routeBasePath: '/', // serve the docs at the site's route
 
           sidebarPath: require.resolve('./sidebars.js'),
+          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args); 
 
+            const itemsToFilterOut = [ 
+              'data-model/entities/entity-identifiers', 
+              'data-model/entities/other'
+            ];
+
+            return filterItems(sidebarItems, itemsToFilterOut);
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
