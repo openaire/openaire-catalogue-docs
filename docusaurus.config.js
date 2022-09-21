@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: 'Research Graph',
-                to: '/docs/intro',
+                to: '/',
               },
             ],
           },

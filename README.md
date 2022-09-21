@@ -1,4 +1,4 @@
-# Website
+# OpenAIRE Graph Documentation
 
 This website is built using [Docusaurus 2](https://docusaurus.io/); please check [here](https://docusaurus.io/docs/installation#requirements) the requirements to run the project.
 
