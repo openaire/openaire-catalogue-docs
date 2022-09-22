@@ -2,174 +2,169 @@
 sidebar_position: 7
 ---
 
-# Other helper objects
+# Other component objects
 
-Here, we describe other helper objects that are used as part of the main graph entities.
+Here, we describe other component objects that are used as part of the main graph entities.
 
 ## AccessRight
-_Type: One of `{ gold, green, hybrid, bronze }` &bull; Cardinality: ONE_
 
 Subclass of [BestAccessRight](#bestaccessright), indicates information about rights held in and over the resource and the open Access Route.
 
 ### openAccessRoute
+_Type: One of `{ gold, green, hybrid, bronze }` &bull; Cardinality: ONE_
 
 Indicates the OpenAccess status. Values are set according to the [Unpaywall methodology](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-).
 
+```json
+"openAccessRoute": "gold"
+```
+
 ## AlternateIdentifier
 Type used to represent the information associated to persistent identifiers associated to the result that have not been forged by an authority for that pid type. For example we collect metadata from an institutional repository that provides as identifier for the result also the doi.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
- { 
-  "scheme" : "doi",
-  "value" : "10.17182/hepdata.9959" 
- }
-```
-</details>
 
 ### scheme 
 _Type: String &bull; Cardinality: ONE_
 
 Vocabulary reference.
 
+```json
+"scheme": "doi"
+```
+
 ### value
 _Type: String &bull; Cardinality: ONE_
 
 Value from the given scheme/vocabulary.
 
+```json
+"value": "10.1016/j.respol.2021.104226"
+```
+
 ## APC
 Indicates the money spent to make a book or article available in Open Access. Sources for this information includes the OpenAPC initiative.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{ 
-  "currency" : "EU",
-  "amount": "1000" 
-}
-```
-</details>
 
 ### currency
 _Type: String &bull; Cardinality: ONE_
 
 The system of money in which the amount is expressed (Euro, USD, etc).
 
+```json
+"currency": "EU"
+```
+
 ### amount
 _Type: String &bull; Cardinality: ONE_
 
 The quantity of money.
 
+```json
+"amount": "1000"
+```
+
 ## Author
 
 Represents the result author.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "fullname":"Turunen, Heidi",
-    "name":"Heidi",
-    "surname":"Turunen",
-    "rank":1,
-    "pid":{
-        "id":{
-            "scheme":"orcid",
-            "value":"0000-0001-7169-1177" 
-        },
-        "provenance":{
-            "provenance":"Harvested",
-            "trust":"0.9" 
-        }
-    }
-}
-```
-</details>
 
 ### fullname
 _Type: String &bull; Cardinality: ONE_
 
 Author's full name.
 
+```json 
+"fullname": "Turunen, Heidi"
+```
+
 ### name
 _Type: String &bull; Cardinality: ONE_
 
 Author's given name.
+
+```json
+"name": "Heidi"
+```
 
 ### surname
 _Type: String &bull; Cardinality: ONE_
 
 Author's family name.
 
+```json
+"surname": "Turunen"
+```
+
 ### rank
 _Type: String &bull; Cardinality: ONE_
 
 Author's order in the list of authors for the given result.
+
+```json
+"rank": 1
+```
 
 ### pid
 _Type: [AuthorPid](#authorpid) &bull; Cardinality: ONE_
 
 Persistent identifier associated with this author.
 
+```json
+"pid": {
+    "id": {
+        "scheme": "orcid",
+        "value": "0000-0001-7169-1177" 
+    },
+    "provenance" {
+        "provenance": "Harvested",
+        "trust": "0.9" 
+    }
+}
+```
+
 ## AuthorPid
 
 The author's persistent identifier.
 
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "id":{
-        "scheme":"orcid",
-        "value":"0000-0001-7169-1177" 
-    },
-    "provenance":{
-        "provenance":"Inferred by OpenAIRE",
-        "trust":"0.85" 
-    }
-}
-```
-</details>
-
 ### id 
 _Type: [AuthorPidSchemaValue](#authorpidschemavalue) &bull; Cardinality: ONE_
+
+```json
+"id": {
+    "scheme": "orcid",
+    "value": "0000-0001-7169-1177" 
+}
+```
 
 ### provenance
 _Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
 
-## AuthorPidSchemaValue
-Type used to represent the scheme and value for the author's pid.
+The reason why the pid was associated to the author.
 
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-	"scheme" : "orcid",
-	"value" : "0000-1111-2222-3333"
+```json
+"provenance": {
+    "provenance": "Inferred by OpenAIRE",
+    "trust": "0.85" 
 }
 ```
-</details>
+
+## AuthorPidSchemaValue
+Type used to represent the scheme and value for the author's pid.
 
 ### schema
 _Type: String &bull; Cardinality: ONE_
 
 The author's pid scheme. OpenAIRE currently supports ORCID.
 
+```json
+"scheme": "orcid"
+```
+
 ### value
 _Type: String &bull; Cardinality: ONE_
 
-The author's pid value.
+The author's pid value in that scheme.
+
+```json
+"value": "0000-1111-2222-3333"
+```
 
 ## BestAccessRight
 Indicates the most open access rights \*available among the result Instances.
@@ -178,49 +173,63 @@ Indicates the most open access rights \*available among the result Instances.
 ```
 OPEN SOURCE > OPEN > EMBARGO (6MONTHS) > EMBARGO (12MONTHS) > RESTRICTED > CLOSED > UNKNOWN
 ```
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "code":"c_16ec",
-    "label":"RESTRICTED",
-    "scheme":"http://vocabularies.coar-repositories.org/documentation/access_rights/" 
-}
-```
-
-</details>
-
 
 ### code
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+COAR access mode code: http://vocabularies.coar-repositories.org/documentation/access_rights/.
+
+```json
+"code": "c_16ec"
+```
 
 ### label
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+Label for the access mode.
+
+```json
+"label": "RESTRICTED"
+```
 
 ### scheme
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+Scheme of reference for access right code. Currently, always set to COAR access rights vocabulary: http://vocabularies.coar-repositories.org/documentation/access_rights/.
+
+```json
+"scheme": "http://vocabularies.coar-repositories.org/documentation/access_rights/"
+```
 
 ## Container
 This field has information about the conference or journal where the result has been presented or published.
 
 ### name
 _Type: String &bull; Cardinality: ONE_
+
 Name of the journal or conference.
+
+```json
+"name": "Research Policy"
+```
 
 ### issnPrinted 
 _Type: String &bull; Cardinality: ONE_
 
 The journal printed issn.
 
+```json
+"issnPrinted": "0048-7333"
+```
+
 ### issnOnline 
 _Type: String &bull; Cardinality: ONE_
 
 The journal online issn.
+
+```json
+"issnOnline": "1873-7625"
+```
 
 ### issnLinking 
 _Type: String &bull; Cardinality: ONE_
@@ -232,20 +241,36 @@ _Type: String &bull; Cardinality: ONE_
 
 The journal issue.
 
+```json
+"iss": "5"
+```
+
 ### sp 
 _Type: String &bull; Cardinality: ONE_
 
 The start page.
+
+```json
+"sp": "12"
+```
 
 ### ep 
 _Type: String &bull; Cardinality: ONE_
 
 The end page.
 
+```json
+"ep": "22"
+```
+
 ### vol 
 _Type: String &bull; Cardinality: ONE_
 
 The journal volume.
+
+```json
+"vol": "50"
+```
 
 ### edition 
 _Type: String &bull; Cardinality: ONE_
@@ -257,71 +282,93 @@ _Type: String &bull; Cardinality: ONE_
 
 The place of the conference.
 
+```json
+"conferenceplace": "Padua, Italy"
+```
+
 ### conferencedate 
 _Type: String &bull; Cardinality: ONE_
 
 The date of the conference.
 
-
-## ControlledField
-<span className="todo">TODO: similar to AlternateIdentifier and ResultPid?</span>
-
-Generic type used to represent the information described by a scheme and a value in that scheme (i.e. pid).
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{ 
-  "scheme" : "DOI",
-  "value" : "10.5281/zenodo.4707307" 
-}
+```json
+"conferencedate": "2022-09-22"
 ```
 
-</details>
+## ControlledField
+<!-- <span className="todo">TODO: similar to AlternateIdentifier and ResultPid?</span> -->
+
+Generic type used to represent the information described by a scheme and a value in that scheme (i.e. pid).
 
 ### scheme
 _Type: String &bull; Cardinality: ONE_
 
 Vocabulary reference.
 
+```json
+"scheme": "DOI"
+```
+
 ### value
 _Type: String &bull; Cardinality: ONE_
 
 Value from the given scheme/vocabulary.
 
+```json
+"value": "10.5281/zenodo.4707307" 
+```
+
 ## Country
 To represent the generic country code and label.
-
 
 ### code
 _Type: String &bull; Cardinality: ONE_
 
-The country code (i.e. IT).
-<span className="todo">TODO: based on which list?</span>
+ISO 3166-1 alpha-2 country code.
+
+```json
+"code" : "IT"
+```
 
 ### label
 _Type: String &bull; Cardinality: ONE_
 
-The country label (i.e. Italy).
+The country label.
 
-
+```json
+"label": "Italy"
+```
 
 ## GeoLocation
 Represents the geolocation information.
 
 ### point
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+A point with Latitude and Longitude.
+
+```json
+"point": "7.72486 50.1084"
+```
 
 ### box
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+A specified bounding box defined by two longitudes (min and max) and two latitudes (min and max). 
+
+
+```json
+"box": "18.569386 54.468973  18.066832 54.83707"
+```
 
 ### place
 _Type: String &bull; Cardinality: ONE_
-<span className="todo">TODO</span>
+
+The name of a specific place.
+
+```json
+"place": "Tübingen, Baden-Württemberg, Southern Germany"
+```
 
 ## Instance
 An instance is one specific materialization or version of the result. For example, you can have one result with three instances as result of deduplication:
@@ -330,61 +377,96 @@ An instance is one specific materialization or version of the result. For exampl
 * one is the post-print
 * one is the published version
 
-Each instance is characterized by the properties described in the following table.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "accessright":{
-        "code":"c_abf2",
-        "label":"OPEN",
-        "openAccessRoute":"gold",
-        "scheme":"http://vocabularies.coar-repositories.org/documentation/access_rights/" 
-    },
-    "alternateIdentifier":[],
-    "license":"http://creativecommons.org/licenses/by-nc/4.0",
-    "pid":[],
-    "publicationdate":"2009-02-12",
-    "refereed":"UNKNOWN",
-    "type":"Article",
-    "url":["https://periodicos2.uesb.br/index.php/folio/article/view/4296"]
-}
-```
-
-</details>
+Each instance is characterized by the properties that follow.
 
 ### accessright
 _Type: [AccessRight](#accessright) &bull; Cardinality: ONE_
 
 Maps [dc:rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/rights/), describes the access rights of the web resources relative to this instance.
 
+```json
+"accessright": {
+    "code": "c_abf2",
+    "label": "OPEN",
+    "openAccessRoute": "gold",
+    "scheme": "http://vocabularies.coar-repositories.org/documentation/access_rights/" 
+}
+```
+
 ### alternateIdentifier
 _Type: [AlternateIdentifier](#alternateidentifier) &bull; Cardinality: MANY_
 
 All the identifiers associated to the result other than the authoritative ones.
+
+```json
+"alternateIdentifier": [
+    {
+        "scheme": "doi",
+        "value": "10.1016/j.respol.2021.104226"
+    },
+    ...
+]
+```
 
 ### articleprocessingcharge
 _Type: [APC](#apc) &bull; Cardinality: ONE_
 
 The money spent to make this book or article available in Open Access. Source for this information is the OpenAPC initiative.
 
+```json
+"articleprocessingcharge": {
+    "currency": "EUR",
+    "amount": "1000" 
+}
+```
+
 ### license
 _Type: String &bull; Cardinality: ONE_
 
 The license URL.
 
+```json
+"license": "http://creativecommons.org/licenses/by-nc/4.0"
+```
+
+### measures 
+_Type: [Measure](#measure) &bull; Cardinality: MANY_
+
+The measures computed for this instance (e.g. those provided by [BIP! Finder](https://bip.imsi.athenarc.gr/)).
+
+```json
+"measures": [
+    { 
+        "key": "influence",
+        "value": "6.45335454246e-09"
+    },
+    ...
+]
+```
+
 ### pid
 _Type: [ResultPid](#resultpid) &bull; Cardinality: MANY_
 
-The set of persistent identifiers associated to this instance that have been collected from an authority for the pid type (i.e. Crossref/Datacite for doi). See [OpenAIRE_entity_identifier_and_PID_mapping_policy](https://support.openaire.eu/projects/docs/wiki/OpenAIRE_entity_identifier_and_PID_mapping_policy) for more information.
+The set of persistent identifiers associated to this instance that have been collected from an authority for the pid type (i.e. Crossref/Datacite for doi). See the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers) for more information.
+
+```json
+"pid": [
+    {
+        "scheme": "pmc",
+        "value": "PMC8024784"
+    },
+    ...
+]
+```
 
 ### publicationdate
 _Type: String &bull; Cardinality: ONE_
 
 The publication date of the research product.
+
+```json
+"publicationdate": "2009-02-12"
+```
 
 ### refereed
 _Type: String &bull; Cardinality: ONE_
@@ -399,14 +481,30 @@ based on guidelines covers the vocabularies
 * [DRIVE guidelines 2.0 - info:eu-repo/semantic](https://wiki.surfnet.nl/download/attachments/10851536/DRIVER_Guidelines_v2_Final_2008-11-13.pdf) (OpenAIRE v1.0 till v3.0 - Literature)
 * [COAR Vocabulary v2.0 and v3.0](https://vocabularies.coar-repositories.org/resource_types/) (OpenAIRE v4 - Inst.+Them.)
 
+```json
+"refereed": "UNKNOWN"
+```
+
 ### type
 _Type: String &bull; Cardinality: ONE_
 
 The specific sub-type of this instance (see https://api.openaire.eu/vocabularies/dnet:result_typologies following the links)
+
+```json
+"type": "Article"
+```
+
 ### url
 _Type: String &bull; Cardinality: MANY_
 
 URLs to the instance. They may link to the actual full-text or to the landing page at the hosting source.
+
+```json
+"url": [
+    "https://periodicos2.uesb.br/index.php/folio/article/view/4296",
+    ...    
+]
+```
 
 ## Language
 Represents information for the language of the result
@@ -414,199 +512,168 @@ Represents information for the language of the result
 ### code
 _Type: String &bull; Cardinality: ONE_
 
-Alpha-3/ISO 639-2 code of the language.
+Alpha-3/ISO 639-2 code of the language. Values controlled by the [dnet:languages vocabulary](https://api.openaire.eu/vocabularies/dnet:languages).
+
+```json
+"code": "eng"
+```
 
 ### label
 _Type: String &bull; Cardinality: ONE_
 
-Language label in English
+Language label in English.
+
+```json
+"label": "English"
+```
+
+## Measure
+A measure computed for this instance (e.g. those provided by [BIP! Finder](https://bip.imsi.athenarc.gr/))
+
+### key
+_Type: String &bull; Cardinality: ONE_
+
+The specified measure. Currently supported one of: `{ influence, influence_alt, popularity, popularity_alt, impulse, cc }` (see [the dedicated page](../../data-provision/enrichment/impact-scores) for more details).
+
+```json
+"key": "influence"
+```
+
+### value
+_Type: String &bull; Cardinality: ONE_
+
+```json
+"value": "6.45335454246e-09"
+```
+
+The value for that measure.
 
 ## OrganizationPid	
 
 The schema and value for identifiers of the organization.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{ 
-  "scheme" : "GRID",
-  "value" : "grid.7119.e" 
-}
-```
-
-</details>
 
 ### scheme
 _Type: String &bull; Cardinality: ONE_
 
 Vocabulary reference (i.e. isni).
 
+```json
+"scheme" : "GRID"
+```
+
 ### value
 _Type: String &bull; Cardinality: ONE_
 
 Value from the given scheme/vocabulary (i.e. 0000000090326370).
 
-## Provenance
-Indicates the process that produced (or provided) the information, and the trust associated to the information.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-[
-	{
-		"provenance":"Harvested",
-		"trust":"0.9"
-	},
-	{
-		"provenance":"Inferred by OpenAIRE",
-		"trust":"0.875"
-	},
-	{
-		"provenance":"Linked by user",
-		"trust":"0.8"
-	}
-]
+```json
+"value" : "grid.7119.e"
 ```
 
-</details>
+## Provenance
+Indicates the process that produced (or provided) the information, and the trust associated to the information.
 
 ### provenance
 _Type: String &bull; Cardinality: ONE_
 
 Provenance term from the vocabulary [dnet:provenanceActions](https://api.openaire.eu/vocabularies/dnet:provenanceActions).
 
+```json
+"provenance": "Harvested"
+```
+
 ### trust
 _Type: String &bull; Cardinality: ONE_
 
 Trust, expressed as a number in the range [0-1].
 
+```json
+"trust": "0.9"
+```
+
 ## ResultCountry
 It is for the country associated to the result. 
 It is a subclass of [Country](#country) and extends it with provenance information.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "code" : "IT",
-    "label": "Italy",
-    "provenance" : {
-         "provenance": "inferred by OpenAIRE",
-         "trust": "0.85"
-     }
-}
-```
-
-</details>
 
 ### provenance
 _Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
 
 Indicates the reason why this country is associated to this result.
 
+```json
+"provenance" : {
+    "provenance": "inferred by OpenAIRE",
+    "trust": "0.85"
+}
+```
+
 ## ResultPid
 Type used to represent the information associated to persistent identifiers for the result that have been forged by an authority for that pid type.
 
-<span className="todo">Seems to be similar to the AlternateIdentifier. What is the difference?</span>
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-{
-    "scheme" : "doi",
-    "value" : "10.21511/bbs.13(3).2018.13" 
-}
-```
-</details>
+<!-- <span className="todo">Seems to be similar to the AlternateIdentifier. What is the difference?</span> -->
 
 ### scheme
 _Type: String &bull; Cardinality: ONE_
 
-Vocabulary reference.
+The scheme of the persistent identifier for the result (i.e. doi). If the pid is here it means the information for the pid has been collected from an authority for that pid type (i.e. Crossref/Datacite for doi). The set of authoritative pid is: `doi` when collected from Crossref or Datacite, `pmid` when collected from EuroPubmed, `arxiv` when collected from arXiv, `handle` from the repositories.
+
+```json
+"scheme": "doi"
+```
 
 ### value
 _Type: String &bull; Cardinality: ONE_
 
-Value from the given scheme/vocabulary.
+The value expressed in the scheme (i.e. 10.1000/182).
+
+```json
+"value": "10.21511/bbs.13(3).2018.13"
+```
 
 ## Subject
 Represents keywords associated to the result.
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-[
-	{
-	    "subject":{
-	        "scheme": "acm",
-	        "value": "GeneralLiterature_MISCELLANEOUS"
-	    },
-	    "provenance": {
-	        "provenance": "Inferred by OpenAIRE",
-	        "trust": "0.891"
-	    }
-	},
-	{
-	    "provenance":{
-	        "provenance":"Harvested",
-	        "trust":"0.9"
-	    },
-	    "subject":{
-	        "scheme":"keyword",
-	        "value":"SVOC"
-	    }
-	}
-]
-```
-</details>
 
 ### subject
 _Type: [SubjectSchemeValue](#subjectschemevalue) &bull; Cardinality: ONE_
 
 Contains the subject term: subject type (keyword, MeSH, etc) and the subject term (medicine, chemistry, etc.).
 
+```json
+"subject": {
+    "scheme":"keyword",
+    "value":"SVOC"
+}
+```
+
 ### provenance
 _Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
 
 Contains provenance information for the subject term.
 
+```json
+"provenance": {
+    "provenance":"Harvested",
+    "trust":"0.9"
+}
+```
+
 ## SubjectSchemeValue
 Subject classification against a vocabulary
-
-<details>
-  <summary>Example</summary>
-  
-
-```json 
-[
-	{
-		"scheme" : "keyword",
-		"value" : "pyrolysis-oil"
-	},
-	{
-		"value":"food and beverages",
-		"scheme":"mesheuropmc"
-	}
-]
-```
-</details>
 
 ### scheme 
 _Type: String &bull; Cardinality: ONE_
 
 OpenAIRE subject classification scheme (https://api.openaire.eu/vocabularies/dnet:subject_classification_typologies).
 
+```json
+"scheme" : "keyword"
+```
+
 ### value
 _Type: String &bull; Cardinality: ONE_
 
 The value for the subject in the selected scheme. When the scheme is 'keyword', it means that the subject is free-text (i.e. not a term from a controlled vocabulary).
+
+```json
+"value" : "pyrolysis-oil"
+```

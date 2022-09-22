@@ -16,7 +16,7 @@ OpenAIRE entity instances are created out of data collected from various data so
 ### id
 _Type: String &bull; Cardinality: ONE_
 
-Main entity identifier, created according to [OpenAIRE_entity_identifier_and_PID_mapping_policy](https://support.openaire.eu/projects/docs/wiki/OpenAIRE_entity_identifier_and_PID_mapping_policy).
+Main entity identifier, created according to the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers).
 
 ### originalId
 _Type: String &bull; Cardinality: MANY_
