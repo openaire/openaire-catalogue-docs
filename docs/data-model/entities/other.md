@@ -112,7 +112,7 @@ Persistent identifier associated with this author.
         "scheme": "orcid",
         "value": "0000-0001-7169-1177" 
     },
-    "provenance" {
+    "provenance": {
         "provenance": "Harvested",
         "trust": "0.9" 
     }
@@ -339,6 +339,68 @@ The country label.
 "label": "Italy"
 ```
 
+## Funding
+Funding information for a project.
+
+### funding_stream
+_Type: [FundingStream](#fundingstream) &bull; Cardinality: ONE_
+
+Funding information for the project.
+
+```json
+"funding_stream": {
+    "description": "Horizon 2020 Framework Programme - Research and Innovation action",
+    "id": "EC::H2020::RIA"
+}
+```
+### jurisdiction
+_Type: String &bull; Cardinality: ONE_
+
+Geographical jurisdiction (e.g. for European Commission is EU, for Croatian Science Foundation is HR).
+
+```json
+"jurisdiction": "EU"
+```
+
+### name
+_Type: String &bull; Cardinality: ONE_
+
+The name of the funder.
+
+```json
+"name": "European Commission"
+```
+
+### shortName
+_Type: String &bull; Cardinality: ONE_
+
+The short name of the funder.
+
+```json
+"shortName": "EC"
+```
+
+## FundingStream
+Description of a funding stream.
+
+###  id
+_Type: String &bull; Cardinality: ONE_
+
+The identifier of the funding stream.
+
+```json
+"id": "EC::H2020::RIA"
+```
+
+### description
+_Type: String &bull; Cardinality: ONE_
+
+Short description of the funding stream.
+
+```json
+"description": "Horizon 2020 Framework Programme - Research and Innovation action"
+```
+
 ## GeoLocation
 Represents the geolocation information.
 
@@ -368,6 +430,57 @@ The name of a specific place.
 
 ```json
 "place": "Tübingen, Baden-Württemberg, Southern Germany"
+```
+
+## Grant
+The money granted to a project.
+
+### currency
+_Type: String &bull; Cardinality: ONE_
+
+The currency of the granted amount (e.g. EUR).
+
+```json
+"currency": "EUR"
+```
+
+### fundedamount
+_Type: Number &bull; Cardinality: ONE_
+
+The funded amount.
+
+```json
+"fundedamount": 1.0E7
+```
+
+### totalcost
+_Type: Number &bull; Cardinality: ONE_
+
+The total cost of the project.
+
+```json
+"totalcost": 1.0E7
+```
+
+## H2020Programme
+The H2020 programme funding a project.
+
+### code
+_Type: String &bull; Cardinality: ONE_
+
+The code of the programme.
+
+```json
+"code": "H2020-EU.1.4.1.3."
+```
+
+### description
+_Type: String &bull; Cardinality: ONE_
+
+The description of the programme.
+
+```json
+"description": "Development, deployment and operation of ICT-based e-infrastructures"
 ```
 
 ## Instance
@@ -601,7 +714,7 @@ _Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
 Indicates the reason why this country is associated to this result.
 
 ```json
-"provenance" : {
+"provenance": {
     "provenance": "inferred by OpenAIRE",
     "trust": "0.85"
 }
@@ -640,8 +753,8 @@ Contains the subject term: subject type (keyword, MeSH, etc) and the subject ter
 
 ```json
 "subject": {
-    "scheme":"keyword",
-    "value":"SVOC"
+    "scheme": "keyword",
+    "value": "SVOC"
 }
 ```
 
@@ -652,8 +765,8 @@ Contains provenance information for the subject term.
 
 ```json
 "provenance": {
-    "provenance":"Harvested",
-    "trust":"0.9"
+    "provenance": "Harvested",
+    "trust": "0.9"
 }
 ```
 

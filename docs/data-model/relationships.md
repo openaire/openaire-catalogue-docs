@@ -15,30 +15,65 @@ _Type: [Node](#the-node-object) &bull; Cardinality: ONE_
 
 Represents the source node in the relation.
 
+```json
+"source": {
+    "id": "20|openorgs____::1cb75a3ad756e4c83e455e3e7347643b",
+    "type": "organization"
+}
+```
+
 ### target
 _Type: [Node](#the-node-object) &bull; Cardinality: ONE_
 
 Represents the target node in the relation.
+
+```json
+"target": {
+    "id": "10|doajarticles::022409068174087a003647ff46070f7f",
+    "type": "datasource"
+}
+```
 
 ### reltype
 _Type: [RelType](#the-reltype-object) &bull; Cardinality: ONE_
 
 Represent the semantics of the relation between two nodes of the graph.
 
+```json
+"reltype": {
+    "name": "provides",
+    "type": "provision"
+}
+```
 ### provenance
 _Type: [Provenance](entities/other#provenance-1) &bull; Cardinality: ONE_
 
 Indicates the process that produced (or provided) the information.
+
+```json
+"provenance": {
+    "provenance": "Harvested",
+    "trust":"0.900"
+}
+```
 
 ### validated
 _Type: Boolean &bull; Cardinality: ONE_
 
 Indicates weather or not the relation was validated.
 
+```json
+"validated": true
+```
+
 ### validationDate
 _Type: String &bull; Cardinality: ONE_
 
 Indicates the validation date of the relation - applies only when the validated flag is set to true.
+
+```json
+"validationDate": "2022-09-02"
+```
 
 --- 
 
@@ -52,11 +87,18 @@ _Type: String &bull; Cardinality: ONE_
 
 OpenAIRE identifier of the node in the graph.
 
+```json
+"id": "10|doajarticles::022409068174087a003647ff46070f7f"
+```
+    
 ### type
 _Type: String &bull; Cardinality: ONE_
 
 Graph node type.
 
+```json
+"type": "datasource"
+```
 
 ## The `RelType` object
 
@@ -67,19 +109,25 @@ _Type: String &bull; Cardinality: ONE_
 
 Relation category, e.g. affiliation, citation, see table Relation typologies.
 
+```json
+"name": "provides"
+```
+
 ### name
 _Type: String &bull; Cardinality: ONE_
 
 Further specifies the relation semantic, indicating the relation direction, e.g. Cites, isCitedBy.
 
-
+```json
+"type": "provision"
+```
 --- 
 
 ## Relationship types
 
 The following table lists all the possible relation semantics found in the graph dump.
 
-|  # | source entity type |  target entity type |  relType.type |         relType.name        |    relType.name (inverse)    |
+|  # | Source entity type |  Target entity type |  Relation type |         Relation name        |    Inverse relation name    |
 |:--:|:------------------:|:-------------------:|:-------------:|:---------------------------:|:----------------------------:|
 | 1  | [Project](entities/project)            | [Result](entities/result)              | outcome       | produces                    | isProducedBy                 |
 | 2  | [Result](entities/result)             | [Organization](entities/organization)        | affiliation   | hasAuthorInstitution        | isAuthorInstitutionOf        |
@@ -90,9 +138,9 @@ The following table lists all the possible relation semantics found in the graph
 | 7  | [Data source](entities/data-source)        | [Organization](entities/organization)        | provision     | provides                    | isProvidedBy                 |
 | 8  | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isHostedBy                  | hosts                        |
 | 9  | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isProvidedBy                | provides                     |
-| 10 | [Result](entities/result)             | [CommunityInitiative](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 11 | [Organization](entities/organization)       | [CommunityInitiative](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 12 | [Data source](entities/data-source)        | [CommunityInitiative](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 13 | [Project](entities/project)            | [CommunityInitiative](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 10 | [Result](entities/result)             | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 11 | [Organization](entities/organization)       | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 12 | [Data source](entities/data-source)        | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 13 | [Project](entities/project)            | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
 
 

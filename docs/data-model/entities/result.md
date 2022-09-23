@@ -92,7 +92,7 @@ The main researchers involved in producing the data, or the authors of the publi
                 "scheme": "orcid",
                 "value": "0000-0002-3789-9238" 
             },
-            "provenance" {
+            "provenance"; {
                 "provenance": "Harvested",
                 "trust": "0.9" 
             }
@@ -263,12 +263,12 @@ Persistent identifiers of the result. See also the [OpenAIRE entity identifier a
 ```json
 "pid": [
     {
-        "scheme":"pmc",
-        "value":"PMC8024784"
+        "scheme": "pmc",
+        "value": "PMC8024784"
     },
     {
-        "scheme":"doi",
-        "value":"10.1016/j.respol.2021.104226"
+        "scheme": "doi",
+        "value": "10.1016/j.respol.2021.104226"
     },
     ...
 ]
@@ -314,12 +314,12 @@ Subject, keyword, classification code, or key phrase describing the resource.
 "subjecsts": [
     {
         "provenance": {
-            "provenance":"Harvested",
-            "trust":"0.9"
+            "provenance": "Harvested",
+            "trust": "0.9"
         },
         "subject": {
-            "scheme":"keyword",
-            "value":"Open science"
+            "scheme": "keyword",
+            "value": "Open science"
         }
     },
     ...
@@ -342,15 +342,15 @@ Container has information about the conference or journal where the result has b
 
 ```json
 "container": {
-    "edition":"",
-    "iss":"5",
-    "issnLinking":"",
-    "issnOnline":"1873-7625",
-    "issnPrinted":"0048-7333",
-    "name":"Research Policy",
-    "sp":"12",
-    "ep":"22",
-    "vol":"50"
+    "edition": "",
+    "iss": "5",
+    "issnLinking": "",
+    "issnOnline": "1873-7625",
+    "issnPrinted": "0048-7333",
+    "name": "Research Policy",
+    "sp": "12",
+    "ep": "22",
+    "vol": "50"
 }
 ```
 ### Dataset

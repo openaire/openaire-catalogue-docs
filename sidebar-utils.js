@@ -11,8 +11,8 @@ function filterItems(items, itemsToFilter) {
   
     // filter out items in current level
     return result.filter( item => !itemsToFilter.includes(item.id) );
-  }
+}
 
-  module.exports = {
+module.exports = {
     filterItems
-  };
+};

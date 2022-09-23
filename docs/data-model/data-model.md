@@ -15,11 +15,8 @@ Its main entities are described in brief below:
 * [Data Sources](entities/data-source) are the resources used to collect metadata for the graph objects
 * [Organizations](entities/organization) correspond to companies or research institutions involved in projects,
 responsible for operating data sources or consisting the affiliations of Product creators.
-<!-- * [Funders](entities/funder) (e.g. EC, Wellcome Trust) are agencies responsible for a list of Funding Streams. -->
-<!-- * [Funding Streams](entities/funding-stream) represent investments (funding actions) from Funders (e.g. FP7 or H2020). -->
 * [Projects](entities/project) are research projects funded by a Funding Stream of a Funder.
 * [Communities](entities/community) are groups of people with a common research intent.
-
 
 :::note Further reading
 
