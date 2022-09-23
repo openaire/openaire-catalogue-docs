@@ -1,8 +1,5 @@
 # Enrichment
 
-
-<span className="todo">TODO: intro</span>
-
 ## Mining
 
 The OpenAIRE Research Graph is enriched by links mined by OpenAIRE’s full-text mining algorithms that scan the plaintexts of publications for funding information, references to datasets, software URIs, accession numbers of bioetities, and EPO patent mentions. Custom mining modules also link research objects to specific research communities, initiatives and infrastructures. In addition, other inference modules provide content-based document classification, document similarity, citation matching, and author affiliation matching.

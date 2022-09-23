@@ -2,8 +2,7 @@
 sidebar_position: 6
 ---
 
-
-# Community (Initiative)
+# Community
 
 Research communities and research initiatives are intended as groups of people with a common research intent and can be of two types: ​research initiatives or ​research communities​:
 

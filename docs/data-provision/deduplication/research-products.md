@@ -33,7 +33,9 @@ Cross comparison of the pid lists (in the `pid` and `alternateid` elements). If 
 Otherwise, check if the number of authors and the title version is equal. If so, levenshtein distance on titles with higher threshold (0.99).
 The publications are matched as duplicate if the distance is higher than the threshold, in every other case they are considered as distinct publications.
 
-![Example banner](../assets/dedup-results.png)
+<p align="center">
+    <img loading="lazy" alt="Deduplication workflow" src="/img/docs/dedup-results.png" width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
 #### Creation of representative record
 <span className="todo">TODO</span>

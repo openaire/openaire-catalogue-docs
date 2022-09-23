@@ -2,7 +2,6 @@
 sidebar_position: 3
 ---
 # Clustering functions 
-<span className="todo">TODO</span>
 
 ## NgramPairs
 It produces a list of concatenations of a pair of ngrams generated from different words.<br />

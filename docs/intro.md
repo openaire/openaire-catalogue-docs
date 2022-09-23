@@ -21,6 +21,5 @@ As of today, the OpenAIRE Research Graph aggregates around 450Mi metadata record
 * Microsoft Academic Graph
 * Datacite
 
-After cleaning, deduplication, enrichment and full-text mining processes, the graph is analysed to produce statistics for the [OpenAIRE MONITOR](https://monitor.openaire.eu), the [Open Science Observatory](https://osobservatory.openaire.eu), made discoverable via the [OpenAIRE EXPLORE](https://explore.openaire.eu) and programmatically accessible as described at 
-<span className="todo">https://develop.openaire.eu</span>.
-Json dumps are also published on Zenodo.
+After cleaning, deduplication, enrichment and full-text mining processes, the graph is analysed to produce statistics for the [OpenAIRE MONITOR](https://monitor.openaire.eu), the [Open Science Observatory](https://osobservatory.openaire.eu), made discoverable via the [OpenAIRE EXPLORE](https://explore.openaire.eu) and programmatically accessible via [OpenAIRE Public APIs](https://develop.openaire.eu).
+Last but not least, frequently updated [JSON dumps](download) are published on Zenodo.
