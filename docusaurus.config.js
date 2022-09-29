@@ -91,15 +91,19 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Research graph',
+            label: 'Research graph v5.0',
           },
+          // 
+          // documentation version in the navbar
           // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'docs',
+          //   type: 'docsVersionDropdown', 
+          //   position: 'right'
           // },
+          // 
+          // link to blog, the blog must be enabled first
           // {to: '/blog', label: 'Blog', position: 'left'},
+          // 
+          // link to github repo
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',

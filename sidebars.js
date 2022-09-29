@@ -108,6 +108,10 @@ const sidebars = {
       type: 'doc', 
       id: 'license'
     },  
+    {
+      type: 'doc', 
+      id: 'changelog'
+    },
   ]
 };
 

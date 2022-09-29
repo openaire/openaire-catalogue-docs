@@ -2,30 +2,41 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/); please check [here](https://docusaurus.io/docs/installation#requirements) the requirements to run the project.
 
-### Clone repository
+## Clone repository
 ```
 $ git clone https://code-repo.d4science.org/D-Net/openaire-graph-docs.git
 ```
 
-### Installation
+## Local installation and deployment
 
+To install the required packages use:
 ```
 $ npm install
 ```
 
-### Local Development
-
+The following command starts a local development server and opens up a browser window. Note that most changes are reflected live without having to restart the server.
 ```
 $ npm run start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build and deploy
+Generate the static content into the `build` directory using the command tha follows. Then this directory can be served using any static contents hosting service.
 
 ```
 $ npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Deployment using Docker
+TODO
 
+## Documentation versioning 
+The versioning documentation of Docusaurus can be found [here](https://docusaurus.io/docs/versioning).
+Specifically, a new version can be created with the following command: 
+```
+npm run docusaurus docs:version <versionName>
+```
+
+When tagging a new version, the document versioning mechanism will:
+
+* Copy the full `docs/` folder contents into a new `versioned_docs/version-<versionName>/` folder.
+* Create a versioned sidebars file based from your current sidebar configuration, saved as `versioned_sidebars/version-<versionName>-sidebars.json`.
+* Append the new version number to `versions.json`.
