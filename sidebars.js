@@ -58,7 +58,14 @@ const sidebars = {
       label: "Data provision",
       link: {type: 'doc', id: 'data-provision/data-provision'},
       items: [
-        { type: 'doc', id: 'data-provision/aggregation' },
+        {
+          type: 'category',
+          label: "Aggregation",
+          link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
+          items: [
+            { type: 'doc', id: 'data-provision/aggregation/authoritative-datasources' }
+          ]
+        },
         {
           type: 'category', 
           label: "Deduplication",
