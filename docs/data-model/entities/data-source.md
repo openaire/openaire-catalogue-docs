@@ -15,7 +15,7 @@ For example, a metadata record about a project carries information for the creat
 ### id
 _Type: String &bull; Cardinality: ONE_
 
-The OpenAIRE id of the data source, created according to the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers).
+The OpenAIRE id of the data source, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
 "id": "10|issn___print::22c514d022b199c346e7f29ca06efc95"

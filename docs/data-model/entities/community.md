@@ -16,7 +16,7 @@ For example, the organizations supporting a research infrastructure fall in the 
 ### id
 _Type: String &bull; Cardinality: ONE_
 
-The OpenAIRE id for the community/research infrastructure, created according to the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers).
+The OpenAIRE id for the community/research infrastructure, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
 "id": "00|context_____::5b7f9fa40bdc12072249204cedfa7808"
