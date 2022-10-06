@@ -23,6 +23,7 @@ const sidebars = {
       label: "Data model",
       link: {type: 'doc', id: 'data-model/data-model'},
       items: [
+        { type: 'doc', id: 'data-model/pids-and-identifiers' },
         {
           type: 'category', 
           label: "Entities",
@@ -63,7 +64,9 @@ const sidebars = {
           label: "Aggregation",
           link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
           items: [
-            { type: 'doc', id: 'data-provision/aggregation/authoritative-datasources' }
+            { type: 'doc', id: 'data-provision/aggregation/doiboost' },
+            { type: 'doc', id: 'data-provision/aggregation/pubmed' },
+            { type: 'doc', id: 'data-provision/aggregation/datacite' }
           ]
         },
         {
