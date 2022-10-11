@@ -18,7 +18,7 @@ On this API Request, we introduce some variables:
 
 
 Each record contains two pieces of information needed for incremental harvesting:
-- **isActive**: tell if the record is deleted (isActive:false)
+- **isActive**: tells if the record is deleted (`isActive:false`)
 - **updated**: timestamp of last update
 
 
@@ -39,4 +39,8 @@ The table below describes the mapping from the XML baseline records to the OpenA
 | OpenAIRE Result field path         | Datacite record JSON path     | # Notes           |
 |------------------------------------|-------------------------------|-------------------|
 | `id`                               |  `\attributes\doi`|the identifier will be created by folloing the openaire PID generation policy |
-| `instance`<br>`instance.type`      | `\attributes\types\resourceType` `\attributes\types\resourceTypeGeneral` `attributes\types\schemaOrg` |   Use the vocabulary _dnet:publication_resource_  to find a synonym to one of these terms and get the `instance.type`. Using the **dnet:result_typologies** vocabulary to find the `instance.type` synonym we can get one of the main entity: <br> `publication` <br> `dataset` <br> `software` <br> `otherresearchproduct`    |
+| <ul><li>`instance`</li>  <li>`instance.type`</li></ul>      | <ul><li>`\attributes\types\resourceType`</li>  <li> `\attributes\types\resourceTypeGeneral` </li>  <li>`attributes\types\schemaOrg`</li></ul> |   Use the vocabulary **_dnet:publication_resource_**  to find a synonym to one of these terms and get the `instance.type`. Using the **_dnet:result_typologies_** vocabulary, we look up the `instance.type` synonym to  generate one of the following main entities: <ul><li>`publication`</li>  <li>`dataset`</li> <li> `software`</li>  <li>`otherresearchproduct`</li></ul> |
+| `pid` | `\attributes\doi` | `scheme = doi` |
+| `dateofcollection` | `attributes\updated`  | the timestamp is defined in milliseconds we convert to "yyyy-MM-dd'T'HH:mm:ssZ" format |
+| `author` | `\attributes\creators` |  Each creator field will be mapped in the author entity below the subfield|
+
