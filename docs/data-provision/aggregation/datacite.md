@@ -41,6 +41,42 @@ The table below describes the mapping from the XML baseline records to the OpenA
 | `id`                               |  `\attributes\doi`|the identifier will be created by folloing the openaire PID generation policy |
 | <ul><li>`instance`</li>  <li>`instance.type`</li></ul>      | <ul><li>`\attributes\types\resourceType`</li>  <li> `\attributes\types\resourceTypeGeneral` </li>  <li>`attributes\types\schemaOrg`</li></ul> |   Use the vocabulary **_dnet:publication_resource_**  to find a synonym to one of these terms and get the `instance.type`. Using the **_dnet:result_typologies_** vocabulary, we look up the `instance.type` synonym to  generate one of the following main entities: <ul><li>`publication`</li>  <li>`dataset`</li> <li> `software`</li>  <li>`otherresearchproduct`</li></ul> |
 | `pid` | `\attributes\doi` | `scheme = doi` |
+| `originalid` | `\attributes\doi` |  |
 | `dateofcollection` | `attributes\updated`  | the timestamp is defined in milliseconds we convert to "yyyy-MM-dd'T'HH:mm:ssZ" format |
-| `author` | `\attributes\creators` |  Each creator field will be mapped in the author entity below the subfield|
+| `author` | `\attributes\creators` |  Each creator field will be mapped in the author entity below the subfield. **If the record has no Creator it will be skipped**|
+| `author.fullname` |  `\attributes\creators\name` |  if name is not defined, we construct from given and family name |
+| `author.rank` |   | Incremental index starting from 1  |
+| `author.name` |  `\attributes\creators\givenName` |  |
+| `author.surname` |  `\attributes\creators\familyName` |  |
+| `author.pid` |  `\attributes\creators\nameIdentifiers` | this is a list of pids associated to the creator |
+| `author.pid.scheme` |  `\attributes\creators\nameIdentifiers` | mapping with vocabulary  **dnet:pid_types** |
+| `author.pid.value` |  `\attributes\creators\nameIdentifiers/nameIdentifier` | the pid value |
+|  `maintitle` | `\attributes\titles`  |  Titles whose title type is null or title type is Main |
+|  `subtitle` | `\attributes\titles`  |  Titles whose title type is Subtitle since the title type vocabulary in OpenAIRE  use the datacite title type vocabulary |
+| **date section** |  | for each date in particular for DOI starting with _10.14457_ we Apply a fix thai date convert a date to ThaiBuddhistDate and reformat to local one see ticket [#6791](https://support.openaire.eu/issues/6791) |
+|`publicationdate` |  `\attributes\dates` | where `dateType` is **issued** |
+|`publicationdate` |  `\attributes\publicationYear` | we create this date format `01-01-publicationYear` |  
+|`embargoenddate` | `\attributes\dates` | where `dateType` is **available** |
+| `subjects`      | `\attributes\subject`  |  `scheme=keywords` |
+| `description`   | `\attributes\descriptions`    |            |
+| `publisher`   | `\attributes\publisher`    |            |
+| `language`   | `\attributes\language`    |  cleaned by using vocabulary `dnet:languages`           |
+| `publisher`   | `\attributes\publisher`    |            |
+| `instance.license`     | `\attributes\rightsList` | if right value starts with http and matches a particular regex  |
+| `instance.accessright` |  `\attributes\rightsList` | <ul> <li>if not present :`unknown`</li><li>if datasource is _figshare_:`open`</li><li>If `embargo_date < today()`: _OPEN_ </li> </ul>   |
+
+
+### Mapping Relation
+
+
+| OpenAIRE Relation Semantic and inverse    | Datacite record JSON path     | Source/Tartget type           | #Notes  |
+|-------------------------------------------|-------------------------------|-------------------------------|---------|
+| `isProducedBy`      |`attributes\fundingReferences` | `Result/Project`|  we must identifi if match this pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`|
+| `IsProvidedBy`   | | `Result/DataSource` | Datasource is always Datacite|
+| `IsHostedBy`   | `\attributes\relationships\client\id` | `Result/DataSource` |we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_ |
+
+
+### Relation Resolution
+
+
 
