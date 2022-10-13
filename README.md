@@ -26,7 +26,22 @@ $ npm run build
 ```
 
 ## Deployment using Docker
-TODO
+
+### Development
+
+Build docker container for development and run on port 3000:
+```
+docker build --target development -t docs:dev .
+sudo docker run -d -p 3000:3000 docs:dev
+```
+
+### Production
+
+Build docker container for production and run on port 80:
+```
+docker build -t docs:latest .
+docker run -d -p 80:80 docs:latest
+```
 
 ## Documentation versioning 
 The versioning documentation of Docusaurus can be found [here](https://docusaurus.io/docs/versioning).
