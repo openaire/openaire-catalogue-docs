@@ -66,7 +66,8 @@ const sidebars = {
           items: [
             { type: 'doc', id: 'data-provision/aggregation/doiboost' },
             { type: 'doc', id: 'data-provision/aggregation/pubmed' },
-            { type: 'doc', id: 'data-provision/aggregation/datacite' }
+            { type: 'doc', id: 'data-provision/aggregation/datacite' },
+            { type: 'doc', id: 'data-provision/aggregation/ebi' },
           ]
         },
         {
