@@ -4,10 +4,6 @@ DOIBoost is a dataset that combines research outputs and links among them from a
 It enriches the records available on Crossref with what's available on Unpaywall, Microsoft Academic Graph, ORCID intersecting all those datasets by DOI. 
 As consequence, DOIBoost does not contain any record from MAG, Unpaywall, or ORCID that doesn't provide a DOI available in Crossref.
 
-The idea behind DOIBoost and its origin can be found in the paper (and related resources) at:
-
-* La Bruzzo S., Manghi P., Mannocci A. (2019) OpenAIRE's DOIBoost - Boosting CrossRef for Research. In: Manghi P., Candela L., Silvello G. (eds) Digital Libraries: Supporting Open Science. IRCDL 2019. Communications in Computer and Information Science, vol 988. Springer, doi:10.1007/978-3-030-11226-4_11 . Open Access version available at: [10.5281/zenodo.1441071](https://doi.org/10.5281/zenodo.1441071)
-
 Each Crossref record is enriched with:
 * ORCID identifiers of authors from ORCID
 * Open Access instance (with OA color/route and license) from Unpaywall
@@ -29,7 +25,11 @@ The Open Access status is also set by intersecting the journal information of a 
 
 The construction of the DOIBoost dataset consists of the following phases:
 
-## 1. Crossref filtering
+## Process
+
+The following section describes the processing steps needed to build DOIBoost starting from the input data.
+
+### Crossref filtering
 
 Records in Crossref are ruled out according to the following criteria
 
@@ -68,7 +68,7 @@ Records in Crossref are ruled out according to the following criteria
 
 Records with `type=dataset` are mapped into OpenAIRE results of type dataset. All others are mapped as OpenAIRE results of type publication.
 
-## 2. Mapping Crossref properties into the OpenAIRE Research Graph
+### Mapping Crossref properties into the OpenAIRE Research Graph
 
 Properties in OpenAIRE results are set based on the logic described in the following table:
 
@@ -133,9 +133,9 @@ Possible improvements:
 
 h3. 2 Map Crossref links to projects/funders
 
-Links to funding available in Crossref are mapped as funding relationships (`result -- isProducedBy --> project`) applying the following mapping:
+Links to funding available in Crossref are mapped as funding relationships (`result -- isProducedBy -- project`) applying the following mapping:
 
-| *funder*                                                                                                                                                                                     | *grant code*                                                                             | *Link to*                                                                                                                                           |
+| Funder                                                                                                                                                                                       | Grant code                                                                               | Link to                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | DOI: `{10.13039/100010663, 10.13039/100010661, 10.13039/501100007601, 10.13039/501100000780, 10.13039/100010665}` or name: `'European Union’s Horizon 2020 research and innovation program'` | series of `4-9` digits in `award`                                                        | Link to H2020 project                                                                                                                               |
 | DOI: `{10.13039/100011199, 10.13039/100004431, 10.13039/501100004963, 10.13039/501100000780}`                                                                                                | series of `4-9` digits in `award`                                                        | Link to FP7 project                                                                                                                                 |
@@ -159,7 +159,7 @@ Links to funding available in Crossref are mapped as funding relationships (`res
 | DOI: `10.13039/501100004410`                                                                                                                                                                 | `award`                                                                                  | Link to TUBITAK project                                                                                                                             |
 | DOI: `10.10.13039/100004440`  or name: `Wellcome Trust Masters Fellowship`                                                                                                                   | `award`                                                                                  | Link to Wellcome Trust specific project and to the `unidentified` project.                                                                          |
 
-## 3. Intersect Crossref with UnpayWall by DOI
+### Intersect Crossref with UnpayWall by DOI
 
 The fields we consider from UnpayWall are:
 * `is_oa`
@@ -168,7 +168,7 @@ The fields we consider from UnpayWall are:
 
 The results of Crossref that intersect by DOI with UnpayWall records are enriched with one additional `instance` with the following properties:
 
-| *OpenAIRE Result field path*           | *Unpaywall field path*     | *Notes*                                                                                                                                                                |
+| OpenAIRE Result field path             | Unpaywall field path       | Notes                                                                                                                                                                  |
 |----------------------------------------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `instance`                             |                            | created only if `is_oa` and a `best_oa_location` is available                                                                                                          |
 | `instance.accessright`                 |                            | default value `Open Access`: we do not add instances if UnpayWall says there is no open version                                                                        |
@@ -186,23 +186,23 @@ For the definition of UnpayWall's `oa_status` refer to the [Unpaywall FAQ](https
 
 The record will also feature a relation to the UnpayWall data source: `name="UnpayWall"`, `id=openaire____::8ac8380272269217cb09a928c8caa993`.
 
-## 4. Intersect with ORCID
+### Intersect with ORCID
 
 The fields we consider from ORCID are:
 * `doi`
 * `authors`, a list of authors, each with optional `name`, `surname`, `creditName`, `oid`
 
-| *OpenAIRE field path*               | *ORCID path*          | *Notes*                                                                                                                              |
-|-------------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| `pid`                               | `doi`                 |                                                                                                                                      |
-| `author.name`                       | `capitalize(name)`    | only mapped if not blank                                                                                                             |
-| `author.surname`                    | `capitalize(surname)` | only mapped if not blank                                                                                                             |
-| `author.fullname`                   |                       | if name and surname are not blank, they are concatenated (`capitalize(name) capitalize(surname)`), otherwise we use the `creditName` |
-| `author.pid`                        |                       | only if the `ORCID` is available                                                                                                     |
-| `author.pid.id.scheme`              |                       | Default `orcid` (meaning that it is confirmed by ORCID, (in contrast to the `orcid_pending` set from Crossref and Unpaywall)         |
-| `author.pid.id.value`               | `oid`                 |                                                                                                                                      |
-| `author.pid.provenance.provenance`  |                       | Default `Harvested`                                                                                                                  |
-| `author.pid.provenance.trust`       |                       | Default `0.9`                                                                                                                        |
+| OpenAIRE field path                | ORCID path            | Notes                                                                                                                                |
+|------------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `pid`                              | `doi`                 |                                                                                                                                      |
+| `author.name`                      | `capitalize(name)`    | only mapped if not blank                                                                                                             |
+| `author.surname`                   | `capitalize(surname)` | only mapped if not blank                                                                                                             |
+| `author.fullname`                  |                       | if name and surname are not blank, they are concatenated (`capitalize(name) capitalize(surname)`), otherwise we use the `creditName` |
+| `author.pid`                       |                       | only if the `ORCID` is available                                                                                                     |
+| `author.pid.id.scheme`             |                       | Default `orcid` (meaning that it is confirmed by ORCID, (in contrast to the `orcid_pending` set from Crossref and Unpaywall)         |
+| `author.pid.id.value`              | `oid`                 |                                                                                                                                      |
+| `author.pid.provenance.provenance` |                       | Default `Harvested`                                                                                                                  |
+| `author.pid.provenance.trust`      |                       | Default `0.9`                                                                                                                        |
 
 The records are enriched with the ORCID identifiers of their authors.
 
@@ -216,7 +216,7 @@ Miriam will modify the process to ensure that:
 * the list of authors from Crossred always "win"
 * the identifiers from ORCID "win"
 
-## 5. Intersect with Microsoft Academic Graph
+### Intersect with Microsoft Academic Graph
 
 *Important Notes*
 * Only papers with DOI are considered
@@ -238,10 +238,16 @@ The records are enriched with:
 * conference or journal information (in the `journal` field) TODO: or `container`, in case of the dump?
 * [TO BE REMOVED] instances with URL from MAG
 
-## 6. Enrich DOIBoost3 with hosting data sources (`hostedby`) and access right information
+### Enrich DOIBoost3 with hosting data sources (`hostedby`) and access right information
 
 In this phase, we intersect DOIBoost3 with a dataset composed of journals from OpenAIRE, Crossref, and the ISSN gold list. Each journal comes with its International Standard Serial Numbers (`issn`, `eissn`, `lissn`) and, when available, a flag that tells if the journal is open access. The intersection is done on the basis of the International Standard Serial Numbers. The records with a `journal.[l|e]issn` that match are enriched as follows:
 * Each instance gain the `hostedby` information corresponding to the journal
 * If the journal is open access, the access rights of the instances are also set to `Open Access` with `gold` route (because by construction, the journals we know are open are from DOAJ or Gold ISSN list)
 
 The hostedby of records that do not match are set to the `Unknown Repository`.
+
+## References
+
+The idea behind DOIBoost and its origin can be found in the paper (and related resources) at:
+
+* La Bruzzo S., Manghi P., Mannocci A. (2019) OpenAIRE's DOIBoost - Boosting CrossRef for Research. In: Manghi P., Candela L., Silvello G. (eds) Digital Libraries: Supporting Open Science. IRCDL 2019. Communications in Computer and Information Science, vol 988. Springer, doi:10.1007/978-3-030-11226-4_11 . Open Access version available at: [10.5281/zenodo.1441071](https://doi.org/10.5281/zenodo.1441071)

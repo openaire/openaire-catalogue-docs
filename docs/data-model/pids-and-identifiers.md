@@ -13,11 +13,11 @@ Such a policy defines a list of data sources that are considered authoritative f
 * OpenAIRE IDs depend on persistent IDs when they are provided by the authority responsible to create them;
 * PIDs are included in the graph according to a tight criterion: the PID Types declared in the table below are considered to be mapped as PIDs only when they are collected from the relative PID authority data source.
 
-| *PID Type* | *Authority*                                                                                         |
-|------------|-----------------------------------------------------------------------------------------------------|
-| doi        | [Crossref](https://www.crossref.org), [Datacite](https://datacite.org)                              |
-| pmc, pmid  | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) |
-| arXiv      | [arXiv.org e-Print Archive](https://arxiv.org/)                                                     |
+| PID Type  | Authority                                                                                           |
+|-----------|-----------------------------------------------------------------------------------------------------|
+| doi       | [Crossref](https://www.crossref.org), [Datacite](https://datacite.org)                              |
+| pmc, pmid | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) |
+| arXiv     | [arXiv.org e-Print Archive](https://arxiv.org/)                                                     |
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
 In all other cases, PIDs are be included in the graph as alternate Identifiers.
@@ -31,10 +31,10 @@ assigns PIDs to their scientific products from a given PID minter.
 
 This "selection" can be performed when the entities in the graph sharing the same identifier are grouped together. The list of the delegated authorities currently includes
 
-| *Datasource delegated*               | *Datasource delegating*          | *Pid Type* |
-|--------------------------------------|----------------------------------|------------|
-| [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | doi        |
-| [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | w3id       |
+| Datasource delegated                 | Datasource delegating            | Pid Type  |
+|--------------------------------------|----------------------------------|-----------|
+| [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | doi       |
+| [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | w3id      |
 
 
 ## Identifiers in the Graph

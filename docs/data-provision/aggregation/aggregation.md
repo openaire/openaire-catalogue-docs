@@ -10,14 +10,14 @@ OpenAIRE materializes an open, participatory research graph (the OpenAIRE Resear
 
 OpenAIRE aggregates metadata records describing objects of the research life-cycle from content providers compliant to the [OpenAIRE guidelines](https://guidelines.openaire.eu/) and from entity registries (i.e. data sources offering authoritative lists of entities, like [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/), [re3data](https://www.re3data.org/), [DOAJ](https://doaj.org/), and various funder databases). After collection, metadata are transformed according to the OpenAIRE internal metadata model, which is used to generate the final OpenAIRE Research Graph, accessible from the [OpenAIRE EXPLORE portal](https://explore.openaire.eu) and the [APIs](https://graph.openaire.eu/develop/).
 
-The transformation process includes the application of cleaning functions whose goal is to ensure that values are harmonised according to a common format (e.g. dates as YYYY-MM-dd) and, whenever applicable, to a common controlled vocabulary. The controlled vocabularies used for cleansing are accessible at http://api.openaire.eu/vocabularies. Each vocabulary features a set of controlled terms, each with one code, one label, and a set of synonyms. If a synonym is found as field value, the value is updated with the corresponding term. 
+The transformation process includes the application of cleaning functions whose goal is to ensure that values are harmonised according to a common format (e.g. dates as YYYY-MM-dd) and, whenever applicable, to a common controlled vocabulary. The controlled vocabularies used for cleansing are accessible at [api.openaire.eu/vocabularies](https://api.openaire.eu/vocabularies/). Each vocabulary features a set of controlled terms, each with one code, one label, and a set of synonyms. If a synonym is found as field value, the value is updated with the corresponding term. 
 Also, the OpenAIRE Research Graph is extended with other relevant scholarly communication sources that do not follow the OpenAIRE Guidelines and/or are too large to be integrated via the “normal” aggregation mechanism: DOIBoost (which merges Crossref, ORCID, Microsoft Academic Graph, and Unpaywall).
 
 <p align="center">
     <img loading="lazy" alt="Aggregation" src="/img/docs/aggregation.png" width="65%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
-The OpenAIRE aggregation system collects information about objects of the research life-cycle compliant to the [OpenAIRE acquisition policy](https://www.openaire.eu/content-aquisition-policy1) from [different types of data sources](https://explore.openaire.eu/search/find/dataproviders):
+The OpenAIRE aggregation system collects information about objects of the research life-cycle compliant to the [OpenAIRE acquisition policy](https://www.openaire.eu/content-acquisition-policy) from [different types of data sources](https://explore.openaire.eu/search/find/dataproviders):
 
 1. Scientific literature metadata and full-texts from institutional and thematic repositories, CRIS (Common Research Information Systems), Open Access journals and publishers;
 2. Dataset metadata from data repositories and data journals;
