@@ -64,10 +64,10 @@ const sidebars = {
           label: "Aggregation",
           link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
           items: [
-            { type: 'doc', id: 'data-provision/aggregation/doiboost' },
+            { type: 'doc', id: 'data-provision/aggregation/doiboost', label: 'DOIBoost' },
             { type: 'doc', id: 'data-provision/aggregation/pubmed' },
             { type: 'doc', id: 'data-provision/aggregation/datacite' },
-            { type: 'doc', id: 'data-provision/aggregation/ebi' },
+            { type: 'doc', id: 'data-provision/aggregation/ebi', label: 'EMBL-EBI' },
           ]
         },
         {
