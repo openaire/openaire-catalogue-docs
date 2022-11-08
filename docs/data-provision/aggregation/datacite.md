@@ -69,23 +69,11 @@ The table below describes the mapping from the XML baseline records to the OpenA
 ### Relation Mapping
 
 
-<<<<<<< HEAD
 | OpenAIRE Relation Semantic and inverse    | Datacite record JSON path     | Source/Tartget type           | #Notes  |
 |-------------------------------------------|-------------------------------|-------------------------------|---------|
 | `isProducedBy`      |`attributes\fundingReferences` | `Result/Project`|  we must identifi if match this pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`|
 | `IsProvidedBy`   | | `Result/DataSource` | Datasource is always Datacite|
 | `IsHostedBy`   | `\attributes\relationships\client\id` | `Result/DataSource` |we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_ |
 |            |      `\attribute\relatedIdentifiers`                | result/result                 | we create relationships whenever the pid of the target is resolved on the Research Graph          |
-=======
-| OpenAIRE Relation Semantic and inverse | Datacite record JSON path             | Source/Tartget type  | #Notes                                                                                            |
-|----------------------------------------|---------------------------------------|----------------------|---------------------------------------------------------------------------------------------------|
-| `isProducedBy`                         | `attributes\fundingReferences`        | `Result/Project`     | we must identifi if match this pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`       |
-| `IsProvidedBy`                         |                                       | `Result/DataSource`  | Datasource is always Datacite                                                                     |
-| `IsHostedBy`                           | `\attributes\relationships\client\id` | `Result/DataSource`  | we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_ |
-
-
-### Relation Resolution
-
->>>>>>> 92baad5acb3ecfb774510b48fee6aeeba92738df
 
 
