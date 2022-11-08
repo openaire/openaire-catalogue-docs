@@ -65,15 +65,13 @@ The table below describes the mapping from the XML baseline records to the OpenA
 | `instance.license`                                     | `\attributes\rightsList`                                                                                                                        | if the rights value starts with http and matches a particular regex                                                                                                                                                                                  |
 | `instance.accessright`                                 | `\attributes\rightsList`                                                                                                                        | <ul><li>if not present :`unknown`</li><li>if datasource is Figshare:`open`</li><li>If `embargo_date < today()`: OPEN</li></ul>                                                                                                                       |
 
-
 ### Relation Mapping
 
-
-| OpenAIRE Relation Semantic and inverse    | Datacite record JSON path     | Source/Tartget type           | #Notes  |
-|-------------------------------------------|-------------------------------|-------------------------------|---------|
-| `isProducedBy`      |`attributes\fundingReferences` | `Result/Project`|  we must identifi if match this pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`|
-| `IsProvidedBy`   | | `Result/DataSource` | Datasource is always Datacite|
-| `IsHostedBy`   | `\attributes\relationships\client\id` | `Result/DataSource` |we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_ |
-|            |      `\attribute\relatedIdentifiers`                | result/result                 | we create relationships whenever the pid of the target is resolved on the Research Graph          |
+| OpenAIRE Relation Semantic and inverse | Datacite record JSON path             | Source/Target type  | #Notes                                                                                                     |
+|----------------------------------------|---------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------|
+| `isProducedBy/produces`                | `attributes\fundingReferences`        | `result/project`    | only when the fundingReferences matches the pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`   |
+| `IsProvidedBy/provides`                |                                       | `result/datasource` | Datasource is always set to `Datacite`                                                                     |
+| `isHostedBy/host`                      | `\attributes\relationships\client\id` | `result/datasource` | we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_          |
+| `isRelatedTo`                          | `\attribute\relatedIdentifiers`       | `result/result`     | we create relationships whenever the pid of the target is resolved on the Research Graph                   |
 
 

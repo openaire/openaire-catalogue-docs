@@ -406,22 +406,21 @@ We filter all the target links with pid type **ena**, **pdb** or **uniprot**
 For each target we construct a Bioentity with the following mapping
 
 
-| *OpenAIRE Result field path*   | EBI record field xpath      | Notes                                                                                                                                                         |
-|--------------------------------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `id`                           | `target/identifier/ID` and  `target/identifier/IDScheme`                            | id in the form `SCHEMA_________::md5(pid)`|
-| `pid`                          | `target/identifier/ID` and  `target/identifier/IDScheme`                       | `classid = classname = schema`|
-| `publicationdate`              | `target/PublicationDate`              | clean and normalize the format of the date to be `YYYY-mm-dd`  |
-| `maintitle`                    | `target/Title`                |     |
-| **Instance Mapping**           |                                |                                                                                                                                                               |
-| `instance.type`                |     | `Bioentity` |
-|`type` |                        |    `Dataset`    | 
-| `instance.pid`                 |`target/identifier/ID` and  `target/identifier/IDScheme` |     `classid = classname = schema`                                                                                                                     |
-| `instance.url`                 | `target/identifier/IDURL`                    | Copy the value as it is                                                      |
-                          |
-| `instance.publicationdate`     | `//PubmedPubDate`              |   clean and normalize the format of the date to be YYYY-mm-dd   
+| *OpenAIRE Result field path* | EBI record field xpath                                   | Notes                                                         |
+|------------------------------|----------------------------------------------------------|---------------------------------------------------------------|
+| `id`                         | `target/identifier/ID` and  `target/identifier/IDScheme` | id in the form `SCHEMA_________::md5(pid)`                    |
+| `pid`                        | `target/identifier/ID` and  `target/identifier/IDScheme` | `classid = classname = schema`                                |
+| `publicationdate`            | `target/PublicationDate`                                 | clean and normalize the format of the date to be `YYYY-mm-dd` |
+| `maintitle`                  | `target/Title`                                           |                                                               |
+| **Instance Mapping**         |                                                          |                                                               |
+| `instance.type`              |                                                          | `Bioentity`                                                   |
+| `type`                       |                                                          | `Dataset`                                                     | 
+| `instance.pid`               | `target/identifier/ID` and  `target/identifier/IDScheme` | `classid = classname = schema`                                |
+| `instance.url`               | `target/identifier/IDURL`                                | Copy the value as it is                                       |
+| `instance.publicationdate`   | `//PubmedPubDate`                                        | clean and normalize the format of the date to be YYYY-mm-dd   |
 
 
 ### Relation Mapping
-| OpenAIRE Relation Semantic and inverse    | Datacite record JSON path     | Source/Tartget type           | #Notes  |
-|-------------------------------------------|-------------------------------|-------------------------------|---------|
-|  `IsRelatedTo`          |                      | result/result                 | we create relationships between the BioEntity and the pubmed publication           |
+| OpenAIRE Relation Semantic and inverse | Source/Target type  | #Notes                                                                   |
+|----------------------------------------|---------------------|--------------------------------------------------------------------------|
+| `IsRelatedTo`                          | `result/result`     | we create relationships between the BioEntity and the pubmed publication |
