@@ -72,9 +72,6 @@ The table below describes the mapping from the XML baseline records to the OpenA
 | `isProducedBy`      |`attributes\fundingReferences` | `Result/Project`|  we must identifi if match this pattern `(info:eu-repo/grantagreement/ec/h2020/)(\d{6})(.*)`|
 | `IsProvidedBy`   | | `Result/DataSource` | Datasource is always Datacite|
 | `IsHostedBy`   | `\attributes\relationships\client\id` | `Result/DataSource` |we defined a curated map clientId/Datasource if we found a match we create an _hostedBy Relation_ |
-
-
-### Relation Resolution
-
+|            |      `\attribute\relatedIdentifiers`                | result/result                 | we create relationships whenever the pid of the target is resolved on the Research Graph          |
 
 
