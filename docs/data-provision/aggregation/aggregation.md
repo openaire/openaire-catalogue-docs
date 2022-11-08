@@ -26,7 +26,7 @@ The OpenAIRE aggregation system collects information about objects of the resear
 5. Metadata of open source research software from software repositories and SoftwareHeritge
 6. Metadata about other types of research products, like workflow, protocols, methods, research packages
 
-Relationships between objects are collected from the data sources, but also automatically detected by [inference algorithms](https://www.openaire.eu/blogs/text-mining-services-in-openaire-1) and added by authenticated users, who can insert links between literature, datasets, software and projects via [the “Link” procedure available from the OpenAIRE explore portal](https://explore.openaire.eu/participate/claim).
+Relationships between objects are collected from the data sources, but also automatically detected by [inference algorithms](https://www.openaire.eu/blogs/text-mining-services-in-openaire-1) and added by authenticated users, who can insert links between literature, datasets, software and projects via [the “Link” procedure available from the OpenAIRE explore portal](https://explore.openaire.eu). More information about the linking functionality can be found [here](https://www.openaire.eu/linking).
 
 ## What kind of data sources are in OpenAIRE?
 
