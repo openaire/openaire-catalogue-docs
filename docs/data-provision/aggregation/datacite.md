@@ -30,6 +30,9 @@ The collection workflow is responsible for aggregating new records. Each record 
 The metadata collection process identifies the most recent record date available locally and uses such date to requests the records to the Datacite API, populating the **FROM_DATE_TIMESAMP** variable. The records in the API response are included in the local storage in upsert mode.
 
 ## Datacite Mapping
+
+### Entity Mapping
+
 The table below describes the mapping from the XML baseline records to the OpenAIRE Graph dump format.
 
 | OpenAIRE Result field path                             | Datacite record JSON path                                                                                                                       | # Notes                                                                                                                                                                                                                                              |
@@ -63,7 +66,7 @@ The table below describes the mapping from the XML baseline records to the OpenA
 | `instance.accessright`                                 | `\attributes\rightsList`                                                                                                                        | <ul><li>if not present :`unknown`</li><li>if datasource is Figshare:`open`</li><li>If `embargo_date < today()`: OPEN</li></ul>                                                                                                                       |
 
 
-### Mapping Relation
+### Relation Mapping
 
 
 | OpenAIRE Relation Semantic and inverse | Datacite record JSON path             | Source/Tartget type  | #Notes                                                                                            |

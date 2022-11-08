@@ -9,7 +9,8 @@ It contains XML records compliant with the schema available at https://www.nlm.n
 
 ## Incremental harvesting
 Pubmed exposes an entry point FTP with all the updates for each one. [ftp baseline update](https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/). We collect the new file and generate the new dataset by upserting the existing item.
-## Mapping
+
+## Entity Mapping
 
 The table below describes the mapping from the XML baseline records to the OpenAIRE Graph dump format.
 
