@@ -18,27 +18,76 @@ The OpenAIRE Research Graph is enriched by links mined by OpenAIRE’s full-text
 
 The Deduction process (also known as “bulk tagging”) enriches each record with new information that can be derived from the existing property values.
 
-As of September 2020, three procedures are in place to relate a research product to a research initiative, infrastructure (RI) or community (RC) based on:
+This process is used to associate results to community/research initiatives that are part of OpenAIRE. 
+As of November 2022, three procedures are in place to relate a research product to a research initiative, infrastructure (RI) or community (RC) based on:
 
-* subjects (2.7M results tagged)
+* subjects: it is possible to specify a list of subjects that are relevant for the RC/RI. Every time one of the subjects is found among the subjects of a result, the result is linked to the RC/RI.
 
-* Zenodo community (16K results tagged)
+<p align="center">
+    <img loading="lazy" alt="Bulktagging Subject" src="/img/docs/enrichment/bulktagging_subject.png" width="70%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
-* the data source it comes from (250K results tagged)
+
+* data sources: it is possible to list a set of data sources relevant for the RC/RI. All the results collected from these data sources will be linked to the RC/RI
+<p align="center">
+    <img loading="lazy" alt="Bulktagging Data source" src="/img/docs/enrichment/bulktagging_datasource.png" width="70%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+
+ When only some results collected from a datasource are relevant for the RC/RI, it is possible to specify a set of selection constraints (SC) that have to be verified before linking the result to the 
+community. The selection constraint has the form <strong>SC = S1 or S2 or ... or Sn</strong>. The generic Si has the form <strong>Si = s<sub>i1</sub> and s<sub>i2</sub> and ...and s<sub>in</sub></strong> and each s<sub>ij</sub> is a condition on a specific field of the result. The set of fields that can be specified is <strong>F={title, author, contributor, description, orcid}</strong>, 
+while the set of condition can be among <strong>V={contains, equals, not_contains, not_equals, contains_ignorecase, equals_ignorecase, not_contains_ignorecase, not_equal_ignorecase}</strong>, and the value is free text.
+A possible selection criteria can be: “All the products whose contributor contains DARIAH “
+
+<p align="center">
+    <img loading="lazy" alt="Bulktagging Data source" src="/img/docs/enrichment/bulktagging_selconstraints.png" width="70%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+
+* Zenodo community: it is possible to list a set of Zenodo communities relevant for the RC/RI. All the products collected from the listed Zenodo communities are linked to the RC/RI
+
+
+<p align="center">
+    <img loading="lazy" alt="Bulktagging Zenodo Community" src="/img/docs/enrichment/bulktagging_zenodo.png" width="70%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+
 
 The list of subjects, Zenodo communities and data sources used to enrich the products are defined by the managers of the community gateway or infrastructure monitoring dashboard associated with the RC/RI.
 
 ## Propagation
 
-This process “propagates” properties and links from one product to another if between the two there is a “strong” semantic relationship.
+This process enriches the graph by adding new links and/or new properties. The new information is added by exploiting existing semantic 
+relationships and values between the involved entities 
 
-As of September 2020, the following procedures are in place:
-Propagation of the property “country” to results from institutional repositories: e.g. publication collected from an institutional repository maintained by an italian university will be enriched with the property “country = IT”.
+As of November 2022, the following procedures are in place:
 
-* Propagation of links to projects: e.g. publication linked to project P “is supplemented by” a dataset D. Dataset D will get the link to project P. The relationships considered for this procedure are “isSupplementedBy” and “supplements”.
+* Country propagation: updates of the property “country” of a results. This happen when the result is collected from an institutional datasource or when the datasource hosting the result in inserted in a whitelist. For all the results whose hosting datasource verifies one of the conditions above, the country of the organization providing the datasource is added to the country of the result: e.g. publication collected from an institutional repository maintained by an italian university will be enriched with the property “country = IT”.
+<p align="center">
+    <img loading="lazy" alt="Country Propagation" src="/img/docs/enrichment/propagation_country.png" width="70%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
-* Propagation of related community/infrastructure/initiative from organizations to products via affiliation relationships: e.g. a publication with an author affiliated with organization O. The manager of the community gateway C declared that the outputs of O are all relevant for his/her community C. The publication is tagged as relevant for C.
+* Project propagation: adds a "isProducedBy" relationship (and its inverse) between a Project P and Result R, if R has a strong semantic relationship with another Result R1 and R1 is linked to P: e.g. publication linked to project P “is supplemented by” a dataset D. Dataset D will get the link to project P. The relationships considered for this procedure are “isSupplementedBy” and “isSupplementTo”.
+<p align="center">
+    <img loading="lazy" alt="Project Propagation" src="/img/docs/enrichment/propagation_resulttoproject.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+* Result to RC/RI through organization propagation. The manager of the RC/RI can specify a set of organizations whose product are relevant for the 
+community. This kind of propagation exploits the hasAuthorInstitution relation between results and organizations, 
+Each result having such a relation with at least one organization relevant for the RC/RI will be linked to it.
+<p align="center">
+    <img loading="lazy" alt="Result to community through organization propagation" src="/img/docs/enrichment/propagation_resulttocommunitythroughorganization.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
-* Propagation of related community/infrastructure/initiative to related products: e.g. publication associated to community C is supplemented by a dataset D. Dataset D will get the association to C. The relationships considered for this procedure are “isSupplementedBy” and “supplements”.
-
-* Propagation of ORCID identifiers to related products, if the products have the same authors: e.g. publication has ORCID for its authors and is supplemented by a dataset D. Dataset D has the same authors as the publication. Authors of D are enriched with the ORCIDs available in the publication. The relationships considered for this procedure are “isSupplementedBy” and “supplements”.
+* Result to RC/RI through semantic relation: e.g. publication associated to community C is supplemented by a dataset D. Dataset D will get the association to C. The relationships considered for this procedure are “isSupplementedBy” and “supplements”.
+<p align="center">
+    <img loading="lazy" alt="Result to community through organization propagation" src="/img/docs/enrichment/propagation_resulttocommunitythroughsemrel.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+* ORCID identifiers to result through semantic relation related products, if the products have the same authors: e.g. publication has ORCID for its authors and is supplemented by a dataset D. Dataset D has the same authors as the publication. Authors of D are enriched with the ORCIDs available in the publication. The relationships considered for this procedure are “isSupplementedBy” and “supplements”.
+<p align="center">
+    <img loading="lazy" alt="Result to community through organization propagation" src="/img/docs/enrichment/propagation_orcid.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+* affiliation to organization through institutional repository
+<p align="center">
+    <img loading="lazy" alt="Result to community through organization propagation" src="/img/docs/enrichment/propagation_affiliationistrepo.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+* affiliation to organization through semantic relation 
+<p align="center">
+    <img loading="lazy" alt="Result to community through organization propagation" src="/img/docs/enrichment/propagation_organizationsemrel.png" width="40%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
