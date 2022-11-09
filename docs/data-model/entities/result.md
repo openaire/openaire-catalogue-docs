@@ -20,7 +20,7 @@ Moreover, there are the following sub-types of a `Result`, that inherit all its 
 ### id
 _Type: String &bull; Cardinality: ONE_
 
-Main entity identifier, created according to the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers).
+Main entity identifier, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
 "id": "50|doi_dedup___::80f29c8c8ba18c46c88a285b7e739dc3"
@@ -258,7 +258,7 @@ Timestamp of last update of the record in OpenAIRE.
 ### pid
 _Type: [ResultPid](other#resultpid) &bull; Cardinality: MANY_
 
-Persistent identifiers of the result. See also the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers) to learn more.
+Persistent identifiers of the result. See also the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers) to learn more.
 
 ```json
 "pid": [

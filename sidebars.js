@@ -23,6 +23,7 @@ const sidebars = {
       label: "Data model",
       link: {type: 'doc', id: 'data-model/data-model'},
       items: [
+        { type: 'doc', id: 'data-model/pids-and-identifiers' },
         {
           type: 'category', 
           label: "Entities",
@@ -58,7 +59,17 @@ const sidebars = {
       label: "Data provision",
       link: {type: 'doc', id: 'data-provision/data-provision'},
       items: [
-        { type: 'doc', id: 'data-provision/aggregation' },
+        {
+          type: 'category',
+          label: "Aggregation",
+          link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
+          items: [
+            { type: 'doc', id: 'data-provision/aggregation/doiboost', label: 'DOIBoost' },
+            { type: 'doc', id: 'data-provision/aggregation/pubmed' },
+            { type: 'doc', id: 'data-provision/aggregation/datacite' },
+            { type: 'doc', id: 'data-provision/aggregation/ebi', label: 'EMBL-EBI' },
+          ]
+        },
         {
           type: 'category', 
           label: "Deduplication",
