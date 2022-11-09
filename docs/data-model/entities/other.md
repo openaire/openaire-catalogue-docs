@@ -560,7 +560,7 @@ The measures computed for this instance (e.g. those provided by [BIP! Finder](ht
 ### pid
 _Type: [ResultPid](#resultpid) &bull; Cardinality: MANY_
 
-The set of persistent identifiers associated to this instance that have been collected from an authority for the pid type (i.e. Crossref/Datacite for doi). See the [OpenAIRE entity identifier and PID mapping policy](entity-identifiers) for more information.
+The set of persistent identifiers associated to this instance that have been collected from an authority for the pid type (i.e. Crossref/Datacite for doi). See the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers) for more information.
 
 ```json
 "pid": [
