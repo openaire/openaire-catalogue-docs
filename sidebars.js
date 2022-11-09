@@ -98,13 +98,9 @@ const sidebars = {
       id: 'services'
     },
     {
-      type: 'category', 
+      type: "link",
       label: "Learning center",
-      link: { type: 'generated-index' },
-      items: [
-        { type: 'doc', id: 'learning-center/open-plato' },
-        { type: 'doc', id: 'learning-center/tutorials' },
-      ]
+      href: "https://openplato.eu/"
     },
     {
       type: 'doc', 
