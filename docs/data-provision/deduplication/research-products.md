@@ -4,48 +4,60 @@ sidebar_position: 1
 
 # Research results
 
-Metadata records about the same scholarly work can be collected from different providers. Each metadata record can possibly carry different information because, for example, some providers are not aware of links to projects, keywords or other details. Another common case is when OpenAIRE collects one metadata record from a repository about a pre-print and another record from a journal about the published article. For the provision of statistics, OpenAIRE must identify those cases and “merge” the two metadata records, so that the scholarly work is counted only once in the statistics OpenAIRE produces.
-
 Duplicates among research results are identified among results of the same type (publications, datasets, software, other research products). If two duplicate results are aggregated one as a dataset and one as a software, for example, they will never be compared and they will never be identified as duplicates.
 OpenAIRE supports different deduplication strategies based on the type of results.
 
-## Methodology overview
+The next sections describe how each stage of the deduplication workflow is faced for research results.
 
-The deduplication process can be divided into two different phases:
-* Candidate identification (clustering)
-* Decision tree
-* Creation of representative record
+### Candidate identification (clustering)
 
-The implementation of each phase is different based on the type of results that are being processed.
+To match the requirements of limiting the number of comparisons, OpenAIRE clustering for research products works with two functions:
+* *DOI-based function*: the function generates the DOI when this is provided as part of the record properties;
+* *Title-based function*: the function generates a key that depends on (i) number of significant words in the title (normalized, stemming, etc.), (ii) module 10 of the number of characters of such words, and (iii) a string obtained as an alternation of the function prefix(3) and suffix(3) (and vice versa) on the first 3 words (2 words if the title only has 2). For example, the title ``Search for the Standard Model Higgs Boson`` becomes ``search standard model higgs boson`` with two keys key ``5-3-seaardmod`` and ``5-3-rchstadel``.
 
-### Publications 
+To give an idea, this configuration generates around 77Mi blocks, which we limited to 200 records each (only 15K blocks are affected by the cut), and entails 260Bi matches.
 
-#### Candidate identification (clustering)
+### Duplicates identification (pair-wise comparisons)
 
-Clustering is a common heuristics used to overcome the N x N complexity required to match all pairs of objects to identify the equivalent ones. The challenge is to identify a [clustering function](./clustering-functions) that maximizes the chance of comparing only records that may lead to a match, while minimizing the number of records that will not be matched while being equivalent. Since the equivalence function is to some level tolerant to minimal errors (e.g. switching of characters in the title, or minimal difference in letters), we need this function to be not too precise (e.g. a hash of the title), but also not too flexible (e.g. random ngrams of the title). On the other hand, reality tells us that in some cases equality of two records can only be determined by their PIDs (e.g. DOI) as the metadata properties are very different across different versions and no [clustering function](./clustering-functions) will ever bring them into the same cluster. To match these requirements OpenAIRE clustering for products works with two functions:
-DOI: the function generates the DOI when this is provided as part of the record properties;
-Title-based function: the function generates a key that depends on (i) number of significant words in the title (normalized, stemming, etc.), (ii) module 10 of the number of characters of such words, and (iii) a string obtained as an alternation of the function prefix(3) and suffix(3) (and vice versa) o the first 3 words (2 words if the title only has 2). For example, the title “Entity deduplication in big data graphs for scholarly communication” becomes “entity deduplication big data graphs scholarly communication” with two keys key “7.1entionbig” and “7.1itydedbig” (where 1 is module 10 of 54 characters of the normalized title.
+Comparisons in a block are performed using a *sliding window* set to 50 records. The records are sorted lexicographically on a normalized version of their titles. The 1st record is compared against all the 50 following ones using the decision tree, then the second, etc. for an NlogN complexity.
+A different decision tree is adopted depending on the type of the entity being processed. 
+Similarity relations drawn in this stage will be consequently used to perform the duplicates grouping.
 
-#### Decision tree
+#### Publications
 
 For each pair of publications in a cluster the following strategy (depicted in the figure below) is applied.
-Cross comparison of the pid lists (in the `pid` and `alternateid` elements). If 50% common pids, levenshtein distance on titles with low threshold (0.9).
-Otherwise, check if the number of authors and the title version is equal. If so, levenshtein distance on titles with higher threshold (0.99).
-The publications are matched as duplicate if the distance is higher than the threshold, in every other case they are considered as distinct publications.
+The comparison goes through different stages:
+1. *trusted pids check*: comparison of the trusted pid lists (in the `pid` field of the record). If at least 1 pid is equivalent, records match and the similarity relation is drawn.
+2. *instance type check*: comparison of the instance types (indicating the subtype of the record, i.e. presentation, conference object, etc.). If the instance types are not compatible then the records does not match. Otherwise, the comparison proceeds to the next stage
+3. *untrusted pids check*: comparison of all the available pids (in the `pid` and the `alternateid` fields of the record). In every case, no similarity relation is drawn in this stage. If at least one pid is equivalent, the next stage will be a  *soft check*, otherwise the next stage is a *strong check*.
+4. *soft check*: comparison of the record titles with the Levenshtein distance. If the distance measure is above 0.9 then the similarity relation is drawn.
+5. *strong check*: comparison composed by three substages involving the (i) comparison of the author list sizes and the version of the record to determine if they are coherent, (ii) comparison of the record titles with the Levenshtein distance to determine if it is higher than 0.99, (iii) "smart" comparison of the author lists to check if common authors are more than 60%.
 
 <p align="center">
-    <img loading="lazy" alt="Deduplication workflow" src="/img/docs/dedup-results.png" width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Publications Decision Tree" src="/img/docs/decisiontree-publication.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
-#### Creation of representative record
-<span className="todo">TODO</span>
+#### Software
+For each pair of software in a cluster the following strategy (depicted in the figure below) is applied.
+The comparison goes through different stages:
+1. *pids check*: comparison of the pids in the records. No similarity relation is drawn in this stage, it is only used to establish the final threshold to be used to compare record titles. If there is at least one common pid, then the next stage is a *soft check*. Otherwise, the next stage is a *strong check*
+2. *soft check*: comparison of the record titles with Levenshtein distance. If the measure is above 0.9, then the similarity relation is drawn
+3. *strong check*: comparison of the record titles with Levenshtein distance. If the measure is above 0.99, then the similarity relation is drawn
 
-### Datasets
-<span className="todo">TODO</span>
+<p align="center">
+    <img loading="lazy" alt="Software Decision Tree" src="/img/docs/decisiontree-software.png" width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
-### Software
-<span className="todo">TODO</span>
+#### Datasets and Other types of research products
+For each pair of datasets or other types of research products in a cluster the strategy depicted in the figure below is applied.
+The decision tree is almost identical to the publication decision tree, with the only exception of the *instance type check* stage. Since such type of record does not have a relatable instance type, the check is not performed and the decision tree node is skipped.
 
-### Other types of research products
-<span className="todo">TODO</span>
+<p align="center">
+    <img loading="lazy" alt="Dataset and Other types of research products Decision Tree" src="/img/docs/decisiontree-dataset-orp.png" width="90%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
 
+### Duplicates grouping (transitive closure)
+
+The general concept is that the field coming from the record with higher "trust" value is used as reference for the field of the representative record.
+
+The IDs of the representative records are obtained by appending the prefix ``dedup_`` to the MD5 of the first ID (given their lexicographical ordering). If the group of merged records contains a trusted ID (i.e. the DOI), also the ``doi`` keyword is added to the prefix.
