@@ -32,9 +32,9 @@ A vocabulary is a data structure that defines a list of terms, and for each term
             [...]
 ```
 
-Each vocabulary is typically used to control and harmonise the values available in a specific field characterising the bibliographic records. The example above provides a preview of the vocabulary used to clean the [result's instance typology](data-model/entities/other#instance).
+Each vocabulary is typically used to control and harmonise the values available in a specific field characterising the bibliographic records. The example above provides a preview of the vocabulary used to clean the [result's instance typology](/data-model/entities/result#instance).
 
-The content of the vocabularies can be accessed on [api.openaire.eu/vocabularies](https://api.openaire.eu/vocabularies/)
+The content of the vocabularies can be accessed on [api.openaire.eu/vocabularies](https://api.openaire.eu/vocabularies/).
 
 Given a value provided in the original records, the cleaning process looks for a synonym and, when found, resolves the corresponding term which is used in turn to build the cleaned record.
 Each aggregation process applies vocabularies according to their definitions in a given moment of time, however, it could be the case that a vocabulary changes after the aggregation of one data source has finished, thus the aggregated content does not reflect the current status of the controlled vocabularies.
@@ -47,7 +47,7 @@ Bibliographic records that do not meet minimal requirements for being part of th
 Currently, the only criteria applied horizontally to the entire graph aims at excluding scientific results whose title is not meaningful for citation purposes.
 Then, different criteria are applied in the pre-processing of specific sub-collections:
 
-* [Crossref filtering](data-provision/aggregation/doiboost#1-crossref-filtering)
+* [Crossref filtering](/data-provision/aggregation/doiboost#crossref-filtering)
 
 ## Country cleaning
 
