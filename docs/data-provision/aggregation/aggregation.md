@@ -49,6 +49,8 @@ The OpenAIRE aggregator collects metadata records in the majority of cases via [
 
 For additional details about the aggregation workflows, please refer to [2].
 
+The whole list of available and used collectors could be found in the [RedMine Wiki - API Protocols](https://support.openaire.eu/projects/openaire/wiki/API_protocols) 
+
 ## References
 
 [1] Manghi P. et al. (2014) "The D-NET software toolkit: A framework for the realization, maintenance, and operation of aggregative infrastructures", Program, Vol. 48 Issue: 4, pp.322-354, [10.1108/PROG-08-2013-0045](https://doi.org/10.1108/PROG-08-2013-0045)
