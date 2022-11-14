@@ -46,6 +46,8 @@ The comparison goes through the following decision tree:
     <img loading="lazy" alt="Organization Decision Tree" src="/img/docs/decisiontree-organization.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1YKInGGtHu09QG4pT2gRLEum4LxU82d4nKkvGNvRQmrg/edit?usp=sharing)
+
 ### Data Curation
 
 All the similarity relations drawn by the algorithm involving the decision tree are exposed in OpenOrgs, where are made available to the data curators to give feedbacks and to improve the organizations metadata.
