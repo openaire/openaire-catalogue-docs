@@ -29,7 +29,7 @@ const sidebars = {
           label: "Entities",
           link: {
             type: 'generated-index',
-            description: 'The main entities of the OpenAIRE Research Graph are listed below.'
+            description: 'The main entities of the OpenAIRE Graph are listed below.'
           },
           items: [
             { type: 'doc', id: 'data-model/entities/result' },
