@@ -6,12 +6,12 @@ sidebar_position: 1
 
 # Overview 
 
-The OpenAIRE Research Graph is one of the largest open scholarly record collections worldwide, key in fostering Open Science and establishing its practices in the daily research activities.
+The OpenAIRE Graph is one of the largest open scholarly record collections worldwide, key in fostering Open Science and establishing its practices in the daily research activities.
 Conceived as a public and transparent good, populated out of data sources trusted by scientists, the Graph aims at bringing discovery, monitoring, and assessment of science back in the hands of the scientific community.
 
 Imagine a vast collection of research products all linked together, contextualised and openly available. For the past years OpenAIRE has been working to gather this valuable record. It is a massive collection of metadata and links between scientific products such as articles, datasets, software, and other research products, entities like organisations, funders, funding streams, projects, communities, and data sources.
 
-As of today, the OpenAIRE Research Graph aggregates hundreds of millions of metadata records (and links among them)  from multiple data sources trusted by scientists, including:
+As of today, the OpenAIRE Graph aggregates hundreds of millions of metadata records (and links among them)  from multiple data sources trusted by scientists, including:
 
 * Repositories registered in OpenDOAR or re3data.org (soon FAIRSharing.org)
 * Open Access journals registered in DOAJ
