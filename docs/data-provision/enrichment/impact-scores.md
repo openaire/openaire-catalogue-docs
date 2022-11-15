@@ -4,7 +4,10 @@ sidebar_position: 2
 
 # Impact indicators
 
-This page summarises all calculated impact indicators, along with explanations about their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.
+This page summarises all calculated impact indicators, which are included into the [measure](/data-model/entities/other#measure) property.
+It should be noted that the impact indicators are being calculated both on the level of the research output as well on the level of their instances that correspond to a given DOI.
+Below we explain their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.
+
 
 ## Citation Count (CC)
 
@@ -13,7 +16,7 @@ This is the most widely used scientific impact indicator, which sums all citatio
 Citation count can be viewed as a measure of a publication's overall impact, since it conveys the number of other works that directly 
 drew on it.
 
-***Solution:***
+***Algorithmic details:***
 The citation count of a 
 publication $i$ corresponds to the in-degree of the corresponding node in the underlying citation network: $s_i = \sum_{j} A_{i,j}$, 
 where $A$ is the adjacency matrix of the network (i.e., $A_{i,j}=1$ when paper $j$ cites paper $i$, while $A_{i,j}=0$ otherwise). 
@@ -37,7 +40,7 @@ Also, since some indicators require the publication year for their calculation, 
 This measure is essentially a time-restricted version of the citation count, where the time window is distinct for each paper, i.e., 
 only citations $y$ years after its publication are counted.
 
-***Solution:***
+***Algorithmic details:***
 The "incubation" citation count of a paper $i$ is 
 calculated as: $s_i = \sum_{j,t_j \leq t_i+y} A_{i,j}$, where $A$ is the adjacency matrix and $t_j, t_i$ are the citing and cited paper's 
 publication years, respectively. $t_i$ is cited paper $i$'s publication year. iCC can be seen as an indicator of a paper's initial momentum 
@@ -65,7 +68,7 @@ Originally developed to rank Web pages, PageRank has been also widely used to ra
 networks. In this latter context, a publication's PageRank 
 score also serves as a measure of its influence.
 
-***Solution:***
+***Algorithmic details:***
 The PageRank score of a publication is calculated 
 as its probability of being read by a researcher that either randomly selects publications to read or selects 
 publications based on the references of her latest read. Formally, the score of a publication $i$ is given by: 
@@ -105,7 +108,7 @@ Hence, it better captures the popularity of publications. This "time-awareness" 
 alleviates the bias of methods like Citation Count and PageRank against recently published articles, which have 
 not had "enough" time to gather as many citations.
 
-***Solution:***
+***Algorithmic details:***
 The RAM score of each paper $i$ is calculated as follows:
 
 $$
@@ -138,7 +141,7 @@ AttRank is a PageRank variant that alleviates its bias against recent publicatio
 AttRank achieves this by modifying PageRank's probability of randomly selecting a publication. Instead of using a uniform probability,
 AttRank defines it based on a combination of the publication's age and the citations it received in recent years.
 
-***Solution:***
+***Algorithmic details:***
 The AttRank score 
 of each publication $i$ is calculated based on:
 
