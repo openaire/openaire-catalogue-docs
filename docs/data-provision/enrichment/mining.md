@@ -3,6 +3,10 @@ sidebar_position: 1
 ---
 
 # Mining algorithms
+
+[a relative link](acks.md)
+[a relative link](cites.md)
+
 TEST HARRY
 <span className="todo">TODO</span>
 
