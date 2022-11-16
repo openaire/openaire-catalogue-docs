@@ -4,8 +4,9 @@ sidebar_position: 1
 
 # Mining algorithms
 
-[a relative link](acks.md)
-[a relative link](cites.md)
+[Extraction of acknowledged concepts](acks.md)
+
+[Extraction of cited concepts](cites.md)
 
 TEST HARRY
 <span className="todo">TODO</span>
