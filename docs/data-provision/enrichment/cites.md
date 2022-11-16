@@ -2,11 +2,12 @@
 sidebar_position: 4
 ---
 
-# Cites algorithms
+# Extraction of Cited Concepts
 <span className="todo">TODO</span>
 
 | Property  | Description |
 | --- | --- |
+| Short description  | Scans the plaintexts of publications for cited concepts, including references to datasets and software URIs. |
 | Authority  | describes the organisation and/ or the person responsible for the algorithm  |
 | Licence  | describes the licensing and rights held on the algorithm  |
 | Algorithmic details | describes the algorithmic solution in more detail (i.e., the various concepts used in the algorithm, its iterations, etc.) |
