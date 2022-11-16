@@ -2,11 +2,10 @@
 sidebar_position: 3
 ---
 
-# Mining algorithms
-TEST HARRY
+# Acks algorithms
 <span className="todo">TODO</span>
 
-| Short description  | briefly describes the algorithm |
+| Property  | Description |
 | --- | --- |
 | Authority  | describes the organisation and/ or the person responsible for the algorithm  |
 | Licence  | describes the licensing and rights held on the algorithm  |
