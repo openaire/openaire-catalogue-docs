@@ -1,6 +1,7 @@
 # Metadata extraction
 
 ***Short description:***
+
 Metadata Extraction algorithm is responsible for plaintext and metadata extraction out of the PDF documents. It based on [CERMINE](http://cermine.ceon.pl/about.html) project.
 
 CERMINE is a comprehensive open source system for extracting metadata and content from scientific articles in born-digital form. The system is able to process documents in PDF format and extracts:
@@ -22,14 +23,17 @@ CERMINE workflow is composed of four main parts:
 
 CERMINE uses supervised and unsupervised machine-leaning techniques, such as Support Vector Machines, K-means clustering and Conditional Random Fields. Content classifiers are trained on [GROTOAP2 dataset](http://cermine.ceon.pl/grotoap2/). More information about CERMINE can be found in the [presentation](http://cermine.ceon.pl/static/docs/slides.pdf).
 
-***Parameters:*** -
+***Parameters:***
 * input: [DocumentText](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/metadataextraction/DocumentText.avdl) avro datastore location
 * output: [ExtractedDocumentMetadata](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/metadataextraction/ExtractedDocumentMetadata.avdl) avro datastore location
 
 ***Limitations:***
+
 Born-digital form of PDF documents is supported only. Large PDF documents may require more than 4g of assgined memory (set by default).
 
-***Environment:*** Java, Hadoop
+***Environment:*** 
+
+Java, Hadoop
 
 ***References:***
 * Dominika Tkaczyk, Pawel Szostek, Mateusz Fedoryszak, Piotr Jan Dendek and Lukasz Bolikowski. CERMINE: automatic extraction of structured metadata from scientific literature. In International Journal on Document Analysis and Recognition, 2015, vol. 18, no. 4, pp. 317-335, doi: 10.1007/s10032-015-0249-8.

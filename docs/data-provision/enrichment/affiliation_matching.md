@@ -34,7 +34,7 @@ The match strength of the given affiliation-organization pair is based on the ma
 
 The total match strength is calculated in such a way that each consecutive voter reduces (by its match strength) the gap of uncertainty about the correctness of the given match.
 
-***Parameters:*** -
+***Parameters:***
 
 * input
     * input_document_metadata: [ExtractedDocumentMetadata](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/metadataextraction/ExtractedDocumentMetadata.avdl) avro datastore location. Document metadata is the source of affiliations.
@@ -45,10 +45,12 @@ The total match strength is calculated in such a way that each consecutive voter
 * output
     * [MatchedOrganization](https://github.com/openaire/iis/blob/master/iis-wf/iis-wf-affmatching/src/main/resources/eu/dnetlib/iis/wf/affmatching/model/MatchedOrganization.avdl) avro datastore location with matched publications with organizations.
 
-***Limitations:*** -
+***Limitations:***
 
-***Environment:*** Java, Spark
+***Environment:*** 
 
-***References:*** -
+Java, Spark
+
+***References:***
 
 ***Authority:*** ICM &bull; ***License:*** AGPL-3.0 &bull; ***Code:*** [CoAnSys/affiliation-organization-matching](https://github.com/CeON/CoAnSys/tree/master/affiliation-organization-matching)

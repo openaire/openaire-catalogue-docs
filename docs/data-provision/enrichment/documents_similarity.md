@@ -27,7 +27,7 @@ Computation of similarity between documents is executed in the following steps.
     c. Finally, triples are normalized using product of the norm of the term weights' vectors. The normalized value is the final similarity measure with value between 0 and 1.
 5. For a given document, only the top R (say 20) links to similar documents are returned. The links that are thrown away are assumed to be uninteresting for the end-user and thus storing them would only needlessly take disk space.
 
-***Parameters:*** -
+***Parameters:***
 * input: 
     * input_document: [DocumentMetadata](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/documentssimilarity/DocumentMetadata.avdl) avro datastore location
     * parallel: sets parameter parallel for Pig actions (default=80)
@@ -38,9 +38,12 @@ Computation of similarity between documents is executed in the following steps.
     * removal_least_used: removal of the least used terms (default=20)
     * threshold_num_of_vector_elems_length: vector elements length threshold, when set to less than 2 all documents will be included in similarity matching (default=2)
 * output: [DocumentSimilarity](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/documentssimilarity/DocumentSimilarity.avdl) avro datastore location
-***Limitations:*** -
 
-***Environment:*** Pig, Java
+***Limitations:***
+
+***Environment:*** 
+
+Pig, Java
 
 ***References:***
 
