@@ -3,7 +3,6 @@ sidebar_position: 5
 ---
 
 # Classifiers
-<span className="todo">TODO</span>
 
 | Property  | Description |
 | --- | --- |
