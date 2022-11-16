@@ -10,7 +10,7 @@ sidebar_position: 4
 | Short description  | Scans the plaintexts of publications for cited concepts, currently for references to datasets and software URIs. |
 | Authority  | ATHENA Research Center, Greece  |
 | Licence  | describes the licensing and rights held on the algorithm  |
-| Algorithmic details | describes the algorithmic solution in more detail (i.e., the various concepts used in the algorithm, its iterations, etc.) |
+| Algorithmic details | The algorithm extracts citations to specific datasets and software. It extracts the citation section of a publication's fulltext and applies string matching against a target database which includes an inverted index with dataset/software titles, urls and other metadata. |
 | Parameters | describes the required algorithm parameters |
 | Limitations | Mentions any limitation of the output |
 | Code repository | the code repository of the algorithm |
