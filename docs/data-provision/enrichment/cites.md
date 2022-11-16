@@ -3,7 +3,6 @@ sidebar_position: 4
 ---
 
 # Extraction of Cited Concepts
-<span className="todo">TODO</span>
 
 | Property  | Description |
 | --- | --- |
