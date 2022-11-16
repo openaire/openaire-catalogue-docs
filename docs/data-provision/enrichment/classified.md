@@ -15,7 +15,7 @@ sidebar_position: 5
 | Limitations | N/A |
 | Code repository | https://github.com/openaire/iis/tree/master/iis-wf/iis-wf-referenceextraction/src/main/resources/eu/dnetlib/iis/wf/referenceextraction |
 | Environment | Python, madIS (https://github.com/madgik/madis), APSW (https://github.com/rogerbinns/apsw) |
-|  |
+|  References & resources | [Giannakopoulos, T., Stamatogiannakis, E., Foufoulas, I., Dimitropoulos, H., Manola, N., Ioannidis, Y. (2014). Content Visualization of Scientific Corpora Using an Extensible Relational Database Implementation. In: Bolikowski, Ł., Casarosa, V., Goodale, P., Houssos, N., Manghi, P., Schirrwagen, J. (eds) Theory and Practice of Digital Libraries -- TPDL 2013 Selected Workshops. TPDL 2013. Communications in Computer and Information Science, vol 416. Springer, Cham.](https://doi.org/10.1007/978-3-319-08425-1_10) |
 
 
 
