@@ -11,7 +11,7 @@ sidebar_position: 4
 | Authority  | ATHENA Research Center, Greece  |
 | Licence  | describes the licensing and rights held on the algorithm  |
 | Algorithmic details | The algorithm extracts citations to specific datasets and software. It extracts the citation section of a publication's fulltext and applies string matching against a target database which includes an inverted index with dataset/software titles, urls and other metadata. |
-| Parameters | describes the required algorithm parameters |
+| Parameters | Title, URL, creator names, publisher names and publication year for each concept to create the target database. Identifier and publication's fulltext to extract the cited concepts. |
 | Limitations | Mentions any limitation of the output |
 | Code repository | the code repository of the algorithm |
 | Environment | Programming Languages and software packages used |
