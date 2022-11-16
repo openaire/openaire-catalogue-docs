@@ -8,6 +8,8 @@ sidebar_position: 1
 
 [Extraction of cited concepts](cites.md)
 
+[Document Classification](classified.md)
+
 <span className="todo">TODO</span>
 
 | Property  | Description |
