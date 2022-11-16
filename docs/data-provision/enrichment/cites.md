@@ -2,11 +2,10 @@
 sidebar_position: 4
 ---
 
-# Mining algorithms
-TEST HARRY
+# Cites algorithms
 <span className="todo">TODO</span>
 
-| Short description  | briefly describes the algorithm |
+| Property  | Description |
 | --- | --- |
 | Authority  | describes the organisation and/ or the person responsible for the algorithm  |
 | Licence  | describes the licensing and rights held on the algorithm  |
