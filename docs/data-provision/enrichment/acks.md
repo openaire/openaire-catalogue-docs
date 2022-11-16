@@ -3,7 +3,6 @@ sidebar_position: 3
 ---
 
 # Extraction of Acknowledged Concepts
-<span className="todo">TODO</span>
 
 | Property  | Description |
 | --- | --- |
