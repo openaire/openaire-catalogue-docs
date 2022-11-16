@@ -131,7 +131,7 @@ Possible improvements:
 * Verify if Crossref has a property for `language`, `country`, `container.issnLinking`, `container.iss`, `container.edition`, `container.conferenceplace` and `container.conferencedate`
 * Different approach to set the `refereed` field and improve its coverage?
 
-h3. 2 Map Crossref links to projects/funders
+### Map Crossref links to projects/funders
 
 Links to funding available in Crossref are mapped as funding relationships (`result -- isProducedBy -- project`) applying the following mapping:
 
