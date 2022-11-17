@@ -1,7 +1,10 @@
+---
+sidebar_position: 1
+---
+
 # Affiliation matching
 
 ***Short description:***
-
 The goal of the affiliation matching module is to match affiliations extracted from the pdf and xml documents with organizations from the OpenAIRE organization database.
 
 ***Algorithmic details:***
@@ -45,12 +48,11 @@ The total match strength is calculated in such a way that each consecutive voter
 * output
     * [MatchedOrganization](https://github.com/openaire/iis/blob/master/iis-wf/iis-wf-affmatching/src/main/resources/eu/dnetlib/iis/wf/affmatching/model/MatchedOrganization.avdl) avro datastore location with matched publications with organizations.
 
-***Limitations:***
+***Limitations:*** -
 
 ***Environment:*** 
-
 Java, Spark
 
-***References:***
+***References:*** -
 
 ***Authority:*** ICM &bull; ***License:*** AGPL-3.0 &bull; ***Code:*** [CoAnSys/affiliation-organization-matching](https://github.com/CeON/CoAnSys/tree/master/affiliation-organization-matching)

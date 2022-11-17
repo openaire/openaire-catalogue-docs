@@ -1,7 +1,6 @@
 # Citation matching
 
 ***Short description:***
-
 During a citation matching task, bibliographic entries are linked to the documents that they reference. The citation matching module - one of the modules of the Information Inference Service (IIS) - receives as an input a list of documents accompanied by their metadata and bibliography. Among them, it discovers links described above and returns them as a list. In this document we shall evaluate if the module has been properly integrated with the whole
 system and assess the accuracy of the algorithm used. It is worth mentioning that the implemented algorithm has been described in detail in arXiv:1303.6906 [cs.IR]1. However, in the referenced paper the algorithm was tested on small datasets, but here we will focus on larger datasets, which are expected to be analysed by the system in the production environment.
 
@@ -27,17 +26,17 @@ In this step, all the potentially matching pairs obtained in the heuristic step 
 names, we have taken longest common subsequence (LCS) of two strings into consideration. This can be seen as an instance of the assignment problem with some refinements added. The overall similarity of two citation strings is obtained by applying a linear Support Vector Machine (SVM) using field similarities as features.
 
 ***Parameters:***
+
 * input: 
     * input_metadata: [ExtractedDocumentMetadataMergedWithOriginal](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/transformers/metadatamerger/ExtractedDocumentMetadataMergedWithOriginal.avdl) avro datastore location with the metadata of both publications and bibliorgaphic references to be matched
     * input_matched_citations: [Citation](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/common/citations/Citation.avdl) avro datastore location with citations which were already matched and should be excluded from fuzzy matching
 * output: [Citation](https://github.com/openaire/iis/blob/master/iis-schemas/src/main/avro/eu/dnetlib/iis/common/citations/Citation.avdl) avro datastore location with matched publications
 
-***Limitations:***
+***Limitations:*** -
 
-***Environment:*** 
-
+***Environment:***
 Java, Spark
 
-***References:***
+***References:*** -
 
 ***Authority:*** ICM &bull; ***License:*** AGPL-3.0 &bull; ***Code:*** [CoAnSys/citation-matching](https://github.com/CeON/CoAnSys/tree/master/citation-matching)
