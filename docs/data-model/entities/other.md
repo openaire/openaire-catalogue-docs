@@ -646,7 +646,12 @@ A measure computed for this instance (e.g. those provided by [BIP! Finder](https
 ### key
 _Type: String &bull; Cardinality: ONE_
 
-The specified measure. Currently supported one of: `{ influence, influence_alt, popularity, popularity_alt, impulse, cc }` (see [the dedicated page](../../data-provision/enrichment/impact-scores) for more details).
+The specified measure. Currently supported one of: 
+* `influence` (see [PageRank](/data-provision/enrichment/impact-scores#pagerank-pr))
+* `influence_alt` (see [Citation Count](/data-provision/enrichment/impact-scores#citation-count-cc))
+* `popularity` (see [AttRank](/data-provision/enrichment/impact-scores#attrank))
+* `popularity_alt` (see [RAM](/data-provision/enrichment/impact-scores#ram))
+* `impulse` (see ["Incubation" Citation Count](/data-provision/enrichment/impact-scores#incubation-citation-count-icc))
 
 ```json
 "key": "influence"
