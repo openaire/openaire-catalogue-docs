@@ -37,6 +37,8 @@ The comparison goes through different stages:
     <img loading="lazy" alt="Publications Decision Tree" src="/img/docs/decisiontree-publication.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
+[//]: # (Link to the image: https://docs.google.com/drawings/d/19SIilTp1vukw6STMZuPMdc0pv0ODYCiOxP7OU3iPWK8/edit?usp=sharing)
+
 #### Software
 For each pair of software in a cluster the following strategy (depicted in the figure below) is applied.
 The comparison goes through different stages:
@@ -48,6 +50,8 @@ The comparison goes through different stages:
     <img loading="lazy" alt="Software Decision Tree" src="/img/docs/decisiontree-software.png" width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
+[//]: # (Link to the image: https://docs.google.com/drawings/d/19gd1-GTOEEo6awMObGRkYFhpAlO_38mfbDFFX0HAkuo/edit?usp=sharing)
+
 #### Datasets and Other types of research products
 For each pair of datasets or other types of research products in a cluster the strategy depicted in the figure below is applied.
 The decision tree is almost identical to the publication decision tree, with the only exception of the *instance type check* stage. Since such type of record does not have a relatable instance type, the check is not performed and the decision tree node is skipped.
@@ -55,6 +59,8 @@ The decision tree is almost identical to the publication decision tree, with the
 <p align="center">
     <img loading="lazy" alt="Dataset and Other types of research products Decision Tree" src="/img/docs/decisiontree-dataset-orp.png" width="90%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1uBa7Bw2KwBRDUYIfyRr_Keol7UOeyvMNN7MPXYLg4qw/edit?usp=sharing)
 
 ### Duplicates grouping (transitive closure)
 

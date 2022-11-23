@@ -29,7 +29,7 @@ const sidebars = {
           label: "Entities",
           link: {
             type: 'generated-index',
-            description: 'The main entities of the OpenAIRE Research Graph are listed below.'
+            description: 'The main entities of the OpenAIRE Graph are listed below.'
           },
           items: [
             { type: 'doc', id: 'data-model/entities/result' },
@@ -84,7 +84,25 @@ const sidebars = {
           label: "Enrichment",
           link: {type: 'doc', id: 'data-provision/enrichment/enrichment'},
           items: [
-            { type: 'doc', id: 'data-provision/enrichment/mining' },
+            {
+              type: 'category', 
+              label: "Mining algorithms",
+              link: {
+                type: 'generated-index',
+                description: 'The Text and Data Mining (TDM) algorithms used for enriching the OpenAIRE Graph are grouped in the following main categories:'
+              },
+              items: [
+                { type: 'doc', id: 'data-provision/enrichment/affiliation_matching' },
+                { type: 'doc', id: 'data-provision/enrichment/citation_matching' },
+                { type: 'doc', id: 'data-provision/enrichment/classifies' },
+                { type: 'doc', id: 'data-provision/enrichment/documents_similarity' },
+                { type: 'doc', id: 'data-provision/enrichment/acks' },
+
+                { type: 'doc', id: 'data-provision/enrichment/cites' },
+
+                { type: 'doc', id: 'data-provision/enrichment/metadata_extraction' },
+              ]
+            },
             { type: 'doc', id: 'data-provision/enrichment/impact-scores' },
           ]
         },
