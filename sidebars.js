@@ -51,9 +51,14 @@ const sidebars = {
       href: "https://graph.openaire.eu/develop/overview.html"
     },
     {
-      type: 'doc', 
-      id: 'download'
-    },
+          type: 'category',
+	  label: 'Bulk downloads',
+          link: {type: 'doc', id: 'downloads/downloads'},
+          items: [
+            { type: 'doc', id: 'downloads/starter-kit' },
+            { type: 'doc', id: 'downloads/subgraphs' },
+          ]
+        },
     {
       type: 'category', 
       label: "Data provision",
