@@ -81,24 +81,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        // title: 'OpenAIRE Documentation',
+        title: 'documentation',
         logo: {
           alt: 'OpenAIRE',
           src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Research graph v5.0',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Research graph v5.0',
+          // },
           // 
           // documentation version in the navbar
-          // {
-          //   type: 'docsVersionDropdown', 
-          //   position: 'right'
-          // },
+          {
+            type: 'docsVersionDropdown', 
+            position: 'right'
+          },
           // 
           // link to blog, the blog must be enabled first
           // {to: '/blog', label: 'Blog', position: 'left'},
