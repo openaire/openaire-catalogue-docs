@@ -9,13 +9,13 @@ OpenAIRE materializes an open, participatory research graph (the OpenAIRE Resear
 ## What does OpenAIRE collect?
 
 OpenAIRE aggregates metadata records describing objects of the research life-cycle from content providers 
-compliant to the [OpenAIRE guidelines](https://guidelines.openaire.eu/) base on the [OpenAIRE Content Acquisition Policies](https://doi.org/10.5281/zenodo.1446408) 
-from 2018. And from entity registries (i.e. data sources offering authoritative lists of entities, 
+compliant to the [OpenAIRE guidelines](https://guidelines.openaire.eu/) based on the [OpenAIRE Content Acquisition Policies](https://doi.org/10.5281/zenodo.1446408) 
+from 2018 onward, and from entity registries (i.e. data sources offering authoritative lists of entities, 
 like [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/), [re3data](https://www.re3data.org/), 
 [DOAJ](https://doaj.org/), [DRIS](https://dspacecris.eurocris.org/cris/explore/dris) from [euroCRIS](https://www.openaire.eu/openaire-and-eurocris-sign-a-memorandum-of-understanding), and 
 various funder databases).
 
-After collection, metadata are transformed according to the OpenAIRE internal metadata model, which is used to generate the final OpenAIRE Research Graph, accessible from the [OpenAIRE EXPLORE portal](https://explore.openaire.eu) and the [APIs](https://graph.openaire.eu/develop/).
+After collection, metadata are transformed according to the OpenAIRE internal metadata model, which is used to generate the final version of OpenAIRE Research Graph.
 
 The transformation process includes the application of cleaning functions whose goal is to ensure that values are harmonised according to a common format (e.g. dates as YYYY-MM-dd) and, whenever applicable, to a common controlled vocabulary. The controlled vocabularies used for cleansing are accessible at [api.openaire.eu/vocabularies](https://api.openaire.eu/vocabularies/). Each vocabulary features a set of controlled terms, each with one code, one label, and a set of synonyms. If a synonym is found as field value, the value is updated with the corresponding term. 
 Also, the OpenAIRE Research Graph is extended with other relevant scholarly communication sources that do not follow the OpenAIRE Guidelines and/or are too large to be integrated via the “normal” aggregation mechanism: DOIBoost (which merges Crossref, ORCID, Microsoft Academic Graph, and Unpaywall).
