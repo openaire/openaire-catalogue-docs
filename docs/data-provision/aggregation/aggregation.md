@@ -60,6 +60,6 @@ For additional details about the aggregation workflows, please refer to [2].
 
 ## References
 
-[1] Manghi P. et al. (2014) "The D-NET software toolkit: A framework for the realization, maintenance, and operation of aggregative infrastructures", Program, Vol. 48 Issue: 4, pp.322-354, [10.1108/PROG-08-2013-0045](https://doi.org/10.1108/PROG-08-2013-0045)
+[1] Manghi, P., Artini, M., Atzori, C., Bardi, A., Mannocci, A., La Bruzzo, S., Candela, L., Castelli, D. and Pagano, P. (2014), “The D-NET software toolkit: A framework for the realization, maintenance, and operation of aggregative infrastructures”, Program: electronic library and information systems, Vol. 48 No. 4, pp. 322-354. [doi:10.1108/prog-08-2013-0045](http://doi.org/10.1108/prog-08-2013-0045)
 
-[2] Atzori, Claudio, Bardi, Alessia, Manghi, Paolo, & Mannocci, Andrea. (2017). The OpenAIRE workflows for data management. Zenodo. [10.5281/zenodo.996006](http://doi.org/10.5281/zenodo.996006)
+[2] Atzori, C., Bardi, A., Manghi, P., & Mannocci, A. (2017, January). "The OpenAIRE workflows for data management". In Italian Research Conference on Digital Libraries (pp. 95-107). Springer, Cham. [doi:10.1007/978-3-319-68130-6_8](https://doi.org/10.1007/978-3-319-68130-6_8)
