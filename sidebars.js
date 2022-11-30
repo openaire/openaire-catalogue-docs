@@ -112,10 +112,6 @@ const sidebars = {
       ]
     },
     {
-      type: 'doc', 
-      id: 'services'
-    },
-    {
       type: "link",
       label: "Learning center",
       href: "https://openplato.eu/"
