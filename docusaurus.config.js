@@ -65,7 +65,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
 	sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'monthly',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
