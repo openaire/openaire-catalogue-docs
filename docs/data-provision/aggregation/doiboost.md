@@ -68,7 +68,7 @@ Records in Crossref are ruled out according to the following criteria
 
 Records with `type=dataset` are mapped into OpenAIRE results of type dataset. All others are mapped as OpenAIRE results of type publication.
 
-### Mapping Crossref properties into the OpenAIRE Research Graph
+### Mapping Crossref properties into the OpenAIRE Graph
 
 Properties in OpenAIRE results are set based on the logic described in the following table:
 
@@ -131,7 +131,7 @@ Possible improvements:
 * Verify if Crossref has a property for `language`, `country`, `container.issnLinking`, `container.iss`, `container.edition`, `container.conferenceplace` and `container.conferencedate`
 * Different approach to set the `refereed` field and improve its coverage?
 
-h3. 2 Map Crossref links to projects/funders
+### Map Crossref links to projects/funders
 
 Links to funding available in Crossref are mapped as funding relationships (`result -- isProducedBy -- project`) applying the following mapping:
 
@@ -222,7 +222,7 @@ Miriam will modify the process to ensure that:
 * Only papers with DOI are considered
 * Since for the same DOI we have multiple version of item with different MAG PaperId, we only take one per DOI (the last one we process). We call this dataset `Papers_distinct`
 
-When mapping MAG records to the OpenAIRE Research Graph, we consider the following MAG tables:
+When mapping MAG records to the OpenAIRE Graph, we consider the following MAG tables:
 * `PaperAbstractsInvertedIndex`: for the paper abstracts
 * `Authors`: for the authors. The MAG data is pre-processed by grouping authors by PaperId
 * `Affiliations` and `PaperAuthorAffiliations`: to generate links between publications and organisations
