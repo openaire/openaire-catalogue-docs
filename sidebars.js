@@ -87,11 +87,14 @@ const sidebars = {
         {
           type: 'category', 
           label: "Enrichment",
-          link: {type: 'doc', id: 'data-provision/enrichment/enrichment'},
+          link: {
+            type: 'generated-index',
+            description: 'The OpenAIRE Graph is enriched using the different processes that we describe in this section.'
+          },
           items: [
             {
               type: 'category', 
-              label: "Mining algorithms",
+              label: "Mining",
               link: {
                 type: 'generated-index',
                 description: 'The Text and Data Mining (TDM) algorithms used for enriching the OpenAIRE Graph are grouped in the following main categories:'
@@ -108,17 +111,14 @@ const sidebars = {
                 { type: 'doc', id: 'data-provision/enrichment/metadata_extraction' },
               ]
             },
+            { type: 'doc', id: 'data-provision/enrichment/bulk-tagging' },
+            { type: 'doc', id: 'data-provision/enrichment/propagation' },
             { type: 'doc', id: 'data-provision/enrichment/impact-scores' },
           ]
         },
         { type: 'doc', id: 'data-provision/post-cleaning' },
         { type: 'doc', id: 'data-provision/indexing' },
-        { type: 'doc', id: 'data-provision/stats' },
       ]
-    },
-    {
-      type: 'doc', 
-      id: 'services'
     },
     {
       type: "link",
