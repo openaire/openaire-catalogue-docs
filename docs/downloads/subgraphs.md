@@ -16,7 +16,8 @@ In the following, you can find the list of alternative Dumps currently available
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
     It contains metadata records of publications, research data, software and projects on the topic of Corona Virus and COVID-19. 
 This dump is part of the activities of OpenAIRE to support the fight against COVID-19 together with the OpenAIRE COVID-19 Gateway. 
-The dump consists of a tar archive containing gzip files with one json per line.
+The dump consists of a tar archive containing gzip files with one json per line. The model of this dump differs from the one of the whole graph. 
+The differences are shown in the [Alternative Model Dump](./alternativedump)
 
 ## The dump of funded products
 
