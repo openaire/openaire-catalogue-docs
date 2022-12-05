@@ -28,13 +28,14 @@ The differences are shown in the [Alternative Model Dump](./alternativedump)
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 It contains metadata records of research products (research literature, data, software, other types of research products) with funding 
 information available in the OpenAIRE Graph. Records are grouped by funder in a dedicated archive file. Each tar archive contains 
-gzip files, each with one json record per line.
+gzip files, each with one json record per line. The model of this dump differs from the one of the whole graph.
+ The differences are shown in the [Alternative Model Dump](./alternativedump)
 
 ## The dump of delta projects
 
  Dataset: https://doi.org/10.5281/zenodo.7119633
 
- Schema: https://doi.org/10.5281/zenodo.5799514
+ Schema: https://doi.org/10.5281/zenodo.4238938
   
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
   It contains the metadata records of projects collected by OpenAIRE in a given time frame. Usually one deposition of collected projects is done for each release of the OpenAIRE Graph
@@ -48,7 +49,9 @@ gzip files, each with one json record per line.
 
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 The dataset contains one file per community/initiative/infrastructure collaborating with OpenAIRE. Check out also their community gateways on 
- CONNECT. Each file is a tar archive containing gzip files with one json per line. The only communities/research initiative/infrastructure we dump are those visible to everyone. 
+ CONNECT. Each file is a tar archive containing gzip files with one json per line. The only communities/research initiative/infrastructure we dump are those visible to everyone.
+ The model of this dump differs from the one of the whole graph.
+ The differences are shown in the [Alternative Model Dump](./alternativedump)
 
 ## The dump of ScholeXplorer
 
