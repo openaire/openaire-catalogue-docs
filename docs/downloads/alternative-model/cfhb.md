@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # CfHbKeyValue
 
-Information about the sources from which the record has been collected
+Information about the sources from which the record has been collected.
 
 
 	@JsonSchema(description = "the OpenAIRE identifier of the data source")
@@ -22,7 +22,7 @@ the OpenAIRE identifier of the data source
 ### value
 _Type: String &bull; Cardinality: ONE_
 
-The name of the data source
+The name of the data source.
 
 ```json 
 "value":"Crossref"

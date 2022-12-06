@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Context
 
-Information related to research initiative/community (RI/RC) related to the result
+Information related to research initiative/community (RI/RC) related to the result.
 
 ### code 
 _Type: String &bull; Cardinality: ONE_
@@ -22,7 +22,7 @@ Code identifying the RI/RC.
 ### label
 _Type: String &bull; Cardinality: ONE_
 
-Label of the RI/RC 
+Label of the RI/RC.
 
 ```json
 "label":"SDSN - Greece"

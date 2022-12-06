@@ -17,7 +17,7 @@ It is a subclass of [Result](../../../data-model/entities/result) extended with 
 _Type: [Project](project.md)  &bull; Cardinality: MANY_
 
 
-List of projects (i.e. grants) that (co-)funded the production of the research results
+List of projects (i.e. grants) that (co-)funded the production of the research results.
 
 
 ```json
@@ -54,7 +54,7 @@ List of projects (i.e. grants) that (co-)funded the production of the research r
 _Type: [Context](./context) &bull; Cardinality: MANY_
 
 
-Reference to relevant research infrastructure, initiative or communities (RI/RC) among those collaborating with OpenAIRE. Please see https://connect.openaire.eu" that are publicly visible
+Reference to relevant research infrastructure, initiative or communities (RI/RC) among those collaborating with OpenAIRE. Please see https://connect.openaire.eu that are publicly visible.
 
 
 ```json
@@ -83,7 +83,7 @@ Reference to relevant research infrastructure, initiative or communities (RI/RC)
 _Type: [CfHbKeyValue](./cfhb) &bull; Cardinality: MANY_
 
 
-Information about the sources from which the record has been collected
+Information about the sources from which the record has been collected.
 
 
 ```json
@@ -139,5 +139,3 @@ Information about the source from which the instance can be viewed or downloaded
 
 
 ```
-
-

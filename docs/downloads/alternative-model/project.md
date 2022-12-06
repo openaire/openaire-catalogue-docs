@@ -9,7 +9,7 @@ sidebar_position: 1
 # Project
 
 
-The information about the projects related to the result
+The information about the projects related to the result.
 
 
 ### id
@@ -77,7 +77,7 @@ Project's title.
 _Type [Funder](funder.md)  &bull; Cardinality: ONE_
 
 
-Information about the funder funding the project
+Information about the funder funding the project.
 
 
 ```json
@@ -99,7 +99,7 @@ Information about the funder funding the project
 _Type [Provenance](../../data-model/entities/other#provenance-2)  &bull; Cardinality: ONE_
 
 
-The reason why the project is associated to the result
+The reason why the project is associated to the result.
 
 
 ```json
@@ -119,7 +119,7 @@ The reason why the project is associated to the result
 _Type [Validated](validated.md)  &bull; Cardinality: ONE_
 
 
-Specifies it the association between the project and the result was validated
+Specifies it the association between the project and the result was validated.
 
 
 ```json

@@ -7,7 +7,7 @@ sidebar_position: 1
 # Validated
 
 
-Information about the validtion of the association between the result and the funding information
+Information about the validtion of the association between the result and the funding information.
 
 
 ### validationDate
@@ -15,7 +15,7 @@ Information about the validtion of the association between the result and the fu
 _Type: String &bull; Cardinality: ONE_
 
 
-When OpenAIRE collected the association between the funding and the result from an authoritative source (i.e. Sygma)
+When OpenAIRE collected the association between the funding and the result from an authoritative source (i.e. Sygma).
 
 
 ```json
@@ -30,7 +30,7 @@ When OpenAIRE collected the association between the funding and the result from 
 _Type: Boolean &bull; Cardinality: ONE_
 
 
-Specifies if the validation comes from the funder
+Specifies if the validation comes from the funder.
 
 
 ```json

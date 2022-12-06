@@ -51,14 +51,19 @@ const sidebars = {
       href: "https://graph.openaire.eu/develop/overview.html"
     },
     {
-          type: 'category',
-	  label: 'Bulk downloads',
-          link: {type: 'doc', id: 'downloads/downloads'},
-          items: [
-            { type: 'doc', id: 'downloads/starter-kit' },
-            { type: 'doc', id: 'downloads/subgraphs' },
-          ]
-        },
+      type: 'category', 
+      label: "Downloads",
+      link: {
+        type: 'generated-index',
+        description: 'All resources, available for download, are listed below.'
+      },
+      items: [
+        { type: 'doc', id: 'downloads/full-graph'},
+        { type: 'doc', id: 'downloads/beginners-kit' },
+        { type: 'doc', id: 'downloads/subgraphs' },
+        { type: 'doc', id: 'downloads/related-datasets' },
+      ]
+    }, 
     {
       type: 'category', 
       label: "Data provision",

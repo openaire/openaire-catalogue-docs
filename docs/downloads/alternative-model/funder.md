@@ -7,7 +7,7 @@ sidebar_position: 1
 # Funder
 
 
-Information about the funder funding the project
+Information about the funder funding the project.
 
 
 ### fundingStream
