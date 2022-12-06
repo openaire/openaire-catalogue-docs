@@ -8,7 +8,6 @@ In order to facilitate users, different dumps are available under the Zenodo com
 This page lists all alternative dumps currently available.
 
 
-
 ## The OpenAIRE COVID-19 dump
 
  Dataset: https://doi.org/10.5281/zenodo.6638745
@@ -18,7 +17,7 @@ This page lists all alternative dumps currently available.
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
     It contains metadata records of publications, research data, software and projects on the topic of Corona Virus and COVID-19. 
 This dump is part of the activities of OpenAIRE to support the fight against COVID-19 together with the OpenAIRE COVID-19 Gateway. 
-The dump consists of a tar archive containing gzip files with one json per line. Please refer [here](#alternative-sub-graph-data-model) for the data model of this dump.
+The dump consists of a tar archive containing gzip files with one json per line. Please refer [here](#alternative-sub-graph-data-model) for details on the data model of this dump.
 
 ## The dump of funded products
 
@@ -30,7 +29,7 @@ The dump consists of a tar archive containing gzip files with one json per line.
 It contains metadata records of research products (research literature, data, software, other types of research products) with funding 
 information available in the OpenAIRE Graph. Records are grouped by funder in a dedicated archive file. Each tar archive contains 
 gzip files, each with one json record per line. The model of this dump differs from the one of the whole graph.
-Please refer [here](#alternative-sub-graph-data-model) for the data model of this dump.
+Please refer [here](#alternative-sub-graph-data-model) for details on the data model of this dump.
 
 ## The dump of delta projects
 
@@ -52,7 +51,7 @@ Please refer [here](#alternative-sub-graph-data-model) for the data model of thi
 The dataset contains one file per community/initiative/infrastructure collaborating with OpenAIRE. Check out also their community gateways on 
  CONNECT. Each file is a tar archive containing gzip files with one json per line. The only communities/research initiative/infrastructure we dump are those visible to everyone.
  The model of this dump differs from the one of the whole graph.
-Please refer [here](#alternative-sub-graph-data-model) for the data model of this dump.
+Please refer [here](#alternative-sub-graph-data-model) for details on the data model of this dump.
 
  --- 
 
