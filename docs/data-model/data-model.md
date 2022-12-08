@@ -2,7 +2,7 @@
 
 The OpenAIRE Graph comprises several types of [entities](../category/entities) and [relationships](./relationships) among them.
 
-The latest version of the JSON schema can be found on [Bulk downloads](../download).
+The latest version of the JSON schema can be found on the [Downloads](../downloads/full-graph) section.
 
 <p align="center">
     <img loading="lazy" alt="Data model" src="/img/docs/data-model.png" width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
