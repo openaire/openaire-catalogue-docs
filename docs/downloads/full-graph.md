@@ -15,9 +15,21 @@ This dataset is licensed under a Creative Commons Attribution 4.0 International 
 It is composed of several files so that you can download the parts you are interested into. The files are named after the entity they store (i.e. publication, dataset). Each file is at most 10GB and it is 
 a tar archive containing gz files, each with one json per line.
 
+## How to acknowledge this work
 
-:::note Tip!
+Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
 
-For a visual and interactive overview of the JSON schema, we suggest to use a JSON schema viewer like [jsonschemaviewer](https://navneethg.github.io/jsonschemaviewer/) (you just need to copy the schema and then you can easily navigate through the nodes).
+:::note How to cite
 
+Manghi P., Atzori C., Bardi A., Baglioni M., Schirrwagen J., Dimitropoulos H., La Bruzzo S., Foufoulas I., Mannocci A., Horst M., Czerniak A., Kiatropoulou K., Kokogiannaki A., De Bonis M., Artini M., Ottonello E., Lempesis A., Ioannidis A., Manola N., Principe P. (2022). "OpenAIRE Research Graph Dump", *Dataset*, Zenodo. [doi:10.5281/zenodo.3516917](https://doi.org/10.5281/zenodo.3516917) ([BibTex](/bibtex/OpenAIRE_Research_Graph_dump.bib))
 :::
+
+Please also consider citing [other relevant research products](/publications#relevant-research-products) that can be of interest.
+
+Also consider adding one of the following badges to your service with the appropriate link to [our website](https://graph.openaire.eu): 
+
+<p align="left" >
+    <a target="_blank" href={require('../assets/openaire-red-badge.png').default} download>
+    <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-red-badge.png').default} width="50%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" title="Click to download"/>
+    </a>
+</p>
