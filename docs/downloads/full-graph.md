@@ -30,19 +30,19 @@ Also consider adding one of the following badges to your service with the approp
 
 
 <div className="row">
-    <div className="col col-md-4 left-badge">
+    <div className="col col--4 left-badge">
         <a target="_blank" href={require('../assets/openaire-badge-1.zip').default} download>
-            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-1.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" title="Click to download"/>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-1.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
         </a>  
     </div>
-    <div className="col col-md-4 mid-badge">
+    <div className="col col--4 mid-badge">
         <a target="_blank" href={require('../assets/openaire-badge-2.zip').default} download>
-            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-2.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link  dark-badge" title="Click to download"/>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-2.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link  dark-badge" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
         </a>  
     </div>
-    <div className="col col-md-4 right-badge">
+    <div className="col col--4 right-badge">
         <a target="_blank" href={require('../assets/openaire-badge-3.zip').default} download>
-            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-3.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" title="Click to download"/>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-3.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
         </a>
     </div>
 </div>
