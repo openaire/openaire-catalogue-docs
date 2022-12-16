@@ -26,10 +26,23 @@ Manghi P., Atzori C., Bardi A., Baglioni M., Schirrwagen J., Dimitropoulos H., L
 
 Please also consider citing [other relevant research products](/publications#relevant-research-products) that can be of interest.
 
-Also consider adding one of the following badges to your service with the appropriate link to [our website](https://graph.openaire.eu): 
+Also consider adding one of the following badges to your service with the appropriate link to [our website](https://graph.openaire.eu); click on the badges below to download the respective badge image files.
 
-<p align="left" >
-    <a target="_blank" href={require('../assets/openaire-red-badge.png').default} download>
-    <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-red-badge.png').default} width="50%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" title="Click to download"/>
-    </a>
-</p>
+
+<div className="row">
+    <div className="col col--4 left-badge">
+        <a target="_blank" href={require('../assets/openaire-badge-1.zip').default} download>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-1.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
+        </a>  
+    </div>
+    <div className="col col--4 mid-badge">
+        <a target="_blank" href={require('../assets/openaire-badge-2.zip').default} download>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-2.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link  dark-badge" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
+        </a>  
+    </div>
+    <div className="col col--4 right-badge">
+        <a target="_blank" href={require('../assets/openaire-badge-3.zip').default} download>
+            <img loading="lazy" alt="Openaire badge" src={require('../assets/openaire-badge-3.png').default} className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module pagination-nav__link" style={{ paddingTop: '1.2em', paddingBottom: '1.2em'}} title="Click to download"/>
+        </a>
+    </div>
+</div>

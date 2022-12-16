@@ -40,3 +40,24 @@
 .todo {
   background-color: yellow;
 }
+
+@media (min-width: 996px) {
+
+  .left-badge {
+    padding-right: 5px;
+  }
+
+  .mid-badge {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+  .right-badge {
+    padding-left: 0;
+  }
+}
+
+.dark-badge {
+  background-color: #c6c6c6;
+}
+
