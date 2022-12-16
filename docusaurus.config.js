@@ -5,13 +5,23 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const math = require('remark-math');
 const katex = require('rehype-katex');
+const dotenv = require('dotenv');
+
+// load env variables (see .env file)
+const env = dotenv.config();
+if (env.error) {
+  throw env.error;
+}
+
+console.info("ENV VARIABLES:");
+console.info(env.parsed);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'OpenAIRE Research Graph Documentation',
   tagline: 'Open Access Infrastructure for Research in Europe',
-  url: 'http://snf-23385.ok-kno.grnetcloud.net',
-  baseUrl: '/', // serve the website at route
+  url: process.env.URL,
+  baseUrl: process.env.BASE_URL, // serve the website at route
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
