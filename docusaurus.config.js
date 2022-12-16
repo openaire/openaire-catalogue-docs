@@ -5,11 +5,10 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const math = require('remark-math');
 const katex = require('rehype-katex');
-const { filterItems } = require('./sidebar-utils');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'OpenAIRE Documentation',
+  title: 'OpenAIRE Research Graph Documentation',
   tagline: 'Open Access Infrastructure for Research in Europe',
   url: 'http://snf-23385.ok-kno.grnetcloud.net',
   baseUrl: '/', // serve the website at route
@@ -37,18 +36,7 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', // serve the docs at the site's route
-
           sidebarPath: require.resolve('./sidebars.js'),
-          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args); 
-
-            const itemsToFilterOut = [ 
-              'data-model/entities/entity-identifiers', 
-              'data-model/entities/other'
-            ];
-
-            return filterItems(sidebarItems, itemsToFilterOut);
-          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -64,7 +52,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-	sitemap: {
+	      sitemap: {
           changefreq: 'monthly',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
@@ -105,14 +93,14 @@ const config = {
             type: 'docsVersionDropdown', 
             position: 'right'
           },
-          // 
+          
           // link to blog, the blog must be enabled first
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // 
+          
           // link to github repo
           // {
           //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
+          //   label: 'Issues',
           //   position: 'right',
           // },
         ],
@@ -178,6 +166,11 @@ const config = {
           
         ],
         copyright: `Copyright © ${new Date().getFullYear()} OpenAIRE`,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       prism: {
         theme: lightCodeTheme,
