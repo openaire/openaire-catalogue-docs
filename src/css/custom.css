@@ -61,3 +61,10 @@
   background-color: #c6c6c6;
 }
 
+.footer {
+  background-color: var(--ifm-navbar-background-color);
+  padding-bottom: 2em;
+  padding-top: 1em;
+  height: var(--ifm-navbar-height);
+}
+

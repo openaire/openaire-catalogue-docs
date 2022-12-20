@@ -116,65 +116,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Research Graph',
-                to: '/',
-              },
-            ],
-          },
-          {
-            title: 'Dashboards',
-            items: [
-              {
-                label: 'Explore',
-                href: 'https://explore.openaire.eu/',
-              },
-              {
-                label: 'Provide',
-                href: 'https://provide.openaire.eu/',
-              },
-              {
-                label: 'Connect',
-                href: 'https://connect.openaire.eu/',
-              },
-              {
-                label: 'Monitor',
-                href: 'https://monitor.openaire.eu/',
-              },
-              {
-                label: 'Develop',
-                href: 'https://graph.openaire.eu/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              { 
-                label: 'Facebook',
-                href: 'http://www.facebook.com/groups/openaire/'
-              },
-              {
-                label: 'Linkedin',
-                href: 'https://www.linkedin.com/company/openaire-eu/',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/OpenAIRE_eu',
-              },
-              {
-                label: 'Youtube',
-                href: 'https://www.youtube.com/channel/UChFYqizc-S6asNjQSoWuwjw',
-              },
-            ],
-          },
-          
-        ],
+        style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} OpenAIRE`,
       },
       colorMode: {
