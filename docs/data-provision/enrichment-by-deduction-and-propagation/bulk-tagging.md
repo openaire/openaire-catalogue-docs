@@ -1,5 +1,4 @@
-
-# Bulk Tagging/Deduction
+# Deduction
 
 The Deduction process (also known as “bulk tagging”) enriches each record with new information that can be derived from the existing property values.
 

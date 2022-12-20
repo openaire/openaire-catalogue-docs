@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Impact indicators
 
 This page summarises all calculated impact indicators, which are included into the [measure](/data-model/entities/other#measure) property.

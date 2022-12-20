@@ -66,7 +66,7 @@ const sidebars = {
     }, 
     {
       type: 'category', 
-      label: "Data provision",
+      label: "Graph production workflow",
       link: {type: 'doc', id: 'data-provision/data-provision'},
       items: [
         {
@@ -74,12 +74,46 @@ const sidebars = {
           label: "Aggregation",
           link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
           items: [
-            { type: 'doc', id: 'data-provision/aggregation/doiboost', label: 'DOIBoost' },
-            { type: 'doc', id: 'data-provision/aggregation/pubmed' },
-            { type: 'doc', id: 'data-provision/aggregation/datacite' },
-            { type: 'doc', id: 'data-provision/aggregation/ebi', label: 'EMBL-EBI' },
+            {
+              type: 'doc',
+              label: "OpenAIRE compatible sources",
+              id: 'data-provision/aggregation/compatible-sources',
+            },
+            {
+            type: 'category',
+              label: "Non-compatible sources",
+              link: { type: 'generated-index' },
+              items: [
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/doiboost', label: 'DOIBoost' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/pubmed' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/datacite' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/ebi', label: 'EMBL-EBI' },
+              ]
+            }
           ]
         },
+        {
+          type: 'doc', 
+          id: 'data-provision/merge-by-id'
+        },
+        {
+          type: 'category', 
+          label: "Enrichment by mining",
+          link: {
+            type: 'generated-index',
+            description: 'The OpenAIRE Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
+          },
+          items: [
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/affiliation_matching' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/citation_matching' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/classifies' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/documents_similarity' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/acks' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/cites' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/metadata_extraction' },
+            ]
+        },
+        { type: 'doc', id: 'data-provision/cleaning' },
         {
           type: 'category', 
           label: "Deduplication",
@@ -90,38 +124,32 @@ const sidebars = {
           ]
         }, 
         {
-          type: 'category', 
-          label: "Enrichment",
-          link: {
-            type: 'generated-index',
-            description: 'The OpenAIRE Graph is enriched using the different processes that we describe in this section.'
+          type: 'category',
+          label: "Enrichment by deduplication & propagation",
+          link: { 
+            type: 'generated-index' ,
+            description: 'The OpenAIRE Graph is further enriched by the deduction and propagation processes descibed in this section.'
+
           },
           items: [
-            {
-              type: 'category', 
-              label: "Mining",
-              link: {
-                type: 'generated-index',
-                description: 'The Text and Data Mining (TDM) algorithms used for enriching the OpenAIRE Graph are grouped in the following main categories:'
-              },
-              items: [
-                { type: 'doc', id: 'data-provision/enrichment/affiliation_matching' },
-                { type: 'doc', id: 'data-provision/enrichment/citation_matching' },
-                { type: 'doc', id: 'data-provision/enrichment/classifies' },
-                { type: 'doc', id: 'data-provision/enrichment/documents_similarity' },
-                { type: 'doc', id: 'data-provision/enrichment/acks' },
-
-                { type: 'doc', id: 'data-provision/enrichment/cites' },
-
-                { type: 'doc', id: 'data-provision/enrichment/metadata_extraction' },
-              ]
-            },
-            { type: 'doc', id: 'data-provision/enrichment/bulk-tagging' },
-            { type: 'doc', id: 'data-provision/enrichment/propagation' },
-            { type: 'doc', id: 'data-provision/enrichment/impact-scores' },
+            { type: 'doc', id: 'data-provision/enrichment-by-deduction-and-propagation/bulk-tagging' },
+            { type: 'doc', id: 'data-provision/enrichment-by-deduction-and-propagation/propagation' },
           ]
         },
-        { type: 'doc', id: 'data-provision/post-cleaning' },
+        {
+          type: 'category',
+          label: "Indicators ingestion",
+          link: { 
+            type: 'generated-index' ,
+            description: 'In this step, the following types of indicators are ingested in the OpenAIRE Graph.'
+
+          },
+          items: [
+            { type: 'doc', id: 'data-provision/indicators-ingestion/impact-scores' },
+            { type: 'doc', id: 'data-provision/indicators-ingestion/usage-counts' },
+          ]
+        },
+        { type: 'doc', id: 'data-provision/finalisation' },
         { type: 'doc', id: 'data-provision/indexing' },
       ]
     },

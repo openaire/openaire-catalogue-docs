@@ -1,8 +1,4 @@
----
-sidebar_position: 4
----
-
-# Post cleaning
+# Finalisation
 
 At the very end of the processing pipeline, a step is dedicated to perform cleaning operations aimed at improving the overall quality of the data. 
 The output of this final cleansing step is the final version of the OpenAIRE Graph.
@@ -47,7 +43,7 @@ Bibliographic records that do not meet minimal requirements for being part of th
 Currently, the only criteria applied horizontally to the entire graph aims at excluding scientific results whose title is not meaningful for citation purposes.
 Then, different criteria are applied in the pre-processing of specific sub-collections:
 
-* [Crossref filtering](/data-provision/aggregation/doiboost#crossref-filtering)
+* [Crossref filtering](/data-provision/aggregation/non-compatible-sources/doiboost#crossref-filtering)
 
 ## Country cleaning
 
