@@ -29,7 +29,7 @@ Label of the RI/RC.
 ```
 	
 ### provenance 
-_Type: [Provenance](../../../data-model/entities/other#provenance-2)  &bull; Cardinality: MANY_
+_Type: [Provenance](/data-model/entities/other#provenance-2)  &bull; Cardinality: MANY_
 
 Why this result is associated to the RI/RC.
 
