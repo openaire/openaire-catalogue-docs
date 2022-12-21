@@ -4,8 +4,7 @@ sidebar_position: 3
 
 # Extraction of acknowledged concepts
 
-***Short description:***
-Scans the plaintexts of publications for acknowledged concepts, including grant identifiers (projects) of funders, accession numbers of bioetities, EPO patent mentions, as well as custom concepts that can link research objects to specific research communities and initiatives in OpenAIRE.
+***Short description:*** Scans the plaintexts of publications for acknowledged concepts, including grant identifiers (projects) of funders, accession numbers of bioetities, EPO patent mentions, as well as custom concepts that can link research objects to specific research communities and initiatives in OpenAIRE.
 
 ***Algorithmic details:***
 The algorithm processes the publication's fulltext and extracts references to acknowledged concepts. It applies pattern matching and string join between the fulltext and a target database which contains the title, the acronym and the identifier of the searched concept.

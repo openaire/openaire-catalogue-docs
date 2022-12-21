@@ -1,7 +1,6 @@
 # Citation matching
 
-***Short description:***
-During a citation matching task, bibliographic entries are linked to the documents that they reference. The citation matching module - one of the modules of the Information Inference Service (IIS) - receives as an input a list of documents accompanied by their metadata and bibliography. Among them, it discovers links described above and returns them as a list. In this document we shall evaluate if the module has been properly integrated with the whole
+***Short description:*** During a citation matching task, bibliographic entries are linked to the documents that they reference. The citation matching module - one of the modules of the Information Inference Service (IIS) - receives as an input a list of documents accompanied by their metadata and bibliography. Among them, it discovers links described above and returns them as a list. In this document we shall evaluate if the module has been properly integrated with the whole
 system and assess the accuracy of the algorithm used. It is worth mentioning that the implemented algorithm has been described in detail in arXiv:1303.6906 [cs.IR]1. However, in the referenced paper the algorithm was tested on small datasets, but here we will focus on larger datasets, which are expected to be analysed by the system in the production environment.
 
 ***Algorithmic details:***

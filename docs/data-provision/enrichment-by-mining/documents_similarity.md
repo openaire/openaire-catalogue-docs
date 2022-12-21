@@ -1,7 +1,6 @@
 # Documents similarity
 
-***Short description:***
-Document similarity module is responsible for finding similar documents among the ones available in the OpenAIRE Information Space. It produces "similarity" links between the documents stored in the OpenAIRE Information Space. Each link has a similarity score from [0,1] range assigned; it is expected that the higher the score, the more similar are the documents with respect to their content.
+***Short description:*** Document similarity module is responsible for finding similar documents among the ones available in the OpenAIRE Information Space. It produces "similarity" links between the documents stored in the OpenAIRE Information Space. Each link has a similarity score from [0,1] range assigned; it is expected that the higher the score, the more similar are the documents with respect to their content.
 
 ***Algorithmic details:***
 The similarity between two documents is expressed as the similarity between weights of their common terms (i.e., words being reduced to their root form) within a context of all terms from the first and the second document. In this approach, the computation can be divided into three consecutive steps:

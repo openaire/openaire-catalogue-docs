@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Indexing
 
 The final version of the OpenAIRE Graph is indexed on a Solr server that is used by the OpenAIRE portals (EXPLORE, CONNECT, PROVIDE) and APIs, the latter adopted by several third-party applications and organizations, such as:
