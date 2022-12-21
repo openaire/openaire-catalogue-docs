@@ -38,7 +38,18 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        language: ["en"],
+        indexBlog: false,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcutHint: false,
+      }),
+    ],
+  ],
   presets: [
     [
       'classic',
