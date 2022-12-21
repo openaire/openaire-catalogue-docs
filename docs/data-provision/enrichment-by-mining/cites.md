@@ -4,8 +4,7 @@ sidebar_position: 4
 
 # Extraction of cited concepts
 
-***Short description:***
-Scans the plaintexts of publications for cited concepts, currently for references to datasets and software URIs.
+***Short description:*** Scans the plaintexts of publications for cited concepts, currently for references to datasets and software URIs.
 
 ***Algorithmic details:***
 The algorithm extracts citations to specific datasets and software. It extracts the citation section of a publication's fulltext and applies string matching against a target database which includes an inverted index with dataset/software titles, urls and other metadata.

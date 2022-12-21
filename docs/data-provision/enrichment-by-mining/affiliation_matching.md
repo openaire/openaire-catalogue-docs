@@ -4,8 +4,7 @@ sidebar_position: 1
 
 # Affiliation matching
 
-***Short description:***
-The goal of the affiliation matching module is to match affiliations extracted from the pdf and xml documents with organizations from the OpenAIRE organization database.
+***Short description:*** The goal of the affiliation matching module is to match affiliations extracted from the pdf and xml documents with organizations from the OpenAIRE organization database.
 
 ***Algorithmic details:***
 

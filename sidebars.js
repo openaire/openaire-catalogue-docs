@@ -125,7 +125,7 @@ const sidebars = {
         }, 
         {
           type: 'category',
-          label: "Deduplication & propagation",
+          label: "Deduction & propagation",
           link: { 
             type: 'generated-index' ,
             description: 'The OpenAIRE Graph is further enriched by the deduction and propagation processes descibed in this section.'

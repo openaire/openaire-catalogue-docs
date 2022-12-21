@@ -1,7 +1,6 @@
 # Metadata extraction
 
-***Short description:***
-Metadata Extraction algorithm is responsible for plaintext and metadata extraction out of the PDF documents. It based on [CERMINE](http://cermine.ceon.pl/about.html) project.
+***Short description:*** Metadata Extraction algorithm is responsible for plaintext and metadata extraction out of the PDF documents. It based on [CERMINE](http://cermine.ceon.pl/about.html) project.
 
 CERMINE is a comprehensive open source system for extracting metadata and content from scientific articles in born-digital form. The system is able to process documents in PDF format and extracts:
 
