@@ -14,7 +14,7 @@ The transformation process includes the application of cleaning functions whose 
 In addition, the OpenAIRE Graph is extended with other relevant scholarly communication sources that need special handling, either because they do not strictly follow the OpenAIRE Guidelines or due to the vast amount of data of data they offer (e.g. DOIBoost, that merges Crossref, ORCID, Microsoft Academic Graph, and Unpaywall).
 
 <p align="center">
-    <img loading="lazy" alt="Aggregation" src="/img/docs/aggregation.png" width="65%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Aggregation" src={require('../../assets/img/aggregation.png').default} width="65%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
 The OpenAIRE aggregation system collects information about objects of the research life-cycle compliant to the [OpenAIRE acquisition policy](https://www.openaire.eu/content-acquisition-policy) from [different types of data sources](https://explore.openaire.eu/search/find/dataproviders):
