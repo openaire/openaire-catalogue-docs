@@ -5,7 +5,7 @@ The OpenAIRE Graph comprises several types of [entities](../category/entities) a
 The latest version of the JSON schema can be found on the [Downloads](../downloads/full-graph) section.
 
 <p align="center">
-    <img loading="lazy" alt="Data model" src="/img/docs/data-model.png" width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Data model" src={require('../assets/img/data-model.png').default} width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
 The figure above, presents the graph's data model. 
