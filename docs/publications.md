@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Relevant publications
 
-Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
+Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Research Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
 
 :::note How to cite
 
@@ -27,7 +27,7 @@ Mannocci A., Manghi P. (2016). "DataQ: a data flow quality monitoring system for
 
 ### Deduplication
 
-Vichos K., De Bonis M., Kanellos I., Chatzopoulos S., Atzori C., Manola N., Manghi P., Vergoulis T. (2022). "A preliminary assessment of the article deduplication algorithm used for the OpenAIRE Graph", In Italian Research Conference on Digital Libraries (IRCDL), Padua, Italy, CEUR-WS Proceedings. [http://ceur-ws.org/Vol-3160](http://ceur-ws.org/Vol-3160/) 
+Vichos K., De Bonis M., Kanellos I., Chatzopoulos S., Atzori C., Manola N., Manghi P., Vergoulis T. (2022). "A preliminary assessment of the article deduplication algorithm used for the OpenAIRE Research Graph", In Italian Research Conference on Digital Libraries (IRCDL), Padua, Italy, CEUR-WS Proceedings. [http://ceur-ws.org/Vol-3160](http://ceur-ws.org/Vol-3160/) 
 
 De Bonis M., Manghi P., Atzori C. (2022). "FDup: a framework for general-purpose and efficient entity deduplication of record collections", PeerJ Computer Science, 8, e1058. [https://peerj.com/articles/cs-1058](https://peerj.com/articles/cs-1058)
 

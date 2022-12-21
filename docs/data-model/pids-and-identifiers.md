@@ -1,6 +1,6 @@
 # PIDs and identifiers
 
-One of the challenges towards the stability of the contents in the OpenAIRE Graph consists of making its identifiers and records stable over time.
+One of the challenges towards the stability of the contents in the OpenAIRE Research Graph consists of making its identifiers and records stable over time.
 The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content,
 original IDs, and PIDs, may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.
 Not only, but the mappings applied to the original contents may also change and improve over time to catch up with the changes in the input records.

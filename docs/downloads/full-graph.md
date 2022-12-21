@@ -17,7 +17,7 @@ a tar archive containing gz files, each with one json per line.
 
 ## How to acknowledge this work
 
-Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
+Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Research Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
 
 :::note How to cite
 

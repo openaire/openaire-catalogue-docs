@@ -27,7 +27,7 @@ The dump consists of a tar archive containing gzip files with one json per line.
 
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 It contains metadata records of research products (research literature, data, software, other types of research products) with funding 
-information available in the OpenAIRE Graph. Records are grouped by funder in a dedicated archive file. Each tar archive contains 
+information available in the OpenAIRE Research Graph. Records are grouped by funder in a dedicated archive file. Each tar archive contains 
 gzip files, each with one json record per line. The model of this dump differs from the one of the whole graph.
 Please refer [here](#alternative-sub-graph-data-model) for details on the data model of this dump.
 
@@ -38,7 +38,7 @@ Please refer [here](#alternative-sub-graph-data-model) for details on the data m
  Schema: https://doi.org/10.5281/zenodo.4238938
   
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
-  It contains the metadata records of projects collected by OpenAIRE in a given time frame. Usually one deposition of collected projects is done for each release of the OpenAIRE Graph
+  It contains the metadata records of projects collected by OpenAIRE in a given time frame. Usually one deposition of collected projects is done for each release of the OpenAIRE Research Graph
  The deposition is one tar archive containing gzip files, each with one json record per line.
 
 ## The dumps about research communities, initiatives and infrastructures
@@ -57,7 +57,7 @@ Please refer [here](#alternative-sub-graph-data-model) for details on the data m
 
  ## Alternative sub-graph data model
 
- It should be noted that the dumps for research communities, infrastructures, and products related to projects do not strictly follow the main data model of the OpenAIRE Graph. In particular, they differ in the following:
+ It should be noted that the dumps for research communities, infrastructures, and products related to projects do not strictly follow the main data model of the OpenAIRE Research Graph. In particular, they differ in the following:
 
  * only research products are dumped (no relations, and entities different from results)
  * the dumped results are extended with information that can be inferred in the whole dump namely:

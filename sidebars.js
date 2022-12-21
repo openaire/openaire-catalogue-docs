@@ -29,7 +29,7 @@ const sidebars = {
           label: "Entities",
           link: {
             type: 'generated-index',
-            description: 'The main entities of the OpenAIRE Graph are listed below.'
+            description: 'The main entities of the OpenAIRE Research Graph are listed below.'
           },
           items: [
             { type: 'doc', id: 'data-model/entities/result' },
@@ -101,7 +101,7 @@ const sidebars = {
           label: "Enrichment by mining",
           link: {
             type: 'generated-index',
-            description: 'The OpenAIRE Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
+            description: 'The OpenAIRE Research Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
           },
           items: [
               { type: 'doc', id: 'data-provision/enrichment-by-mining/affiliation_matching' },
@@ -128,7 +128,7 @@ const sidebars = {
           label: "Deduction & propagation",
           link: { 
             type: 'generated-index' ,
-            description: 'The OpenAIRE Graph is further enriched by the deduction and propagation processes descibed in this section.'
+            description: 'The OpenAIRE Research Graph is further enriched by the deduction and propagation processes descibed in this section.'
 
           },
           items: [
@@ -141,7 +141,7 @@ const sidebars = {
           label: "Indicators ingestion",
           link: { 
             type: 'generated-index' ,
-            description: 'In this step, the following types of indicators are ingested in the OpenAIRE Graph.'
+            description: 'In this step, the following types of indicators are ingested in the OpenAIRE Research Graph.'
 
           },
           items: [

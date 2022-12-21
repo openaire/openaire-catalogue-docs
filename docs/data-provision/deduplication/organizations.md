@@ -14,7 +14,7 @@ The data curation activity is twofold, on one end pivots around the disambiguati
 Duplicates among organizations are therefore managed through three different stages:
   * *Creation of Suggestions*: executes an automatic workflow that performs the deduplication and prepare new suggestions for the curators to be processed;
   * *Curation*: manual editing of the organization records performed by the data curators;
-  * *Creation of Representative Organizations*: executes an automatic workflow that creates curated organizations and exposes them on the OpenAIRE Graph by using the curators' feedback from the OpenOrgs underlying database.
+  * *Creation of Representative Organizations*: executes an automatic workflow that creates curated organizations and exposes them on the OpenAIRE Research Graph by using the curators' feedback from the OpenOrgs underlying database.
 
 The next sections describe the above mentioned stages.
 
@@ -61,7 +61,7 @@ Note that if a curator does not provide a feedback on a similarity relation sugg
 
 ### Creation of Representative Organizations
 
-This stage executes an automatic workflow that faces the *duplicates grouping* stage to create representative organizations and to update them on the OpenAIRE Graph. Such organizations are obtained via transitive closure and the relations used comes from the curators' feedback gathered on the OpenOrgs underlying Database.
+This stage executes an automatic workflow that faces the *duplicates grouping* stage to create representative organizations and to update them on the OpenAIRE Research Graph. Such organizations are obtained via transitive closure and the relations used comes from the curators' feedback gathered on the OpenOrgs underlying Database.
 
 #### Duplicates grouping (transitive closure)
 
