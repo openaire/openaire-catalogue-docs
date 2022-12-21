@@ -125,15 +125,15 @@ const sidebars = {
         }, 
         {
           type: 'category',
-          label: "Enrichment by deduplication & propagation",
+          label: "Deduplication & propagation",
           link: { 
             type: 'generated-index' ,
             description: 'The OpenAIRE Graph is further enriched by the deduction and propagation processes descibed in this section.'
 
           },
           items: [
-            { type: 'doc', id: 'data-provision/enrichment-by-deduction-and-propagation/bulk-tagging' },
-            { type: 'doc', id: 'data-provision/enrichment-by-deduction-and-propagation/propagation' },
+            { type: 'doc', id: 'data-provision/deduction-and-propagation/bulk-tagging' },
+            { type: 'doc', id: 'data-provision/deduction-and-propagation/propagation' },
           ]
         },
         {
@@ -163,10 +163,10 @@ const sidebars = {
       id: 'publications',
       label: "Relevant publications"
     },
-    {
-      type: 'doc', 
-      id: 'faq'
-    },
+    // {
+    //   type: 'doc', 
+    //   id: 'faq'
+    // },
     {
       type: 'doc', 
       id: 'license'
