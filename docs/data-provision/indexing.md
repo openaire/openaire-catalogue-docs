@@ -1,8 +1,8 @@
 # Indexing
 
-The final version of the OpenAIRE Research Graph is indexed on a Solr server that is used by the OpenAIRE portals (EXPLORE, CONNECT, PROVIDE) and APIs, the latter adopted by several third-party applications and organizations, such as:
+The final version of the OpenAIRE Research Graph is indexed on a Solr server that is used by the OpenAIRE portals ([EXPLORE](https://explore.openaire.eu), [CONNECT](https://connect.openaire.eu), [PROVIDE](https://provide.openaire.eu)) and APIs, the latter adopted by several third-party applications and organizations, such as:
 
-* The OpenAIRE Research Graph APIs and Portals will offer to the EOSC (European Open Science Cloud) an Open Science Resource Catalogue, keeping an up to date map of all research results (publications, datasets, software), services, organizations, projects, funders in Europe and beyond.
+* The OpenAIRE Graph APIs and Portals will offer to the EOSC (European Open Science Cloud) an Open Science Resource Catalogue, keeping an up to date map of all research results (publications, datasets, software), services, organizations, projects, funders in Europe and beyond.
 
 * DSpace & EPrints repositories can install the OpenAIRE plugin to expose OpenAIRE compliant metadata records via their OAI-PMH endpoint and offer to researchers the possibility to link their depositions to the funding project, by selecting it from the list of project provided by OpenAIRE.
 

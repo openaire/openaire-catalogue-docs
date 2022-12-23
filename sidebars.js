@@ -151,6 +151,7 @@ const sidebars = {
         },
         { type: 'doc', id: 'data-provision/finalisation' },
         { type: 'doc', id: 'data-provision/indexing' },
+        { type: 'doc', id: 'data-provision/stats' }
       ]
     },
     {
