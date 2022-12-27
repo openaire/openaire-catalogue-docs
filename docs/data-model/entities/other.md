@@ -542,21 +542,6 @@ The license URL.
 "license": "http://creativecommons.org/licenses/by-nc/4.0"
 ```
 
-### measures 
-_Type: [Measure](#measure) &bull; Cardinality: MANY_
-
-The measures computed for this instance (e.g. those provided by [BIP! Finder](https://bip.imsi.athenarc.gr/)).
-
-```json
-"measures": [
-    { 
-        "key": "influence",
-        "value": "6.45335454246e-09"
-    },
-    ...
-]
-```
-
 ### pid
 _Type: [ResultPid](#resultpid) &bull; Cardinality: MANY_
 
@@ -619,6 +604,51 @@ URLs to the instance. They may link to the actual full-text or to the landing pa
 ]
 ```
 
+## Indicator
+The indicators are measures computed for the specific OpenAIRE result
+
+Each indicator is composed of the following properties:
+
+### impactMeasures
+_Type: [ImpactMeasures](#impactmeasures) &bull; Cardinality: ONE_
+
+The measures provided by [BIP! Finder](https://bip.imsi.athenarc.gr/)
+
+```json
+"impactMeasures": {
+                "influence": {
+                        "score":"123",
+                        "class":"C2"
+                },
+                "influence_alt" :{
+                        "score":"456",
+                        "class":"C3"
+                },
+                "popularity":{
+                        "score":"234",
+                        "class":"C1"
+                },
+                "popularity_alt":{
+                        "score":"345",
+                        "class":"C5"
+                },
+                "impulse":{
+                        "score":"987",
+                        "class":"C3"
+                }
+        }
+```
+
+### usageCounts
+_Type: [UsageCounts](#usagecounts) &bull; Cardinality: ONE_
+The measures computed by usageCounts
+
+```json
+"usageCounts":{
+                        "downloads":"10",
+                         "views": "20"
+        }
+```
 ## Language
 Represents information for the language of the result
 
@@ -640,31 +670,72 @@ Language label in English.
 "label": "English"
 ```
 
-## Measure
-A measure computed for this instance (e.g. those provided by [BIP! Finder](https://bip.imsi.athenarc.gr/))
+## ImpactMeasures
+The measures computed for this result by [BIP! Finder](https://bip.imsi.athenarc.gr/)
 
-### key
-_Type: String &bull; Cardinality: ONE_
+It is composed by the following properties:
 
-The specified measure. Currently supported one of: 
-* `influence` (see [PageRank](/data-provision/enrichment/impact-scores#pagerank-pr))
-* `influence_alt` (see [Citation Count](/data-provision/enrichment/impact-scores#citation-count-cc))
-* `popularity` (see [AttRank](/data-provision/enrichment/impact-scores#attrank))
-* `popularity_alt` (see [RAM](/data-provision/enrichment/impact-scores#ram))
-* `impulse` (see ["Incubation" Citation Count](/data-provision/enrichment/impact-scores#incubation-citation-count-icc))
+### influence
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+see [PageRank](/data-provision/enrichment/impact-scores#pagerank-pr)
 
 ```json
-"key": "influence"
+"influence": {
+                        "score":"123",
+                        "class":"C2"
+                }
 ```
 
-### value
-_Type: String &bull; Cardinality: ONE_
+### influence_alt
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+see [Citation Count](/data-provision/enrichment/impact-scores#citation-count-cc)
 
 ```json
-"value": "6.45335454246e-09"
+  "influence_alt" :{
+                        "score":"456",
+                        "class":"C3"
+                }
 ```
 
-The value for that measure.
+### popularity
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+see [AttRank](/data-provision/enrichment/impact-scores#attrank)
+
+```json
+                "popularity":{
+                        "score":"234",
+                        "class":"C1"
+                }
+                
+```
+
+### popularity_alt
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+see [RAM](/data-provision/enrichment/impact-scores#ram)
+
+```json
+"popularity_alt":{
+                        "score":"345",
+                        "class":"C5"
+                }
+                
+```
+
+### impulse
+_Type: [Score](#score) &bull; Cardinality: ONE_ 
+
+see ["Incubation" Citation Count](/data-provision/enrichment/impact-scores#incubation-citation-count-icc)
+
+```json
+"impulse":{
+                        "score":"987",
+                        "class":"C3"
+                }
+```
 
 ## OrganizationPid	
 
@@ -748,6 +819,26 @@ The value expressed in the scheme (i.e. 10.1000/182).
 "value": "10.21511/bbs.13(3).2018.13"
 ```
 
+## Score
+The specific score for the Bip!Finder measure. 
+
+### score
+_Type: String &bull; Cardinality: ONE_
+
+The score computed for the indicator
+
+```json
+"score":"1234"
+```
+
+### class
+_Type: String &bull; Cardinality: _ONE
+
+The class for the indicator
+
+```json
+"class":"C2"
+```
 ## Subject
 Represents keywords associated to the result.
 
@@ -794,4 +885,23 @@ The value for the subject in the selected scheme. When the scheme is 'keyword', 
 
 ```json
 "value" : "pyrolysis-oil"
+```
+
+## UsageCounts
+The usage counts indicator computed for this result
+
+### views
+_Type: String &bull; Cardinality: _ONE
+
+The number of views for this result
+
+```json
+"views":"10"
+```
+
+### downloads
+The number of downloads for this result
+
+```json
+"downloads":"5"
 ```
