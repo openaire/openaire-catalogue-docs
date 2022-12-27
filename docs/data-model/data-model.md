@@ -1,11 +1,11 @@
 # Data model
 
-The OpenAIRE Graph comprises several types of [entities](../category/entities) and [relationships](./relationships) among them.
+The OpenAIRE Research Graph comprises several types of [entities](../category/entities) and [relationships](./relationships) among them.
 
-The latest version of the JSON schema can be found on [Bulk downloads](../download).
+The latest version of the JSON schema can be found on the [Downloads](../downloads/full-graph) section.
 
 <p align="center">
-    <img loading="lazy" alt="Data model" src="/img/docs/data-model.png" width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Data model" src={require('../assets/img/data-model.png').default} width="80%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
 The figure above, presents the graph's data model. 
@@ -20,6 +20,6 @@ responsible for operating data sources or consisting the affiliations of Product
 
 :::note Further reading
 
-A detailed report on the OpenAIRE Graph Data Model can be found on [Zenodo](https://zenodo.org/record/2643199).
+A detailed report on the OpenAIRE Research Graph Data Model can be found on [Zenodo](https://zenodo.org/record/2643199).
 :::
 

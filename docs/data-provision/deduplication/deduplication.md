@@ -10,7 +10,7 @@ The deduplication process can be divided into three different phases:
 * Duplicates grouping (transitive closure)
 
 <p align="center">
-    <img loading="lazy" alt="Deduplication Workflow" src="/img/docs/deduplication-workflow.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Deduplication Workflow" src={require('../../assets/img/deduplication-workflow.png').default} width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
 ### Candidate identification (clustering) 

@@ -9,6 +9,11 @@ $ git clone https://code-repo.d4science.org/D-Net/openaire-graph-docs.git
 
 ## Local installation and deployment
 
+From https://docusaurus.io/docs/installation#requirements 
+> Node.js version 16.14 or above (which can be checked by running node -v) 
+
+
+
 To install the required packages use:
 ```
 $ npm install

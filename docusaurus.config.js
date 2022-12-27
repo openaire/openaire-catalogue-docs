@@ -5,14 +5,23 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const math = require('remark-math');
 const katex = require('rehype-katex');
-const { filterItems } = require('./sidebar-utils');
+const dotenv = require('dotenv');
+
+// load env variables (see .env file)
+const env = dotenv.config();
+if (env.error) {
+  throw env.error;
+}
+
+console.info("ENV VARIABLES:");
+console.info(env.parsed);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'OpenAIRE Documentation',
+  title: 'OpenAIRE Research Graph Documentation',
   tagline: 'Open Access Infrastructure for Research in Europe',
-  url: 'http://snf-23385.ok-kno.grnetcloud.net',
-  baseUrl: '/', // serve the website at route
+  url: process.env.URL,
+  baseUrl: process.env.BASE_URL, // serve the website at route
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -29,7 +38,19 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        language: ["en"],
+        indexBlog: false,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcutHint: false,
+        docsRouteBasePath: "/",
+      }),
+    ],
+  ],
   presets: [
     [
       'classic',
@@ -37,18 +58,7 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', // serve the docs at the site's route
-
           sidebarPath: require.resolve('./sidebars.js'),
-          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args); 
-
-            const itemsToFilterOut = [ 
-              'data-model/entities/entity-identifiers', 
-              'data-model/entities/other'
-            ];
-
-            return filterItems(sidebarItems, itemsToFilterOut);
-          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -63,6 +73,12 @@ const config = {
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+	      sitemap: {
+          changefreq: 'monthly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       }),
     ],
@@ -81,97 +97,44 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        // title: 'OpenAIRE Documentation',
+        title: 'documentation',
         logo: {
           alt: 'OpenAIRE',
           src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Research graph v5.0',
-          },
-          // 
-          // documentation version in the navbar
           // {
-          //   type: 'docsVersionDropdown', 
-          //   position: 'right'
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Research graph v5.0',
           // },
           // 
+          // documentation version in the navbar
+          {
+            type: 'docsVersionDropdown', 
+            position: 'right'
+          },
+          
           // link to blog, the blog must be enabled first
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // 
+          
           // link to github repo
           // {
           //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
+          //   label: 'Issues',
           //   position: 'right',
           // },
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Research Graph',
-                to: '/',
-              },
-            ],
-          },
-          {
-            title: 'Dashboards',
-            items: [
-              {
-                label: 'Explore',
-                href: 'https://explore.openaire.eu/',
-              },
-              {
-                label: 'Provide',
-                href: 'https://provide.openaire.eu/',
-              },
-              {
-                label: 'Connect',
-                href: 'https://connect.openaire.eu/',
-              },
-              {
-                label: 'Monitor',
-                href: 'https://monitor.openaire.eu/',
-              },
-              {
-                label: 'Develop',
-                href: 'https://graph.openaire.eu/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              { 
-                label: 'Facebook',
-                href: 'http://www.facebook.com/groups/openaire/'
-              },
-              {
-                label: 'Linkedin',
-                href: 'https://www.linkedin.com/company/openaire-eu/',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/OpenAIRE_eu',
-              },
-              {
-                label: 'Youtube',
-                href: 'https://www.youtube.com/channel/UChFYqizc-S6asNjQSoWuwjw',
-              },
-            ],
-          },
-          
-        ],
+        style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} OpenAIRE`,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       prism: {
         theme: lightCodeTheme,

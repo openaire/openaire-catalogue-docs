@@ -1,8 +1,8 @@
 # PIDs and identifiers
 
-Ensuring the stability of the records and their identifiers in the OpenAIRE Graph is a challenge.
-Data sources from which OpenAIRE collects metadata records are subject to constant variations: records in repositories vary in content,
-original IDs, and PIDs, may disappear or reappear, and the same holds for the data source itself or the metadata collection it exposes.
+One of the challenges towards the stability of the contents in the OpenAIRE Research Graph consists of making its identifiers and records stable over time.
+The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content,
+original IDs, and PIDs, may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.
 Not only, but the mappings applied to the original contents may also change and improve over time to catch up with the changes in the input records.
 
 ## PID Authorities
@@ -70,5 +70,5 @@ Currently, the following data sources are used as "PID authorities":
 | arXiv     | `arXiv_______`      	  | arXiv.org e-Print Archive             	 |
 | handle    | `handle______`      	  | any repository                        	 |
 
-OpenAIRE also perform duplicate identification (see the [dedicated section for details](../../data-provision/deduplication/)).
+OpenAIRE also perform duplicate identification (see the [dedicated section for details](/data-provision/deduplication)).
 All duplicates are **merged** together in a **representative record** which must be assigned a dedicated OpenAIRE identifier (i.e. it cannot have the identifier of one of the aggregated record).
