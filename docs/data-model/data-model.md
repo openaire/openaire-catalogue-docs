@@ -12,11 +12,11 @@ The figure above, presents the graph's data model.
 Its main entities are described in brief below:
 
 * [Results](entities/result) represent the outcomes (or products) of research activities.
-* [Data Sources](entities/data-source) are the sources from which the metadata of graph objects are collected 
+* [Data Sources](entities/data-source) are the sources from which the metadata of graph objects are collected. 
 * [Organizations](entities/organization) correspond to companies or research institutions involved in projects,
 responsible for operating data sources or consisting the affiliations of Product creators.
 * [Projects](entities/project) are research project grants funded by a Funding Stream of a Funder.
-* [Communities](entities/community) are groups of people with a common research intent (e.g. research infrastructures, university alliances)
+* [Communities](entities/community) are groups of people with a common research intent (e.g. research infrastructures, university alliances).
 
 :::note Further reading
 

@@ -186,38 +186,38 @@ Date when the embargo ends and this result turns Open Access.
 ### indicators
 _Type: [Indicator](other#indicator) &bull; Cardinality: ONE_
 
-The indicators computed for this result (e.g. those provided by [BIP! Finder](https://bip.imsi.athenarc.gr/)).
+The indicators computed for this result;
+currently, the following two types of indicators are supported: [impact indicators](/data-provision/indicators-ingestion/impact-scores) and [usage statistics indicators](/data-provision/indicators-ingestion/usage-counts).
 
 ```json
 "indicators": {
         "impactMeasures": {
                 "influence": {
-                        "score":"123",
-                        "class":"C2"
+                        "score": "123",
+                        "class": "C2"
                 },
-                "influence_alt" :{
-                        "score":"456",
-                        "class":"C3"
+                "influence_alt" : {
+                        "score": "456",
+                        "class": "C3"
                 },
-                "popularity":{
-                        "score":"234",
-                        "class":"C1"
+                "popularity": {
+                        "score": "234",
+                        "class": "C1"
                 },
-                "popularity_alt":{
-                        "score":"345",
-                        "class":"C5"
+                "popularity_alt": {
+                        "score": "345",
+                        "class": "C5"
                 },
-                "impulse":{
-                        "score":"987",
-                        "class":"C3"
+                "impulse": {
+                        "score": "987",
+                        "class": "C3"
                 }
         },
-        "usageCounts":{
-                        "downloads":"10",
-                         "views": "20"
+        "usageCounts": {
+                "downloads": "10",
+                 "views": "20"
         }
 }
-
 ```
 
 ### instance
