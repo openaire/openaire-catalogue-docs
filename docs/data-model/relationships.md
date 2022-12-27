@@ -130,17 +130,31 @@ The following table lists all the possible relation semantics found in the graph
 |  # | Source entity type |  Target entity type |  Relation type |         Relation name        |    Inverse relation name    |
 |:--:|:------------------:|:-------------------:|:-------------:|:---------------------------:|:----------------------------:|
 | 1  | [Project](entities/project)            | [Result](entities/result)              | outcome       | produces                    | isProducedBy                 |
-| 2  | [Result](entities/result)             | [Organization](entities/organization)        | affiliation   | hasAuthorInstitution        | isAuthorInstitutionOf        |
-| 3  | [Result](entities/result)             | [Result](entities/result)              | similarity    | isAmongTopNSimilarDocuments | HasAmongTopNSimilarDocuments |
-| 4  | [Project](entities/project)            | [Organization](entities/organization)        | participation | isParticipant               | hasParticipant               |
+| 2  | [Project](entities/project)            | [Organization](entities/organization)        | participation | hasParticipant                |     isParticipant           |
+| 3  | [Project](entities/project)            | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 4  | [Result](entities/result)             | [Result](entities/result)              | similarity    | isAmongTopNSimilarDocuments | HasAmongTopNSimilarDocuments |
 | 5  | [Result](entities/result)             | [Result](entities/result)              | supplement    | isSupplementTo              | isSupplementedBy             |
 | 6  | [Result](entities/result)             | [Result](entities/result)              | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 7  | [Data source](entities/data-source)        | [Organization](entities/organization)        | provision     | provides                    | isProvidedBy                 |
-| 8  | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isHostedBy                  | hosts                        |
-| 9  | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isProvidedBy                | provides                     |
-| 10 | [Result](entities/result)             | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 11 | [Organization](entities/organization)       | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 12 | [Data source](entities/data-source)        | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 13 | [Project](entities/project)            | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-
+| 7  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsPartOf                    | HasPart                      |    
+| 8  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsDocumentedBy              | Documents                      |
+| 9  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsObsoletedBy                    |    Obsoletes                   |
+| 10 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsSourceOf                  | IsDerivedFrom                      |
+| 11 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsCompiledBy                    | Compiles                      |
+| 12 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsRequiredBy                     |     Requires                  |
+| 13 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsCitedBy                     |    Cites                   |
+| 14 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReferencedBy                    | References                      |
+| 15 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReviewedBy                     |    IsVariantFormOf                   |
+| 16 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsOriginalFormOf                    | IsCitedBy                      |
+| 17 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsVersionOf                    | HasVersion                      |
+| 18 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsIdenticalTo                    | IsIdenticalTo                      |
+| 19 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsPreviousVersionOf                    | IsNewVersionOf                      |
+| 20 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsContinuedBy                    | Continues                      |
+| 21 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsDescribedBy                    | Describes                      |
+| 22 | [Result](entities/result)             | [Organization](entities/organization)        | affiliation   | hasAuthorInstitution        | isAuthorInstitutionOf        |
+| 23 | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isHostedBy                  | hosts                        |
+| 24 | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isProvidedBy                | provides                     |
+| 25 | [Result](entities/result)             | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 26 | [Organization](entities/organization)       | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 27 | [Data source](entities/data-source)        | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
+| 28 | [Data source](entities/data-source)        | [Organization](entities/organization)        | provision     | isProvidedBy                     |    provides              |
 
