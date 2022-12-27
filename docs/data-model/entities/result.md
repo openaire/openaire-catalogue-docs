@@ -311,7 +311,7 @@ _Type: [Subject](other#subject) &bull; Cardinality: MANY_
 Subject, keyword, classification code, or key phrase describing the resource.
 
 ```json
-"subjecsts": [
+"subjects": [
     {
         "provenance": {
             "provenance": "Harvested",

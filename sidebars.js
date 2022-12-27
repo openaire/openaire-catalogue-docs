@@ -51,12 +51,22 @@ const sidebars = {
       href: "https://graph.openaire.eu/develop/overview.html"
     },
     {
-      type: 'doc', 
-      id: 'download'
-    },
+      type: 'category', 
+      label: "Downloads",
+      link: {
+        type: 'generated-index',
+        description: 'All resources, available for download, are listed below.'
+      },
+      items: [
+        { type: 'doc', id: 'downloads/full-graph'},
+        { type: 'doc', id: 'downloads/beginners-kit' },
+        { type: 'doc', id: 'downloads/subgraphs' },
+        { type: 'doc', id: 'downloads/related-datasets' },
+      ]
+    }, 
     {
       type: 'category', 
-      label: "Data provision",
+      label: "Graph production workflow",
       link: {type: 'doc', id: 'data-provision/data-provision'},
       items: [
         {
@@ -64,12 +74,46 @@ const sidebars = {
           label: "Aggregation",
           link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
           items: [
-            { type: 'doc', id: 'data-provision/aggregation/doiboost', label: 'DOIBoost' },
-            { type: 'doc', id: 'data-provision/aggregation/pubmed' },
-            { type: 'doc', id: 'data-provision/aggregation/datacite' },
-            { type: 'doc', id: 'data-provision/aggregation/ebi', label: 'EMBL-EBI' },
+            {
+              type: 'doc',
+              label: "OpenAIRE compatible sources",
+              id: 'data-provision/aggregation/compatible-sources',
+            },
+            {
+            type: 'category',
+              label: "Non-compatible sources",
+              link: { type: 'generated-index' },
+              items: [
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/doiboost', label: 'DOIBoost' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/pubmed' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/datacite' },
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/ebi', label: 'EMBL-EBI' },
+              ]
+            }
           ]
         },
+        {
+          type: 'doc', 
+          id: 'data-provision/merge-by-id'
+        },
+        {
+          type: 'category', 
+          label: "Enrichment by mining",
+          link: {
+            type: 'generated-index',
+            description: 'The OpenAIRE Research Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
+          },
+          items: [
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/affiliation_matching' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/citation_matching' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/classifies' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/documents_similarity' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/acks' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/cites' },
+              { type: 'doc', id: 'data-provision/enrichment-by-mining/metadata_extraction' },
+            ]
+        },
+        { type: 'doc', id: 'data-provision/cleaning' },
         {
           type: 'category', 
           label: "Deduplication",
@@ -80,22 +124,35 @@ const sidebars = {
           ]
         }, 
         {
-          type: 'category', 
-          label: "Enrichment",
-          link: {type: 'doc', id: 'data-provision/enrichment/enrichment'},
+          type: 'category',
+          label: "Deduction & propagation",
+          link: { 
+            type: 'generated-index' ,
+            description: 'The OpenAIRE Research Graph is further enriched by the deduction and propagation processes descibed in this section.'
+
+          },
           items: [
-            { type: 'doc', id: 'data-provision/enrichment/mining' },
-            { type: 'doc', id: 'data-provision/enrichment/impact-scores' },
+            { type: 'doc', id: 'data-provision/deduction-and-propagation/bulk-tagging' },
+            { type: 'doc', id: 'data-provision/deduction-and-propagation/propagation' },
           ]
         },
-        { type: 'doc', id: 'data-provision/post-cleaning' },
+        {
+          type: 'category',
+          label: "Indicators ingestion",
+          link: { 
+            type: 'generated-index' ,
+            description: 'In this step, the following types of indicators are ingested in the OpenAIRE Research Graph.'
+
+          },
+          items: [
+            { type: 'doc', id: 'data-provision/indicators-ingestion/impact-scores' },
+            { type: 'doc', id: 'data-provision/indicators-ingestion/usage-counts' },
+          ]
+        },
+        { type: 'doc', id: 'data-provision/finalisation' },
         { type: 'doc', id: 'data-provision/indexing' },
-        { type: 'doc', id: 'data-provision/stats' },
+        { type: 'doc', id: 'data-provision/stats' }
       ]
-    },
-    {
-      type: 'doc', 
-      id: 'services'
     },
     {
       type: "link",
@@ -107,10 +164,10 @@ const sidebars = {
       id: 'publications',
       label: "Relevant publications"
     },
-    {
-      type: 'doc', 
-      id: 'faq'
-    },
+    // {
+    //   type: 'doc', 
+    //   id: 'faq'
+    // },
     {
       type: 'doc', 
       id: 'license'

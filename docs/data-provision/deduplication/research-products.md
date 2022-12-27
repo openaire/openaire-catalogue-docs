@@ -34,8 +34,10 @@ The comparison goes through different stages:
 5. *strong check*: comparison composed by three substages involving the (i) comparison of the author list sizes and the version of the record to determine if they are coherent, (ii) comparison of the record titles with the Levenshtein distance to determine if it is higher than 0.99, (iii) "smart" comparison of the author lists to check if common authors are more than 60%.
 
 <p align="center">
-    <img loading="lazy" alt="Publications Decision Tree" src="/img/docs/decisiontree-publication.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Publications Decision Tree" src={require('../../assets/img/decisiontree-publication.png').default} width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/19SIilTp1vukw6STMZuPMdc0pv0ODYCiOxP7OU3iPWK8/edit?usp=sharing)
 
 #### Software
 For each pair of software in a cluster the following strategy (depicted in the figure below) is applied.
@@ -45,16 +47,20 @@ The comparison goes through different stages:
 3. *strong check*: comparison of the record titles with Levenshtein distance. If the measure is above 0.99, then the similarity relation is drawn
 
 <p align="center">
-    <img loading="lazy" alt="Software Decision Tree" src="/img/docs/decisiontree-software.png" width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Software Decision Tree" src={require('../../assets/img/decisiontree-software.png').default} width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/19gd1-GTOEEo6awMObGRkYFhpAlO_38mfbDFFX0HAkuo/edit?usp=sharing)
 
 #### Datasets and Other types of research products
 For each pair of datasets or other types of research products in a cluster the strategy depicted in the figure below is applied.
 The decision tree is almost identical to the publication decision tree, with the only exception of the *instance type check* stage. Since such type of record does not have a relatable instance type, the check is not performed and the decision tree node is skipped.
 
 <p align="center">
-    <img loading="lazy" alt="Dataset and Other types of research products Decision Tree" src="/img/docs/decisiontree-dataset-orp.png" width="90%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Dataset and Other types of research products Decision Tree" src={require('../../assets/img/decisiontree-dataset-orp.png').default} width="90%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1uBa7Bw2KwBRDUYIfyRr_Keol7UOeyvMNN7MPXYLg4qw/edit?usp=sharing)
 
 ### Duplicates grouping (transitive closure)
 

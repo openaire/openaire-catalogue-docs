@@ -43,8 +43,10 @@ The comparison goes through the following decision tree:
 5. *legalname check*: comparison of the normalized `legalnames` with the `Jaro-Winkler` distance to determine if it is higher than `0.9`. If so, a similarity relation is drawn. Otherwise, no similarity relation is drawn.
 
 <p align="center">
-    <img loading="lazy" alt="Organization Decision Tree" src="/img/docs/decisiontree-organization.png" width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Organization Decision Tree" src={require('../../assets/img/decisiontree-organization.png').default} width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1YKInGGtHu09QG4pT2gRLEum4LxU82d4nKkvGNvRQmrg/edit?usp=sharing)
 
 ### Data Curation
 
