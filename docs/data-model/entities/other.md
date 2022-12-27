@@ -616,25 +616,25 @@ The measures provided by [BIP! Finder](https://bip.imsi.athenarc.gr/)
 
 ```json
 "impactMeasures": {
-                "influence": {
-                        "score":"123",
-                        "class":"C2"
+        "influence": {
+                "score":"123",
+                "class":"C2"
                 },
-                "influence_alt" :{
-                        "score":"456",
-                        "class":"C3"
+        "influence_alt" :{
+               "score":"456",
+               "class":"C3"
                 },
-                "popularity":{
-                        "score":"234",
-                        "class":"C1"
+        "popularity":{
+               "score":"234",
+               "class":"C1"
                 },
-                "popularity_alt":{
-                        "score":"345",
-                        "class":"C5"
+        "popularity_alt":{
+               "score":"345",
+               "class":"C5"
                 },
-                "impulse":{
-                        "score":"987",
-                        "class":"C3"
+        "impulse":{
+                "score":"987",
+                "class":"C3"
                 }
         }
 ```
@@ -645,8 +645,8 @@ The measures computed by usageCounts
 
 ```json
 "usageCounts":{
-                        "downloads":"10",
-                         "views": "20"
+              "downloads":"10",
+              "views": "20"
         }
 ```
 ## Language
@@ -682,8 +682,8 @@ see [PageRank](/data-provision/enrichment/impact-scores#pagerank-pr)
 
 ```json
 "influence": {
-                        "score":"123",
-                        "class":"C2"
+              "score":"123",
+              "class":"C2"
                 }
 ```
 
@@ -694,8 +694,8 @@ see [Citation Count](/data-provision/enrichment/impact-scores#citation-count-cc)
 
 ```json
   "influence_alt" :{
-                        "score":"456",
-                        "class":"C3"
+                    "score":"456",
+                    "class":"C3"
                 }
 ```
 
@@ -705,9 +705,9 @@ _Type: [Score](#score) &bull; Cardinality: ONE_
 see [AttRank](/data-provision/enrichment/impact-scores#attrank)
 
 ```json
-                "popularity":{
-                        "score":"234",
-                        "class":"C1"
+"popularity":{
+              "score":"234",
+              "class":"C1"
                 }
                 
 ```
@@ -719,8 +719,8 @@ see [RAM](/data-provision/enrichment/impact-scores#ram)
 
 ```json
 "popularity_alt":{
-                        "score":"345",
-                        "class":"C5"
+                 "score":"345",
+                 "class":"C5"
                 }
                 
 ```
@@ -732,8 +732,8 @@ see ["Incubation" Citation Count](/data-provision/enrichment/impact-scores#incub
 
 ```json
 "impulse":{
-                        "score":"987",
-                        "class":"C3"
+            "score":"987",
+            "class":"C3"
                 }
 ```
 
