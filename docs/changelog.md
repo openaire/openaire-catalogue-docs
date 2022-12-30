@@ -26,8 +26,8 @@ This section will document all notable changes for each graph version.
 
 - [Impact indicators](/data-model/entities/result#indicators) at the level of the Result
 - [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New [relationship types](/data-model/relationships#relationship-types): `Reviews, IsReviewedBy, IsParentOf, IsChildOf, References, IsReferencedBy, IsNewVersionOf, IsPreviousVersionOf, HasVersion, IsVersionOf, Cites, IsCitedBy, IsVariantFormOf, IsOriginalFormOf, Obsoletes, IsObsoletedBy, IsContinuedBy, Continues, Documents, IsDocumentedBy, IsCompiledBy, Compiles, IsPartOf, HasPart, IsSourceOf, IsDerivedFrom, IsIdenticalTo`
-
+- New relation types. See the [complete set of relationship](/data-model/relationships#relationship-types)
+- 
 #### Changed
 
 - FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
