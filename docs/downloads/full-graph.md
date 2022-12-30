@@ -10,7 +10,7 @@ You can download the full OpenAIRE Research Graph Dump as well as its schema fro
     
  Schema: https://doi.org/10.5281/zenodo.4238938
 
-The schema used to dump this dataset mirrors  the one described in the [Data Model](../data-model).
+The schema used to dump this dataset mirrors  the one described in the [Data Model](/data-model).
 This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 It is composed of several files so that you can download the parts you are interested into. The files are named after the entity they store (i.e. publication, dataset). Each file is at most 10GB and it is 
 a tar archive containing gz files, each with one json per line.
