@@ -1,7 +1,7 @@
 # Impact indicators
 
-This page summarises all calculated impact indicators, which are included into the [measure](/data-model/entities/other#measure) property.
-It should be noted that the impact indicators are being calculated both on the level of the research output as well on the level of distinct DOIs.
+This page summarises all calculated impact indicators, which are included in the [impactMeasures](/data-model/entities/other#impactmeasures) property which is part of the [indicators](/data-model/entities/result#indicators) property of the result.
+It should be noted that the impact indicators are being calculated on the level of the research output.
 Below we explain their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.
 
 

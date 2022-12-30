@@ -183,6 +183,43 @@ Date when the embargo ends and this result turns Open Access.
 "embargoenddate": "2017-01-01"
 ```
 
+### indicators
+_Type: [Indicator](other#indicator) &bull; Cardinality: ONE_
+
+The indicators computed for this result;
+currently, the following two types of indicators are supported: [impact indicators](/data-provision/indicators-ingestion/impact-scores) and [usage statistics indicators](/data-provision/indicators-ingestion/usage-counts).
+
+```json
+"indicators": {
+        "impactMeasures": {
+                "influence": {
+                        "score": "123",
+                        "class": "C2"
+                },
+                "influence_alt" : {
+                        "score": "456",
+                        "class": "C3"
+                },
+                "popularity": {
+                        "score": "234",
+                        "class": "C1"
+                },
+                "popularity_alt": {
+                        "score": "345",
+                        "class": "C5"
+                },
+                "impulse": {
+                        "score": "987",
+                        "class": "C3"
+                }
+        },
+        "usageCounts": {
+                "downloads": "10",
+                 "views": "20"
+        }
+}
+```
+
 ### instance
 _Type: [Instance](other#instance) &bull; Cardinality: MANY_
 
@@ -209,13 +246,6 @@ Specific materialization or version of the result. For example, you can have one
             "currency": "EUR"
         },
         "license": "http://creativecommons.org/licenses/by-nc/4.0",
-        "measures":[
-            { 
-                "key": "influence",
-                "value": "6.45335454246e-09"
-            },
-            ...
-        ],
         "pid": [
             {
                 "scheme": "pmc",
