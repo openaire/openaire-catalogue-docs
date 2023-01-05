@@ -10,9 +10,9 @@ This page lists all alternative dumps currently available.
 
 ## The OpenAIRE COVID-19 dump
 
- Dataset: https://doi.org/10.5281/zenodo.6638745
+ Dataset: https://doi.org/10.5281/zenodo.3980490
 
- Schema: https://doi.org/10.5281/zenodo.6372977
+ Schema: https://doi.org/10.5281/zenodo.3974225
     
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
     It contains metadata records of publications, research data, software and projects on the topic of Corona Virus and COVID-19. 
@@ -21,9 +21,9 @@ The dump consists of a tar archive containing gzip files with one json per line.
 
 ## The dump of funded products
 
- Dataset: https://doi.org/10.5281/zenodo.6634431
+ Dataset: https://doi.org/10.5281/zenodo.4559725
 
- Schema: https://doi.org/10.5281/zenodo.6372977
+ Schema: https://doi.org/10.5281/zenodo.3974225
 
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 It contains metadata records of research products (research literature, data, software, other types of research products) with funding 
@@ -33,7 +33,7 @@ Please refer [here](#alternative-sub-graph-data-model) for details on the data m
 
 ## The dump of delta projects
 
- Dataset: https://doi.org/10.5281/zenodo.7119633
+ Dataset: https://doi.org/10.5281/zenodo.6419021
 
  Schema: https://doi.org/10.5281/zenodo.4238938
   
@@ -43,9 +43,9 @@ Please refer [here](#alternative-sub-graph-data-model) for details on the data m
 
 ## The dumps about research communities, initiatives and infrastructures
 
- Dataset: https://doi.org/10.5281/zenodo.6638478
+ Dataset: https://doi.org/10.5281/zenodo.3974604
 
- Schema: https://doi.org/10.5281/zenodo.6372977
+ Schema: https://doi.org/10.5281/zenodo.3974225
 
  This dataset is licensed under a Creative Commons Attribution 4.0 International License.
 The dataset contains one file per community/initiative/infrastructure collaborating with OpenAIRE. Check out also their community gateways on 
