@@ -176,6 +176,11 @@ const sidebars = {
       type: 'doc', 
       id: 'changelog'
     },
+    {
+      type: "link",
+      label: "Helpdesk",
+      href: "https://graph.openaire.eu/support"
+    },
   ]
 };
 
