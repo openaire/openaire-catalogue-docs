@@ -8,10 +8,13 @@ The deduplication process can be divided into three different phases:
 * Candidate identification (clustering)
 * Duplicates identification (pair-wise comparisons)
 * Duplicates grouping (transitive closure)
+* Relation redistribution
 
 <p align="center">
     <img loading="lazy" alt="Deduplication Workflow" src={require('../../assets/img/deduplication-workflow.png').default} width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1lLLSU3wsWighmxGQMNMZbgP3mg3BfDVAGVLwt4_OFA8/edit?usp=sharing)
 
 ### Candidate identification (clustering) 
 
@@ -26,3 +29,14 @@ To further limit the number of comparisons, a sliding window mechanism is used: 
 ### Duplicates grouping (transitive closure)
 
 Once the similarity relations between pairs of records are drawn, the groups of equivalent records are obtained (transitive closure, i.e. “mesh”). From such sets a new representative object is obtained, which inherits all properties from the merged records and keeps track of their provenance. 
+
+### Relation redistribution
+
+Relations involved in nodes identified as duplicated are eventually marked as virtually deleted and used as template for creating a new relation pointing to the new representative record.
+Note that nodes and relationships marked as virtually deleted are not exported.
+
+<p align="center">
+    <img loading="lazy" alt="Deduplication Workflow" src={require('../../assets/img/dedup-relation-fixup.png').default} width="75%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+</p>
+
+[//]: # (Link to the image: https://docs.google.com/drawings/d/1cDEuVhWnSO8lUZs_Nd748vKfIPxg10jbwKSVZlv33Mg/edit?usp=sharing)
