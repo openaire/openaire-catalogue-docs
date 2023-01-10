@@ -4,17 +4,22 @@ Metadata records about the same scholarly work can be collected from different p
 
 ## Methodology overview
 
-The deduplication process can be divided into three different phases:
+The deduplication process can be divided into five different phases:
+* Collection import
 * Candidate identification (clustering)
 * Duplicates identification (pair-wise comparisons)
 * Duplicates grouping (transitive closure)
 * Relation redistribution
 
 <p align="center">
-    <img loading="lazy" alt="Deduplication Workflow" src={require('../../assets/img/deduplication-workflow.png').default} width="85%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
+    <img loading="lazy" alt="Deduplication Workflow" src={require('../../assets/img/deduplication-workflow.png').default} width="100%" className="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module"/>
 </p>
 
 [//]: # (Link to the image: https://docs.google.com/drawings/d/1lLLSU3wsWighmxGQMNMZbgP3mg3BfDVAGVLwt4_OFA8/edit?usp=sharing)
+
+### Collection import
+
+The nodes in the graph represent entities of different types. This phase is responsible for identifying all the nodes with a given type and make them available to the subsequent phases representing them in the deduplication record model.
 
 ### Candidate identification (clustering) 
 
