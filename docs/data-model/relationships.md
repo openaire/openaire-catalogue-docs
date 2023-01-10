@@ -141,10 +141,10 @@ The following table lists all the possible relation semantics found in the graph
 | 10 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsSourceOf                  | IsDerivedFrom                      |
 | 11 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsCompiledBy                    | Compiles                      |
 | 12 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsRequiredBy                     |     Requires                  |
-| 13 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsCitedBy                     |    Cites                   |
+| 13 | [Result](entities/result)             | [Result](entities/result)              | citation      | IsCitedBy                     |    Cites                   |
 | 14 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReferencedBy                    | References                      |
-| 15 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReviewedBy                     |    IsVariantFormOf                   |
-| 16 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsOriginalFormOf                    | IsCitedBy                      |
+| 15 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReviewedBy                     |    Reviews                   |
+| 16 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsOriginalFormOf                    | IsVariantFormOf                      |
 | 17 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsVersionOf                    | HasVersion                      |
 | 18 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsIdenticalTo                    | IsIdenticalTo                      |
 | 19 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsPreviousVersionOf                    | IsNewVersionOf                      |
