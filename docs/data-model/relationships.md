@@ -127,6 +127,8 @@ Further specifies the relation semantic, indicating the relation direction, e.g.
 
 The following table lists all the possible relation semantics found in the graph dump.
 
+Note: the labels used to specify the semantic of the relationships are (for the large) inherited from the [DataCite metadata kernel](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf), which provides a description for them.
+
 |  # | Source entity type |  Target entity type |  Relation type |         Relation name        |    Inverse relation name    |
 |:--:|:------------------:|:-------------------:|:-------------:|:---------------------------:|:----------------------------:|
 | 1  | [Project](entities/project)            | [Result](entities/result)              | outcome       | produces                    | isProducedBy                 |
