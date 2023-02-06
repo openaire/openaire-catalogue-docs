@@ -112,9 +112,9 @@ const config = {
           // 
           // documentation version in the navbar
           {
-            type: 'docsVersion',
+            // type: 'docsVersion',
  
-            // type: 'docsVersionDropdown',
+            type: 'docsVersionDropdown',
             position: 'right'
           },
           

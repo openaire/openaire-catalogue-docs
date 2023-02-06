@@ -55,7 +55,7 @@ const sidebars = {
       label: "Downloads",
       link: {
         type: 'generated-index',
-        description: 'All resources, available for download, are listed below.'
+        description: 'All resources, available for download, are listed below. For the versions available in Zenodo, please refer to the Changelog section.'
       },
       items: [
         { type: 'doc', id: 'downloads/full-graph'},
