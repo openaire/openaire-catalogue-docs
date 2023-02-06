@@ -20,10 +20,7 @@ This section documents all notable changes for each graph version. This page is 
 ---
 
 ### v5.1.0
-
-- Process start date: 2023-01-16
-- Public availability date: 2023-01-30
-- Dump released: **no**
+_Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dump release: **no**_
 
 #### Added
 
@@ -40,13 +37,11 @@ This section documents all notable changes for each graph version. This page is 
 
 ### v5.0.0
 
-- Process start date: 2022-12-19
-- Public availability date: 2022-12-28
-- Dump released: **yes**
+_Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **yes**_
 
 #### Added
 
-- [Impact indicators](/data-model/entities/result#indicators) at the level of the Result
+- [Impact & Usage indicators](/data-model/entities/result#indicators) at the level of the Result
 - [Beginner's kit](/downloads/beginners-kit) in the Downloads section
 - New relationship types were introduced; see the complete list [here](/data-model/relationships#relationship-types)
 
@@ -55,5 +50,5 @@ This section documents all notable changes for each graph version. This page is 
 - FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
 - Measures were removed from the [result instance](/data-model/entities/result#instance)
 - Updated DOIBoost to include publications from Crossref and the works from ORCID with a DOI until November 2022
-- ORCID works without a DOI from November 2022
+- Added ORCID works without a DOI from November 2022
 
