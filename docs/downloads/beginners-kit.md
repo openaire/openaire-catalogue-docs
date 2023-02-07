@@ -9,4 +9,4 @@ Working with the Graph in its full size typically requires access to a huge dist
 [The OpenAIRE Beginner’s Kit]( https://doi.org/10.5281/zenodo.7490192) aims to address this issue. It consists of two components:
 
 * A subset of the Graph composed of the research products published between 2022-06-29 and 2022-12-29, all the entities connected to them and the respective relationships.
-* A Zeppelin notebook that demonstrates how you can use PySpark to analyse the Graph and get answers to some interesting research questions. 
+* A Zeppelin notebook that demonstrates how you can use PySpark to analyse the Graph and get answers to some interesting research questions. A guide to Apache Zeppelin can be found [here](https://docs.cloudera.com/HDPDocuments/HDP2/HDP-2.6.5/bk_zeppelin-component-guide/content/ch_overview.html). 
