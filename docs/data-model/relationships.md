@@ -133,10 +133,10 @@ Note: the labels used to specify the semantic of the relationships are (for the 
 |:--:|:--------------------------------------:|:--------------------------------------:|:----------------------------------------------------------:|:-----------------------------------------------:|
 | 1  | [Project](entities/project)            | [Result](entities/result)              | produces / isProducedBy                                    | Harvested, Inferred by OpenAIRE, Linked by user |
 | 2  | [Project](entities/project)            | [Organization](entities/organization)  | hasParticipant / isParticipant                             | Harvested                                       |
-| 3  | [Project](entities/project)            | [Community](entities/community)        | isRelatedTo / isRelatedTo                                  | Linked by user                                  |
-| 4  | [Result](entities/result)              | [Result](entities/result)              | isAmongTopNSimilarDocuments / HasAmongTopNSimilarDocuments | Inferred by OpenAIRE                            |
-| 5  | [Result](entities/result)              | [Result](entities/result)              | isSupplementTo / isSupplementedBy                          | Harvested                                       |
-| 6  | [Result](entities/result)              | [Result](entities/result)              | isRelatedTo / isRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
+| 3  | [Project](entities/project)            | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 4  | [Result](entities/result)              | [Result](entities/result)              | IsAmongTopNSimilarDocuments / HasAmongTopNSimilarDocuments | Inferred by OpenAIRE                            |
+| 5  | [Result](entities/result)              | [Result](entities/result)              | IsSupplementTo / IsSupplementedBy                          | Harvested                                       |
+| 6  | [Result](entities/result)              | [Result](entities/result)              | IsRelatedTo / IsRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
 | 7  | [Result](entities/result)              | [Result](entities/result)              | IsPartOf / HasPart                                         | Harvested                                       |
 | 8  | [Result](entities/result)              | [Result](entities/result)              | IsDocumentedBy / Documents                                 | Harvested                                       |
 | 9  | [Result](entities/result)              | [Result](entities/result)              | IsObsoletedBy / Obsoletes                                  | Harvested                                       |
@@ -155,8 +155,9 @@ Note: the labels used to specify the semantic of the relationships are (for the 
 | 22 | [Result](entities/result)              | [Organization](entities/organization)  | hasAuthorInstitution / isAuthorInstitutionOf               | Harvested, Inferred by OpenAIRE                 |
 | 23 | [Result](entities/result)              | [Data source](entities/data-source)    | isHostedBy / hosts                                         | Harvested, Inferred by OpenAIRE                 |
 | 24 | [Result](entities/result)              | [Data source](entities/data-source)    | isProvidedBy / provides                                    | Harvested                                       |
-| 25 | [Result](entities/result)              | [Community](entities/community)        | isRelatedTo / isRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
-| 26 | [Organization](entities/organization)  | [Community](entities/community)        | isRelatedTo / isRelatedTo                                  | Linked by user                                  |
-| 27 | [Data source](entities/data-source)    | [Community](entities/community)        | isRelatedTo / isRelatedTo                                  | Linked by user                                  |
-| 28 | [Data source](entities/data-source)    | [Organization](entities/organization)  | isProvidedBy / provides                                    | Harvested                                       |
+| 25 | [Result](entities/result)              | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
+| 26 | [Organization](entities/organization)  | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 27 | [Organization](entities/organization)  | [Organization](entities/organization)  | IsChildOf / IsParentOf                                     | Linked by user                                  |
+| 28 | [Data source](entities/data-source)    | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 29 | [Data source](entities/data-source)    | [Organization](entities/organization)  | isProvidedBy / provides                                    | Harvested                                       |
 
