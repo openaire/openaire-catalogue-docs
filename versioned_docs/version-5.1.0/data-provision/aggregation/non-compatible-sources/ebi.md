@@ -69,7 +69,7 @@ curl -s "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/33024307/datalinks
 ```
 
 ## Mapping
-The table below describes the mapping from the EBI links records to the OpenAIRE Research Graph dump format.
+The table below describes the mapping from the EBI links records to the OpenAIRE Graph dump format.
 We filter all the target links with pid type **ena**, **pdb** or **uniprot**
 For each target we construct a Bioentity with the following mapping
 

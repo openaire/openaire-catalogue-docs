@@ -12,7 +12,7 @@ Pubmed exposes an entry point FTP with all the updates for each one. [ftp baseli
 
 ## Entity Mapping
 
-The table below describes the mapping from the XML baseline records to the OpenAIRE Research Graph dump format.
+The table below describes the mapping from the XML baseline records to the OpenAIRE Graph dump format.
 
 | OpenAIRE Result field path     | PubMed record field xpath                                                                                                                     | Notes                                                                                                                                                                                                                                                 |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
