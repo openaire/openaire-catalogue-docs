@@ -8,7 +8,7 @@ sidebar_position: 1
 This version is not accompanied with public dump files, hence the files in this section are based on [v5.0.0](/docs/5.0.0/) of the Graph. The data of v.5.1.0 are only exposed via the [OpenAIRE Graph API](https://graph.openaire.eu/develop/) and added-value services that are built on top of this version of the Graph (e.g., the [OpenAIRE Explore](https://explore.openaire.eu/)). If you would be interested to get bulk access to Graph v5.1.0 data, please contact us via our [helpdesk](https://graph.openaire.eu/support).
 :::
 
-You can download the full OpenAIRE Research Graph Dump as well as its schema from the following links: 
+You can download the full OpenAIRE Graph Dump as well as its schema from the following links: 
 
  Dataset: https://doi.org/10.5281/zenodo.3516917
     
@@ -21,7 +21,7 @@ a tar archive containing gz files, each with one json per line.
 
 ## How to acknowledge this work
 
-Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Research Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
+Open Science services are open and transparent and survive thanks to your active support and to the visibility and reward they gather. If you use one of the [OpenAIRE Graph dumps](https://doi.org/10.5281/zenodo.3516917) for your research, please provide a proper citation following the recommendation that you find on the dump's Zenodo page or as provided below. 
 
 :::note How to cite
 

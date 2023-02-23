@@ -129,34 +129,35 @@ The following table lists all the possible relation semantics found in the graph
 
 Note: the labels used to specify the semantic of the relationships are (for the large) inherited from the [DataCite metadata kernel](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf), which provides a description for them.
 
-|  # | Source entity type |  Target entity type |  Relation type |         Relation name        |    Inverse relation name    |
-|:--:|:------------------:|:-------------------:|:-------------:|:---------------------------:|:----------------------------:|
-| 1  | [Project](entities/project)            | [Result](entities/result)              | outcome       | produces                    | isProducedBy                 |
-| 2  | [Project](entities/project)            | [Organization](entities/organization)        | participation | hasParticipant                |     isParticipant           |
-| 3  | [Project](entities/project)            | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 4  | [Result](entities/result)             | [Result](entities/result)              | similarity    | isAmongTopNSimilarDocuments | HasAmongTopNSimilarDocuments |
-| 5  | [Result](entities/result)             | [Result](entities/result)              | supplement    | isSupplementTo              | isSupplementedBy             |
-| 6  | [Result](entities/result)             | [Result](entities/result)              | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 7  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsPartOf                    | HasPart                      |    
-| 8  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsDocumentedBy              | Documents                      |
-| 9  | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsObsoletedBy                    |    Obsoletes                   |
-| 10 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsSourceOf                  | IsDerivedFrom                      |
-| 11 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsCompiledBy                    | Compiles                      |
-| 12 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsRequiredBy                     |     Requires                  |
-| 13 | [Result](entities/result)             | [Result](entities/result)              | citation      | IsCitedBy                     |    Cites                   |
-| 14 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReferencedBy                    | References                      |
-| 15 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsReviewedBy                     |    Reviews                   |
-| 16 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsOriginalFormOf                    | IsVariantFormOf                      |
-| 17 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsVersionOf                    | HasVersion                      |
-| 18 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsIdenticalTo                    | IsIdenticalTo                      |
-| 19 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsPreviousVersionOf                    | IsNewVersionOf                      |
-| 20 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsContinuedBy                    | Continues                      |
-| 21 | [Result](entities/result)             | [Result](entities/result)              | relationship  | IsDescribedBy                    | Describes                      |
-| 22 | [Result](entities/result)             | [Organization](entities/organization)        | affiliation   | hasAuthorInstitution        | isAuthorInstitutionOf        |
-| 23 | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isHostedBy                  | hosts                        |
-| 24 | [Result](entities/result)             | [Data source](entities/data-source)         | provision     | isProvidedBy                | provides                     |
-| 25 | [Result](entities/result)             | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 26 | [Organization](entities/organization)       | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 27 | [Data source](entities/data-source)        | [Community](entities/community) | relationship  | isRelatedTo                 | isRelatedTo                  |
-| 28 | [Data source](entities/data-source)        | [Organization](entities/organization)        | provision     | isProvidedBy                     |    provides              |
+|  # | Source entity type                     | Target entity type                     | Relation name / inverse                                    | Provenance                                      |
+|:--:|:--------------------------------------:|:--------------------------------------:|:----------------------------------------------------------:|:-----------------------------------------------:|
+| 1  | [Project](entities/project)            | [Result](entities/result)              | produces / isProducedBy                                    | Harvested, Inferred by OpenAIRE, Linked by user |
+| 2  | [Project](entities/project)            | [Organization](entities/organization)  | hasParticipant / isParticipant                             | Harvested                                       |
+| 3  | [Project](entities/project)            | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 4  | [Result](entities/result)              | [Result](entities/result)              | IsAmongTopNSimilarDocuments / HasAmongTopNSimilarDocuments | Inferred by OpenAIRE                            |
+| 5  | [Result](entities/result)              | [Result](entities/result)              | IsSupplementTo / IsSupplementedBy                          | Harvested                                       |
+| 6  | [Result](entities/result)              | [Result](entities/result)              | IsRelatedTo / IsRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
+| 7  | [Result](entities/result)              | [Result](entities/result)              | IsPartOf / HasPart                                         | Harvested                                       |
+| 8  | [Result](entities/result)              | [Result](entities/result)              | IsDocumentedBy / Documents                                 | Harvested                                       |
+| 9  | [Result](entities/result)              | [Result](entities/result)              | IsObsoletedBy / Obsoletes                                  | Harvested                                       |
+| 10 | [Result](entities/result)              | [Result](entities/result)              | IsSourceOf / IsDerivedFrom                                 | Harvested                                       |
+| 11 | [Result](entities/result)              | [Result](entities/result)              | IsCompiledBy / Compiles                                    | Harvested                                       |
+| 12 | [Result](entities/result)              | [Result](entities/result)              | IsRequiredBy / Requires                                    | Harvested                                       |
+| 13 | [Result](entities/result)              | [Result](entities/result)              | IsCitedBy / Cites                                          | Harvested, Inferred by OpenAIRE                 |
+| 14 | [Result](entities/result)              | [Result](entities/result)              | IsReferencedBy / References                                | Harvested                                       |
+| 15 | [Result](entities/result)              | [Result](entities/result)              | IsReviewedBy / Reviews                                     | Harvested                                       |
+| 16 | [Result](entities/result)              | [Result](entities/result)              | IsOriginalFormOf / IsVariantFormOf                         | Harvested                                       |
+| 17 | [Result](entities/result)              | [Result](entities/result)              | IsVersionOf / HasVersion                                   | Harvested                                       |
+| 18 | [Result](entities/result)              | [Result](entities/result)              | IsIdenticalTo / IsIdenticalTo                              | Harvested                                       |
+| 19 | [Result](entities/result)              | [Result](entities/result)              | IsPreviousVersionOf / IsNewVersionOf                       | Harvested                                       |
+| 20 | [Result](entities/result)              | [Result](entities/result)              | IsContinuedBy / Continues                                  | Harvested                                       |
+| 21 | [Result](entities/result)              | [Result](entities/result)              | IsDescribedBy / Describes                                  | Harvested                                       |
+| 22 | [Result](entities/result)              | [Organization](entities/organization)  | hasAuthorInstitution / isAuthorInstitutionOf               | Harvested, Inferred by OpenAIRE                 |
+| 23 | [Result](entities/result)              | [Data source](entities/data-source)    | isHostedBy / hosts                                         | Harvested, Inferred by OpenAIRE                 |
+| 24 | [Result](entities/result)              | [Data source](entities/data-source)    | isProvidedBy / provides                                    | Harvested                                       |
+| 25 | [Result](entities/result)              | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
+| 26 | [Organization](entities/organization)  | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 27 | [Organization](entities/organization)  | [Organization](entities/organization)  | IsChildOf / IsParentOf                                     | Linked by user                                  |
+| 28 | [Data source](entities/data-source)    | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Linked by user                                  |
+| 29 | [Data source](entities/data-source)    | [Organization](entities/organization)  | isProvidedBy / provides                                    | Harvested                                       |
 
