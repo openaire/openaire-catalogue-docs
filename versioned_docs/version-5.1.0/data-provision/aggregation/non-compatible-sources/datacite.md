@@ -33,7 +33,7 @@ The metadata collection process identifies the most recent record date available
 
 ### Entity Mapping
 
-The table below describes the mapping from the XML baseline records to the OpenAIRE Research Graph dump format.
+The table below describes the mapping from the XML baseline records to the OpenAIRE Graph dump format.
 
 | OpenAIRE Result field path                             | Datacite record JSON path                                                                                                                       | # Notes                                                                                                                                                                                                                                              |
 |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

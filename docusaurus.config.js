@@ -18,7 +18,7 @@ console.info(env.parsed);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'OpenAIRE Research Graph Documentation',
+  title: 'OpenAIRE Graph Documentation',
   tagline: 'Open Access Infrastructure for Research in Europe',
   url: process.env.URL,
   baseUrl: process.env.BASE_URL, // serve the website at route
