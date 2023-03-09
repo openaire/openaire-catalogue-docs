@@ -18,6 +18,10 @@ Such a policy defines a list of data sources that are considered authoritative f
 | doi       | [Crossref](https://www.crossref.org), [Datacite](https://datacite.org)                              |
 | pmc, pmid | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) |
 | arXiv     | [arXiv.org e-Print Archive](https://arxiv.org/)                                                     |
+| uniprot   | [Protein Data Bank](http://www.pdb.org/)                                                            |
+| ena       | [Protein Data Bank](http://www.pdb.org/)                                                            |
+| pdb       | [Protein Data Bank](http://www.pdb.org/)                                                            |
+
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
 In all other cases, PIDs are be included in the graph as alternate Identifiers.
@@ -63,12 +67,15 @@ When the record is collected from a source which is not authoritative for any ty
 Currently, the following data sources are used as "PID authorities":
 
 | PID Type  | Prefix (12 chars)      | Authority                             	 |
-|-----------|------------------------|-----------------------------------------|
+|-----------|------------------------|-------------------------------------------|
 | doi       | `doi_________`      	  | Crossref, Datacite, Zenodo            	 |
 | pmc       | `pmc_________`      	  | Europe PubMed Central, PubMed Central 	 |
 | pmid      | `pmid________`      	  | Europe PubMed Central, PubMed Central 	 |
 | arXiv     | `arXiv_______`      	  | arXiv.org e-Print Archive             	 |
 | handle    | `handle______`      	  | any repository                        	 |
+| ena       | `ena_________`      	  | EMBL-EBI                            	 |
+| pdb       | `pdb_________`      	  | EMBL-EBI                            	 |
+| uniprot   | `uniprot_____`      	  | EMBL-EBI                            	 |
 
 OpenAIRE also perform duplicate identification (see the [dedicated section for details](/data-provision/deduplication)).
 All duplicates are **merged** together in a **representative record** which must be assigned a dedicated OpenAIRE identifier (i.e. it cannot have the identifier of one of the aggregated record).

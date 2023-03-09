@@ -26,6 +26,9 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **n
 
 - Revised SDG classification: improved coverage (+600K classified DOIs)
 - General increase of the funded scientific outputs, thanks to the full text mining scanning new OpenAccess publications
+- Integrated contents from
+  - [EMBL-EBIs Protein Data Bank in Europe](/data-provision/aggregation/non-compatible-sources/ebi)
+  - [UniProtKB/Swiss-Prot](/data-provision/aggregation/non-compatible-sources/uniprot)
 
 #### Changed
 

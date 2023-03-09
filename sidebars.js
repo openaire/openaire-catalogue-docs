@@ -88,8 +88,7 @@ const sidebars = {
                 { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/pubmed' },
                 { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/datacite' },
                 { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/ebi', label: 'EMBL-EBI' },
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/uniprot', label: 'UniProtKB/Swiss-Prot' },
-
+                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/uniprot', label: 'UniProtKB/Swiss-Prot' }
               ]
             }
           ]

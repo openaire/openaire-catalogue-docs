@@ -60,3 +60,6 @@ When tagging a new version, the document versioning mechanism will:
 * Copy the full `docs/` folder contents into a new `versioned_docs/version-<versionName>/` folder.
 * Create a versioned sidebars file based from your current sidebar configuration, saved as `versioned_sidebars/version-<versionName>-sidebars.json`.
 * Append the new version number to `versions.json`.
+
+Therefore, when previewing the compiled site locally with `npm run start`, ensure to visualise the `Next` version on the browser as it shows the changes under `/docs`.
+To change a version that was already versioned, the source files to be modified are in the `versioned_docs/version-<versionName>/` folder.
