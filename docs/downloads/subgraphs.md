@@ -5,7 +5,7 @@ sidebar_position: 3
 # Sub-graph dumps
 
 :::caution
-This version is not accompanied with public dump files, hence the files in this section are based on [v5.0.0](/docs/5.0.0/) of the Graph. The data of v.5.1.0 are only exposed via the [OpenAIRE Graph API](https://graph.openaire.eu/develop/) and added-value services that are built on top of this version of the Graph (e.g., the [OpenAIRE Explore](https://explore.openaire.eu/)). If you would be interested to get bulk access to Graph v5.1.0 data, please contact us via our [helpdesk](https://graph.openaire.eu/support).
+This version is not accompanied with public dump files, hence the files in this section are based on [v5.0.0](/docs/5.0.0/) of the Graph. More recent versions of the data are only exposed via the [OpenAIRE Graph API](https://graph.openaire.eu/develop/) and added-value services that are built on top of this version of the Graph (e.g., the [OpenAIRE Explore](https://explore.openaire.eu/)). If you would be interested to get bulk access to more recent versions of the Graph data, please contact us via our [helpdesk](https://graph.openaire.eu/support).
 :::
 
 In order to facilitate users, different dumps are available under the Zenodo community called [OpenAIRE Graph](https://zenodo.org/communities/openaire-research-graph).
