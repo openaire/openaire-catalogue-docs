@@ -77,5 +77,5 @@ Currently, the following data sources are used as "PID authorities":
 | pdb       | `pdb_________`      	  | EMBL-EBI                            	 |
 | uniprot   | `uniprot_____`      	  | EMBL-EBI                            	 |
 
-OpenAIRE also perform duplicate identification (see the [dedicated section for details](/data-provision/deduplication)).
+OpenAIRE also perform duplicate identification (see the [dedicated section for details](/graph-production-workflow/deduplication)).
 All duplicates are **merged** together in a **representative record** which must be assigned a dedicated OpenAIRE identifier (i.e. it cannot have the identifier of one of the aggregated record).

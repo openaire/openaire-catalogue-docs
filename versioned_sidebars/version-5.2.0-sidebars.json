@@ -88,7 +88,7 @@
       "label": "Graph production workflow",
       "link": {
         "type": "doc",
-        "id": "data-provision/data-provision"
+        "id": "graph-production-workflow/graph-production-workflow"
       },
       "items": [
         {
@@ -96,13 +96,13 @@
           "label": "Aggregation",
           "link": {
             "type": "doc",
-            "id": "data-provision/aggregation/aggregation"
+            "id": "graph-production-workflow/aggregation/aggregation"
           },
           "items": [
             {
               "type": "doc",
               "label": "OpenAIRE compatible sources",
-              "id": "data-provision/aggregation/compatible-sources"
+              "id": "graph-production-workflow/aggregation/compatible-sources"
             },
             {
               "type": "category",
@@ -113,25 +113,25 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "data-provision/aggregation/non-compatible-sources/doiboost",
+                  "id": "graph-production-workflow/aggregation/non-compatible-sources/doiboost",
                   "label": "DOIBoost"
                 },
                 {
                   "type": "doc",
-                  "id": "data-provision/aggregation/non-compatible-sources/pubmed"
+                  "id": "graph-production-workflow/aggregation/non-compatible-sources/pubmed"
                 },
                 {
                   "type": "doc",
-                  "id": "data-provision/aggregation/non-compatible-sources/datacite"
+                  "id": "graph-production-workflow/aggregation/non-compatible-sources/datacite"
                 },
                 {
                   "type": "doc",
-                  "id": "data-provision/aggregation/non-compatible-sources/ebi",
+                  "id": "graph-production-workflow/aggregation/non-compatible-sources/ebi",
                   "label": "EMBL-EBI"
                 },
                 {
                   "type": "doc",
-                  "id": "data-provision/aggregation/non-compatible-sources/uniprot",
+                  "id": "graph-production-workflow/aggregation/non-compatible-sources/uniprot",
                   "label": "UniProtKB/Swiss-Prot"
                 }
               ]
@@ -140,7 +140,7 @@
         },
         {
           "type": "doc",
-          "id": "data-provision/merge-by-id"
+          "id": "graph-production-workflow/merge-by-id"
         },
         {
           "type": "category",
@@ -152,53 +152,53 @@
           "items": [
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/affiliation_matching"
+              "id": "graph-production-workflow/enrichment-by-mining/affiliation_matching"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/citation_matching"
+              "id": "graph-production-workflow/enrichment-by-mining/citation_matching"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/classifies"
+              "id": "graph-production-workflow/enrichment-by-mining/classifies"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/documents_similarity"
+              "id": "graph-production-workflow/enrichment-by-mining/documents_similarity"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/acks"
+              "id": "graph-production-workflow/enrichment-by-mining/acks"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/cites"
+              "id": "graph-production-workflow/enrichment-by-mining/cites"
             },
             {
               "type": "doc",
-              "id": "data-provision/enrichment-by-mining/metadata_extraction"
+              "id": "graph-production-workflow/enrichment-by-mining/metadata_extraction"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "data-provision/cleaning"
+          "id": "graph-production-workflow/cleaning"
         },
         {
           "type": "category",
           "label": "Deduplication",
           "link": {
             "type": "doc",
-            "id": "data-provision/deduplication/deduplication"
+            "id": "graph-production-workflow/deduplication/deduplication"
           },
           "items": [
             {
               "type": "doc",
-              "id": "data-provision/deduplication/research-products"
+              "id": "graph-production-workflow/deduplication/research-products"
             },
             {
               "type": "doc",
-              "id": "data-provision/deduplication/organizations"
+              "id": "graph-production-workflow/deduplication/organizations"
             }
           ]
         },
@@ -212,11 +212,11 @@
           "items": [
             {
               "type": "doc",
-              "id": "data-provision/deduction-and-propagation/bulk-tagging"
+              "id": "graph-production-workflow/deduction-and-propagation/bulk-tagging"
             },
             {
               "type": "doc",
-              "id": "data-provision/deduction-and-propagation/propagation"
+              "id": "graph-production-workflow/deduction-and-propagation/propagation"
             }
           ]
         },
@@ -224,31 +224,31 @@
           "type": "category",
           "label": "Indicators ingestion",
           "link": {
-            "type": "generated-index",
-            "description": "In this step, the following types of indicators are ingested in the OpenAIRE Graph."
+            "type": "doc",
+            "id": "graph-production-workflow/indicators-ingestion/indicators-ingestion"
           },
           "items": [
             {
               "type": "doc",
-              "id": "data-provision/indicators-ingestion/impact-scores"
+              "id": "graph-production-workflow/indicators-ingestion/impact-indicators"
             },
             {
               "type": "doc",
-              "id": "data-provision/indicators-ingestion/usage-counts"
+              "id": "graph-production-workflow/indicators-ingestion/usage-counts"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "data-provision/finalisation"
+          "id": "graph-production-workflow/finalisation"
         },
         {
           "type": "doc",
-          "id": "data-provision/indexing"
+          "id": "graph-production-workflow/indexing"
         },
         {
           "type": "doc",
-          "id": "data-provision/stats"
+          "id": "graph-production-workflow/stats"
         }
       ]
     },

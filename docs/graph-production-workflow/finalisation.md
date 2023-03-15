@@ -10,7 +10,7 @@ Bibliographic records that do not meet minimal requirements for being part of th
 Currently, the only criteria applied horizontally to the entire graph aims at excluding scientific results whose title is not meaningful for citation purposes.
 Then, different criteria are applied in the pre-processing of specific sub-collections:
 
-* [Crossref filtering](/data-provision/aggregation/non-compatible-sources/doiboost#crossref-filtering)
+* [Crossref filtering](/graph-production-workflow/aggregation/non-compatible-sources/doiboost#crossref-filtering)
 
 ## Country cleaning
 

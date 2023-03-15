@@ -67,35 +67,35 @@ const sidebars = {
     {
       type: 'category', 
       label: "Graph production workflow",
-      link: {type: 'doc', id: 'data-provision/data-provision'},
+      link: {type: 'doc', id: 'graph-production-workflow/graph-production-workflow'},
       items: [
         {
           type: 'category',
           label: "Aggregation",
-          link: {type: 'doc', id: 'data-provision/aggregation/aggregation'},
+          link: {type: 'doc', id: 'graph-production-workflow/aggregation/aggregation'},
           items: [
             {
               type: 'doc',
               label: "OpenAIRE compatible sources",
-              id: 'data-provision/aggregation/compatible-sources',
+              id: 'graph-production-workflow/aggregation/compatible-sources',
             },
             {
             type: 'category',
               label: "Non-compatible sources",
               link: { type: 'generated-index' },
               items: [
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/doiboost', label: 'DOIBoost' },
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/pubmed' },
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/datacite' },
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/ebi', label: 'EMBL-EBI' },
-                { type: 'doc', id: 'data-provision/aggregation/non-compatible-sources/uniprot', label: 'UniProtKB/Swiss-Prot' }
+                { type: 'doc', id: 'graph-production-workflow/aggregation/non-compatible-sources/doiboost', label: 'DOIBoost' },
+                { type: 'doc', id: 'graph-production-workflow/aggregation/non-compatible-sources/pubmed' },
+                { type: 'doc', id: 'graph-production-workflow/aggregation/non-compatible-sources/datacite' },
+                { type: 'doc', id: 'graph-production-workflow/aggregation/non-compatible-sources/ebi', label: 'EMBL-EBI' },
+                { type: 'doc', id: 'graph-production-workflow/aggregation/non-compatible-sources/uniprot', label: 'UniProtKB/Swiss-Prot' }
               ]
             }
           ]
         },
         {
           type: 'doc', 
-          id: 'data-provision/merge-by-id'
+          id: 'graph-production-workflow/merge-by-id'
         },
         {
           type: 'category', 
@@ -105,23 +105,23 @@ const sidebars = {
             description: 'The OpenAIRE Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
           },
           items: [
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/affiliation_matching' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/citation_matching' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/classifies' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/documents_similarity' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/acks' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/cites' },
-              { type: 'doc', id: 'data-provision/enrichment-by-mining/metadata_extraction' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/affiliation_matching' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/citation_matching' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/classifies' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/documents_similarity' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/acks' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/cites' },
+              { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/metadata_extraction' },
             ]
         },
-        { type: 'doc', id: 'data-provision/cleaning' },
+        { type: 'doc', id: 'graph-production-workflow/cleaning' },
         {
           type: 'category', 
           label: "Deduplication",
-          link: {type: 'doc', id: 'data-provision/deduplication/deduplication'},
+          link: {type: 'doc', id: 'graph-production-workflow/deduplication/deduplication'},
           items: [
-            { type: 'doc', id: 'data-provision/deduplication/research-products' },
-            { type: 'doc', id: 'data-provision/deduplication/organizations' },
+            { type: 'doc', id: 'graph-production-workflow/deduplication/research-products' },
+            { type: 'doc', id: 'graph-production-workflow/deduplication/organizations' },
           ]
         }, 
         {
@@ -133,26 +133,23 @@ const sidebars = {
 
           },
           items: [
-            { type: 'doc', id: 'data-provision/deduction-and-propagation/bulk-tagging' },
-            { type: 'doc', id: 'data-provision/deduction-and-propagation/propagation' },
+            { type: 'doc', id: 'graph-production-workflow/deduction-and-propagation/bulk-tagging' },
+            { type: 'doc', id: 'graph-production-workflow/deduction-and-propagation/propagation' },
           ]
         },
         {
           type: 'category',
           label: "Indicators ingestion",
-          link: { 
-            type: 'generated-index' ,
-            description: 'In this step, the following types of indicators are ingested in the OpenAIRE Graph.'
+          link: {type: 'doc', id: 'graph-production-workflow/indicators-ingestion/indicators-ingestion'},
 
-          },
           items: [
-            { type: 'doc', id: 'data-provision/indicators-ingestion/impact-scores' },
-            { type: 'doc', id: 'data-provision/indicators-ingestion/usage-counts' },
+            { type: 'doc', id: 'graph-production-workflow/indicators-ingestion/impact-indicators' },
+            { type: 'doc', id: 'graph-production-workflow/indicators-ingestion/usage-counts' },
           ]
         },
-        { type: 'doc', id: 'data-provision/finalisation' },
-        { type: 'doc', id: 'data-provision/indexing' },
-        { type: 'doc', id: 'data-provision/stats' }
+        { type: 'doc', id: 'graph-production-workflow/finalisation' },
+        { type: 'doc', id: 'graph-production-workflow/indexing' },
+        { type: 'doc', id: 'graph-production-workflow/stats' }
       ]
     },
     {
