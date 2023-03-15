@@ -187,7 +187,7 @@ Date when the embargo ends and this result turns Open Access.
 _Type: [Indicator](other#indicator) &bull; Cardinality: ONE_
 
 The indicators computed for this result;
-currently, the following two types of indicators are supported: [impact indicators](/graph-production-workflow/indicators-ingestion/impact-scores) and [usage statistics indicators](/graph-production-workflow/indicators-ingestion/usage-counts).
+currently, the following two types of indicators are supported: [impact indicators](/graph-production-workflow/indicators-ingestion/impact-indicators) and [usage statistics indicators](/graph-production-workflow/indicators-ingestion/usage-counts).
 
 ```json
 "indicators": {

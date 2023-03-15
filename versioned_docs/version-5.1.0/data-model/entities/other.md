@@ -615,7 +615,7 @@ _Type: [ImpactMeasures](#impactmeasures-1) &bull; Cardinality: ONE_
 
 These impact-based indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the impact of a result. 
 
-For details about their calculation, please refer [here](/data-provision/indicators-ingestion/impact-scores).
+For details about their calculation, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
 
 ```json
 "impactMeasures": {
@@ -682,7 +682,7 @@ The different impact-based indicators as computed by [BIP!](https://bip.imsi.ath
 _Type: [Score](#score) &bull; Cardinality: ONE_
 
 This indicator reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-For more details please refer [here](/data-provision/indicators-ingestion/impact-scores#pagerank-pr).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#pagerank-pr).
 
 ```json
 "influence": {
@@ -695,7 +695,7 @@ For more details please refer [here](/data-provision/indicators-ingestion/impact
 _Type: [Score](#score) &bull; Cardinality: ONE_
 
 This is an alternative to the "Influence" indicator, which also reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-For more details please refer [here](/data-provision/indicators-ingestion/impact-scores#citation-count-cc).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#citation-count-cc).
 
 ```json
 "influence_alt" :{
@@ -708,7 +708,7 @@ For more details please refer [here](/data-provision/indicators-ingestion/impact
 _Type: [Score](#score) &bull; Cardinality: ONE_
 
 This indicator reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
-For more details please refer [here](/data-provision/indicators-ingestion/impact-scores#attrank).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#attrank).
 
 ```json
 "popularity":{
@@ -722,7 +722,7 @@ For more details please refer [here](/data-provision/indicators-ingestion/impact
 _Type: [Score](#score) &bull; Cardinality: ONE_
 
 This is an alternative to the "Popularity" indicator, which also reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
-For more details please refer [here](/data-provision/indicators-ingestion/impact-scores#ram).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#ram).
 
 ```json
 "popularity_alt":{
@@ -736,7 +736,7 @@ For more details please refer [here](/data-provision/indicators-ingestion/impact
 _Type: [Score](#score) &bull; Cardinality: ONE_ 
 
 This indicator reflects the initial momentum of an article directly after its publication, based on the underlying citation network.
-For more details please refer [here](/data-provision/indicators-ingestion/impact-scores#incubation-citation-count-icc).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#incubation-citation-count-icc).
 
 ```json
 "impulse":{
