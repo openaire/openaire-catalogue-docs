@@ -152,7 +152,7 @@ Note: the labels used to specify the semantic of the relationships are (for the 
 | 19 | [Result](entities/result)              | [Result](entities/result)              | IsPreviousVersionOf / IsNewVersionOf                       | Harvested                                       |
 | 20 | [Result](entities/result)              | [Result](entities/result)              | IsContinuedBy / Continues                                  | Harvested                                       |
 | 21 | [Result](entities/result)              | [Result](entities/result)              | IsDescribedBy / Describes                                  | Harvested                                       |
-| 22 | [Result](entities/result)              | [Organization](entities/organization)  | hasAuthorInstitution / isAuthorInstitutionOf               | Harvested, Inferred by OpenAIRE                 |
+| 22 | [Result](entities/result)              | [Organization](entities/organization)  | hasAuthorInstitution / isAuthorInstitutionOf               | Harvested, Inferred by OpenAIRE [(more)](relationships/hasAuthorInstitution)                 |
 | 23 | [Result](entities/result)              | [Data source](entities/data-source)    | isHostedBy / hosts                                         | Harvested, Inferred by OpenAIRE                 |
 | 24 | [Result](entities/result)              | [Data source](entities/data-source)    | isProvidedBy / provides                                    | Harvested                                       |
 | 25 | [Result](entities/result)              | [Community](entities/community)        | IsRelatedTo / IsRelatedTo                                  | Harvested, Inferred by OpenAIRE, Linked by user |
