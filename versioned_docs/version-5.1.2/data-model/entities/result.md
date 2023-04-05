@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Result
+# Results
 
 Results are intended as digital objects, described by metadata, resulting from a scientific process.
 In this page, we descibe the properties of the `Result` object.

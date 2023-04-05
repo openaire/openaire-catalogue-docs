@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Data source
+# Data sources
 
 OpenAIRE entity instances are created out of data collected from various data sources of different kinds, such as publication repositories, dataset archives, CRIS systems, funder databases, etc. Data sources export information packages (e.g., XML records, HTTP responses, RDF data, JSON) that may contain information on one or more of such entities and possibly relationships between them. 
 

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Organization
+# Organizations
 
 Organizations include companies, research centers or institutions involved as project partners or as responsible of operating data sources. Information about organizations are collected from funder databases like CORDA, registries of data sources like OpenDOAR and re3Data, and CRIS systems, as being related to projects or data sources.
 
