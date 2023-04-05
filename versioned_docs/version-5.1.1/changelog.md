@@ -19,7 +19,7 @@ This section documents all notable changes for each graph version. This page is 
 
 ---
 
-### v5.2.0
+### v5.1.1
 _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **no**_
 
 #### Added
