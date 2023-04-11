@@ -1,27 +1,24 @@
 # PIDs and identifiers
 
 One of the challenges towards the stability of the contents in the OpenAIRE Graph consists of making its identifiers and records stable over time.
-The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content,
-original IDs, and PIDs, may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.
+The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content, original IDs, and PIDs, may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.
 Not only, but the mappings applied to the original contents may also change and improve over time to catch up with the changes in the input records.
 
 ## PID Authorities
 
 One of the fronts, regards the attribution of the identity to the objects populating the Graph. The basic idea is to build the identifiers of the objects in the Graph from the PIDs available in some authoritative sources, while considering all the other sources as by definition “unstable”. 
-For instance, Crossref and DataCite are considered to be authoritative sources for results,
-contrary to institutional repositories, aggregators, etc.
+For instance, Crossref and DataCite are considered to be authoritative sources for results, contrary to institutional repositories, aggregators, etc.
 PIDs from the authoritative sources would form the stable OpenAIRE ID skeleton of the Graph, precisely because they are immutable by construction.
 
 Such a policy defines a list of data sources that are considered authoritative for a specific type of PID they provide, whose effect is twofold:
 * OpenAIRE IDs depend on persistent IDs when they are provided by the authority responsible to create them.
 * PIDs are included in the Graph according to a tight criterion: 
-<!-- the PID Types declared in the table below are considered to be mapped as  -->
-<span className="todo">PIDs are considered valid only when they are collected from a relative PID authority data source.
+
+The PID Types declared in the table below are considered to be mapped as [`result.pid`](entities/result#pid) and [`result.instance[].pid`](entities/other#pid-1) only when they are collected from a relative PID authority data source.
 For each entity, we outline the PID authorities per PID Type in the [following section](#pid-authorities-per-entity).
-[TODO: refine this part if not accurate]</span>
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
-In all other cases, PIDs are be included in the Graph as alternate Identifiers.
+In all other cases, PIDs are included in the Graph as alternate Identifiers.
 
 ## Identifiers in the Graph
 
@@ -39,12 +36,13 @@ After years of operation, we can conclude that:
 
 Therefore, when the record is collected from an authoritative source:
 
-* the identity of the record is forged using the PID, like `pidTypePrefix::md5(lowercase(doi))`
+* the identity of the record is forged using the PID, like `pidTypePrefix::md5(lowercase(pid value))`
 * the PID is added in a `pid` element of the data model
 
-When the record is collected from a source which is not authoritative for any type of PID:
-* the identity of the record is forged as usual using the local identifier
+When the record is collected from a source which is _not_ authoritative for any type of PID:
+* the identity of the record is forged as usual using the local identifier (typically the [oai identifier](http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm))
 * the PID, if available, is added as `alternateIdentifier`
+* Handles are still mapped as PIDs, although they are not associated with any OpenAIRE internal identifier prefix
 
 You can review the list of the PID authorities per entity in the [following section](#pid-authorities-per-entity).
 
@@ -58,20 +56,19 @@ This section gathers all PID Types and their respective authorities for each ent
 
 ### Result
 
-| PID Type  | Authority | OpenAIRE ID prefix (12 chars)      |
-|-----------|------------------------|-----------------------|
-| doi       | [Crossref](https://www.crossref.org), [Datacite](https://datacite.org), Zenodo | `doi_________`
-| pmid | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) | `pmid________`
-| pmc | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) | `pmc_________`
-| arXiv     | [arXiv.org e-Print Archive](https://arxiv.org/)                                                     | `arXiv_______`
-| uniprot   | [Protein Data Bank](http://www.pdb.org/) <span className="todo">[ or EMBL-EBI ?]</span> | `uniprot_____`
-| ena       | [Protein Data Bank](http://www.pdb.org/) <span className="todo">[ or EMBL-EBI ?]</span>  | `ena_________`
-| pdb       | [Protein Data Bank](http://www.pdb.org/)  <span className="todo">[ or EMBL-EBI ?]</span>  | `pdb_________`
-| handle       | Any repository  | <span className="todo">`handle______`</span>
+| PID Type | Authority                                                                                           | OpenAIRE ID prefix (12 chars)                |
+|----------|-----------------------------------------------------------------------------------------------------|----------------------------------------------|
+| doi      | [Crossref](https://www.crossref.org), [Datacite](https://datacite.org)                              | `doi_________`                               |                        
+| pmid     | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) | `pmid________`                               |                 
+| pmc      | [Europe PubMed Central](https://europepmc.org/), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc) | `pmc_________`                               |     
+| arXiv    | [arXiv.org e-Print Archive](https://arxiv.org/)                                                     | `arXiv_______`                               |      
+| uniprot  | [Protein Data Bank](http://www.pdb.org/) <span className="todo">[ or EMBL-EBI ?]</span>             | `uniprot_____`                               |  
+| ena      | [Protein Data Bank](http://www.pdb.org/) <span className="todo">[ or EMBL-EBI ?]</span>             | `ena_________`                               | 
+| pdb      | [Protein Data Bank](http://www.pdb.org/)  <span className="todo">[ or EMBL-EBI ?]</span>            | `pdb_________`                               |   
 
 #### Delegated authorities
 
-<span className="todo">[TODO: the problem that this solves is that we can get a specific PID from more than one auhtoritative sources right ? For example, if we get DOIs from 	Crossref, Datacite, and Zenodo (btw Zenodo was not mentioned in the first table).
+<span className="todo">[TODO: the problem that this solves is that we can get a specific PID from more than one authoritative sources right ? For example, if we get DOIs from 	Crossref, Datacite, and Zenodo (btw Zenodo was not mentioned in the first table).
 Can't we mention those sources by priority in the first table and simply mention in the text that we prefer to collect those PIDs starting from the first till the last one? Is this the problem or I am missing something else here?]</span>
 
 When a record is aggregated from multiple sources considered authoritative for minting specific PIDs, different mappings could be applied to them and, depending on the case,
@@ -80,17 +77,27 @@ To overcome the issue, the intuition is to include such records only once in the
 assigns PIDs to their scientific products from a given PID minter.
 
 This "selection" can be performed when the entities in the Graph sharing the same identifier are grouped together. 
-The list of the delegated authorities currently includes the following:
+The list of the delegated authorities currently includes the following, which can be considered as an extension of the table above:
 
 
-| PID Type | Datasource delegated                 | Datasource delegating             |
-|--------------------------------------|----------------------------------|-----------|
-| doi       | [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | 
-| <span className="todo">w3id [is not mentioned in the table above]</span>     | [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | 
+| PID Type | Datasource delegated                 | Datasource delegating            | OpenAIRE ID prefix (12 chars) |
+|----------|--------------------------------------|----------------------------------|-------------------------------|
+| doi      | [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | `doi_________`                |
+| w3id     | [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | `w3id________`                |
 
 
 ### Data source
-<span className="todo">[TODO]</span>
+
+The following table lists the most important registries from which OpenAIRE imports datasource records. 
+
+| PID Type               | Authority                                                                                  | OpenAIRE ID prefix (12 chars) |
+|------------------------|--------------------------------------------------------------------------------------------|-------------------------------|
+| OpenDOAR ID            | [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/)                                              | `opendoar____`                |                        
+| Re3Data ID             | [re3data](https://www.re3data.org/)                                                        | `re3data_____`                |
+| Fairsharing            | [Fairsharing](https://fairsharing.org/)                                                    | `fairsharing_`                |
+| EuroCRIS - DRIS        | [EuroCRIS - Directory of Research Information Systems](https://eurocris.org/services/dris) | `eurocrisdris`                |
+| EOSC Service Catalogue | [EOSC Service Catalogue](https://eosc-portal.eu/services-resources)                        | `eosc________`                |
+
 
 ### Organization
 
@@ -101,7 +108,6 @@ The list of the delegated authorities currently includes the following:
 
 ### Project
 <span className="todo">[TODO]</span>
-
 
 ### Community
 <span className="todo">[TODO]</span>
