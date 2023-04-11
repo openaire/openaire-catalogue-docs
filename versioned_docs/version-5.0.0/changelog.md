@@ -26,7 +26,7 @@ This section will document all notable changes for each graph version.
 
 - [Impact indicators](/data-model/entities/result#indicators) at the level of the Result
 - [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships#relationship-types)
+- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
 
 #### Changed
 

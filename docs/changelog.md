@@ -15,11 +15,22 @@ In our case, given a version `MAJOR.MINOR.PATCH`, we increment the:
 
 ## Changelog
 
-This section documents all notable changes for each graph version. This page is going to replace the updates listed until the end of 2022 on the OpenAIRE website at https://www.openaire.eu/aggregation-and-content-provision-workflows
+This section documents all notable changes for each graph version.
 
 ---
 
-### v5.2.0
+### v5.1.2
+_Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **no**_
+
+#### Changed
+
+- Crossref dump from February 2023
+- ORCID works without a DOI from March 2023
+- Usage counts from February 2023 (+76% Downloads per Datasource for 2023)
+- Datacite contents from mid March 2023
+- OpenCitations relations from January 2023
+
+### v5.1.1
 _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **no**_
 
 #### Added
@@ -62,7 +73,7 @@ _Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **y
 
 - [Impact & Usage indicators](/data-model/entities/result#indicators) at the level of the Result
 - [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships#relationship-types)
+- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
 
 #### Changed
 

@@ -23,7 +23,6 @@ const sidebars = {
       label: "Data model",
       link: {type: 'doc', id: 'data-model/data-model'},
       items: [
-        { type: 'doc', id: 'data-model/pids-and-identifiers' },
         {
           type: 'category', 
           label: "Entities",
@@ -40,9 +39,18 @@ const sidebars = {
           ]
         }, 
         {
-          type: 'doc', 
-          id: 'data-model/relationships'
-        }
+          type: 'category', 
+          label: "Relationships",
+          link: {
+            type: 'generated-index',
+            description: 'This section describes the relationships between entities in the OpenAIRE Graph: they way they are modelled as well as the different relationship types currently supported.'
+          },
+          items: [
+            { type: 'doc', id: 'data-model/relationships/relationship-object' },
+            { type: 'doc', id: 'data-model/relationships/relationship-types' },
+          ]
+        }, 
+        { type: 'doc', id: 'data-model/pids-and-identifiers' },
       ]
     },
     {
