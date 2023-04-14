@@ -4,7 +4,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/); please check
 
 ## Clone repository
 ```
-$ git clone https://code-repo.d4science.org/D-Net/openaire-graph-docs.git
+git clone https://code-repo.d4science.org/D-Net/openaire-graph-docs.git
 ```
 
 ## Local installation and deployment
@@ -16,18 +16,18 @@ From https://docusaurus.io/docs/installation#requirements
 
 To install the required packages use:
 ```
-$ npm install
+npm install
 ```
 
 The following command starts a local development server and opens up a browser window. Note that most changes are reflected live without having to restart the server.
 ```
-$ npm run start
+npm run start
 ```
 
 Generate the static content into the `build` directory using the command tha follows. Then this directory can be served using any static contents hosting service.
 
 ```
-$ npm run build
+npm run build
 ```
 
 ## Deployment using Docker
