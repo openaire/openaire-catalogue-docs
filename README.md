@@ -27,7 +27,7 @@ npm run start
 NOTE: most changes are reflected live without having to restart the server.
 
 
-Before issueing a Pull Request, please ensure that the following command runs successfully:
+Before issuing a Pull Request, please ensure that the following command runs successfully:
 ```
 npm run build
 ```
