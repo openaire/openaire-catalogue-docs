@@ -1,21 +1,20 @@
-# PIDs and identifiers
+# Object indentifiers
 
-One of the challenges towards the stability of the contents in the OpenAIRE Graph consists of making its identifiers and records stable over time.
-The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content, original IDs, and PIDs, may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.
-Not only, but the mappings applied to the original contents may also change and improve over time to catch up with the changes in the input records.
+One of the challenges towards the stability of the contents in the OpenAIRE Graph consists of making its objects and their identifiers (called "OpenAIRE IDs") stable over time.
+~~The barriers to this scenario are many, as the Graph keeps a map of data sources that is subject to constant variations: records in repositories vary in content, original identifiers, and persistent identifiers (PIDs), may disappear or reappear, and the same holds for the repository or the metadata collection it exposes.~~
+Not only can the mappings applied to the original contents change over time, but they can also improve to catch up with changes in the input records.  
 
-## PID Authorities
+## Adding stability using PIDs
 
-One of the fronts, regards the attribution of the identity to the objects populating the Graph. The basic idea is to build the identifiers of the objects in the Graph from the PIDs available in some authoritative sources, while considering all the other sources as by definition “unstable”. 
+One of the main issues concerns the attribution of the identity to the objects populating the Graph. The basic idea is to build the identifiers of the objects in the Graph from the related PIDs, where they are available. As a result, PIDs are collected and stored inside the respective objects (in the `pid` field).
+However, although various sources can provide object-related PIDs, some of them can be "unstable". For that reason, during the process, only the PIDs available from some "authoritative", stable sources are being considered for the population of the values in the `pid` field and for the creation of the OpenAIRE IDs. OpenAIRE maintains a [list of data sources that are considered authoritative](#pid-authorities) for each specific type of PID. 
 For instance, Crossref and DataCite are considered to be authoritative sources for results, contrary to institutional repositories, aggregators, etc.
 PIDs from the authoritative sources would form the stable OpenAIRE ID skeleton of the Graph, precisely because they are immutable by construction.
 
-Such a policy defines a list of data sources that are considered authoritative for a specific type of PID they provide, whose effect is twofold:
-* OpenAIRE IDs depend on persistent IDs when they are provided by the authority responsible to create them.
-* PIDs are included in the Graph according to a tight criterion: 
+ 
 
-The PID Types declared in the table below are considered to be mapped as [`result.pid`](entities/result#pid) and [`result.instance[].pid`](entities/other#pid-1) only when they are collected from a relative PID authority data source.
-For each entity, we outline the PID authorities per PID Type in the [following section](#pid-authorities-per-entity).
+~~The PID Types declared in the table below are considered to be mapped as [`result.pid`](entities/result#pid) and [`result.instance[].pid`](entities/other#pid-1) only when they are collected from a relative PID authority data source.
+For each entity, we outline the PID authorities per PID Type in the [following section](#pid-authorities-per-entity).~~
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
 In all other cases, PIDs are included in the Graph as alternate Identifiers.
@@ -50,9 +49,18 @@ OpenAIRE also performs duplicate identification (see the [dedicated section for 
 All duplicates are **merged** together in a **representative record** which must be assigned a dedicated OpenAIRE identifier (i.e. it cannot have the identifier of one of the aggregated record).
 
 
-## PID authorities per entity
+## OpenAIRE ID prefixes
 
-This section gathers all PID Types and their respective authorities for each entity in the Graph.
+| Prefix (12 chars) | Interpretation |
+|-------------------|----------------|
+| `doi_________` | constructed based on a DOI |
+| `pmid________` | ... |
+
+
+
+## PID authorities
+
+This section elaborates the PID types that are supported by the OpenAIRE Graph along with the respective authoritative sources.
 
 ### Result
 
