@@ -11,7 +11,7 @@ Conceived as a public and transparent good, populated out of data sources truste
 
 Imagine a vast collection of research products all linked together, contextualised and openly available. For the past years OpenAIRE has been working to gather this valuable record. It is a massive collection of metadata and links between scientific products such as articles, datasets, software, and other research products, entities like organisations, funders, funding streams, projects, communities, and data sources.
 
-As of today, the OpenAIRE Graph aggregates around 450Mi metadata records with links collecting from 2K data sources trusted by scientists, including:
+The OpenAIRE Graph aggregates millions of metadata records collected from trusted data sources, including:
 
 * Open Access journals registered in DOAJ
 * Crossref
