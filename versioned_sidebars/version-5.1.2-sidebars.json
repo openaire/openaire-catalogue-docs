@@ -267,11 +267,6 @@
       ]
     },
     {
-      "type": "link",
-      "label": "Learning center",
-      "href": "https://openplato.eu/"
-    },
-    {
       "type": "doc",
       "id": "publications",
       "label": "Relevant publications"

@@ -160,11 +160,11 @@ const sidebars = {
         { type: 'doc', id: 'graph-production-workflow/stats' }
       ]
     },
-    {
-      type: "link",
-      label: "Learning center",
-      href: "https://openplato.eu/"
-    },
+    // {
+    //   type: "link",
+    //   label: "Learning center",
+    //   href: "https://openplato.eu/"
+    // },
     {
       type: 'doc', 
       id: 'publications',
