@@ -19,6 +19,21 @@ This section documents all notable changes for each graph version.
 
 ---
 
+### v5.1.3
+_Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **no**_
+
+#### Added
+- Datasource and project level usage counts
+
+#### Changed
+
+- Crossref dump from April 2023
+- ORCID works without a DOI from May 2023
+- Usage counts from April 2023
+- Datacite contents from May 2023
+- OpenCitations relations from January 2023
+- Deduplication of the datasource
+
 ### v5.1.2
 _Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **no**_
 
