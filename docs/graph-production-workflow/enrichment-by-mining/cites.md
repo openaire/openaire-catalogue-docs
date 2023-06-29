@@ -2,12 +2,24 @@
 sidebar_position: 4
 ---
 
-# Extraction of cited concepts
+# Extraction of referenced concepts
 
 ***Short description:*** Scans the plaintexts of publications for cited concepts, currently for references to datasets and software URIs.
 
 ***Algorithmic details:***
 The algorithm extracts citations to specific datasets and software. It extracts the citation section of a publication's fulltext and applies string matching against a target database which includes an inverted index with dataset/software titles, urls and other metadata.
+
+The following sqlite databases are involved in the mining process:
+* [datasets] two databases including opentrials and datasets kept separately, both imported from the OpenAIRE Graph
+* [software] database including software entities imported from the OpenAIRE Graph and the Software Heritage URLs imported from the SH API
+
+****The result of the process on the OpenAIRE Research Graph content:****
+The following content is generated as an outcome of the software mining:
+* a new software entity in the OpenAIRE Graph including `title`, `description`, `codeRepositoryUrl`, two instance objects pointing to the original repository and to the SH resource
+* bi-directional relation between the publication and the software
+
+Dataset mining links to an already existing dataset entity therefore the following outcome is generated:
+* bi-directional relation between the publication and the dataset
 
 ***Parameters:***
 Title, URL, creator names, publisher names and publication year for each concept to create the target database. Identifier and publication's fulltext to extract the cited concepts
