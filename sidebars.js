@@ -108,10 +108,7 @@ const sidebars = {
         {
           type: 'category', 
           label: "Enrichment by mining",
-          link: {
-            type: 'generated-index',
-            description: 'The OpenAIRE Graph is enriched using the different Text and Data Mining (TDM) algorithms that are grouped in the following categories.'
-          },
+          link: {type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/enrichment-by-mining'},
           items: [
               { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/affiliation_matching' },
               { type: 'doc', id: 'graph-production-workflow/enrichment-by-mining/citation_matching' },
