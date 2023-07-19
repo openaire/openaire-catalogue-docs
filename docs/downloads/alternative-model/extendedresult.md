@@ -25,7 +25,7 @@ List of projects (i.e. grants) that (co-)funded the production of the research r
 
 "projects": [
         {
-            "id": "40|corda__h2020::94c4a066401e22002c4811a301bb4655",
+            "id": "corda__h2020::94c4a066401e22002c4811a301bb4655",
             "code": "727929",
             "acronym": "TomRes",
             "title": "A NOVEL AND INTEGRATED APPROACH TO INCREASE MULTIPLE AND COMBINED STRESS TOLERANCE IN PLANTS USING TOMATO AS A MODEL",
@@ -90,7 +90,7 @@ Information about the sources from which the record has been collected.
 
 "collectedfrom":[
         {
-            "key":"10|openaire____::081b82f96300b6a6e3d282bad31cb6e2",
+            "key":"openaire____::081b82f96300b6a6e3d282bad31cb6e2",
             "value":"Crossref"
         },
         ...    
@@ -126,11 +126,11 @@ Information about the source from which the instance can be viewed or downloaded
             "publicationdate": "2018-02-09",
             "refereed": "UNKNOWN",
             "hostedby": {
-                "key": "10|issn___print::35ee75a5ad42581d604be113a8f56427",
+                "key": "issn___print::35ee75a5ad42581d604be113a8f56427",
                 "value": "New Phytologist"
             },
             "collectedfrom": {
-                "key": "10|openaire____::081b82f96300b6a6e3d282bad31cb6e2",
+                "key": "openaire____::081b82f96300b6a6e3d282bad31cb6e2",
                 "value": "Crossref"
             }
         },

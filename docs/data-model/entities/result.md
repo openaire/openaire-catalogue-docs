@@ -23,7 +23,7 @@ _Type: String &bull; Cardinality: ONE_
 Main entity identifier, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
-"id": "50|doi_dedup___::80f29c8c8ba18c46c88a285b7e739dc3"
+"id": "doi_dedup___::80f29c8c8ba18c46c88a285b7e739dc3"
 ```
 
 ### type

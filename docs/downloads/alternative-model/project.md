@@ -22,7 +22,7 @@ Main entity identifier, created according to the [OpenAIRE entity identifier and
 
 ```json
 
-"id": "40|corda__h2020::70ea22400fd890c5033cb31642c4ae68"
+"id": "corda__h2020::70ea22400fd890c5033cb31642c4ae68"
 
 ```
 

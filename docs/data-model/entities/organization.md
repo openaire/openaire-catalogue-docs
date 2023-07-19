@@ -17,7 +17,7 @@ _Type: String &bull; Cardinality: ONE_
 The OpenAIRE id for the organization, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
-"id": "20|openorgs____::b84450f9864182c67b8611b5593f4250"
+"id": "openorgs____::b84450f9864182c67b8611b5593f4250"
 ```
 
 ### legalshortname

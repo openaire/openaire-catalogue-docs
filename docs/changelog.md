@@ -19,6 +19,26 @@ This section documents all notable changes for each graph version.
 
 ---
 
+### v6.0.0
+_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **yes**_
+
+#### Added
+- Citations imported from Crossref & MAG
+- FoS and SDG classifications introduced for ~16Mi research products
+
+#### Changed
+
+- [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
+- Removed the numerical prefix from the OpenAIRE identifiers (```"20|openorgs____::..." --> "openorgs____::..."```)
+- Dataset file names in the Zenodo depositions changed from `dump` to `dataset`
+- Crossref dump from May 2023
+- ORCID works without a DOI from June 2023
+- Usage counts from April 2023
+- Datacite contents from June 2023
+- OpenCitations relations from January 2023
+- Deduplication of the datasource
+- Avoid duplicated organisation PIDs
+
 ### v5.1.3
 _Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **no**_
 

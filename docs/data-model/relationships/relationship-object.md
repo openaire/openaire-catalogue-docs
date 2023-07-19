@@ -7,27 +7,39 @@ title: The Relationship object
 A relationship in the Graph is represented with the data type presented in this page, which aims to model a directed edge between two nodes, providing information about its semantics, provenance and validation.
 
 ### source
-_Type: [Node](#the-node-object) &bull; Cardinality: ONE_
+_Type: String &bull; Cardinality: ONE_
 
-Represents the source node in the relation.
+OpenAIRE identifier of the node in the graph.
 
 ```json
-"source": {
-    "id": "20|openorgs____::1cb75a3ad756e4c83e455e3e7347643b",
-    "type": "organization"
-}
+"source": "openorgs____::1cb75a3ad756e4c83e455e3e7347643b"
+```
+
+### sourceType
+_Type: String &bull; Cardinality: ONE_
+
+Graph node type.
+
+```json
+"sourceType": "organization"
 ```
 
 ### target
-_Type: [Node](#the-node-object) &bull; Cardinality: ONE_
+_Type: String &bull; Cardinality: ONE_
 
-Represents the target node in the relation.
+OpenAIRE identifier of the node in the graph.
 
 ```json
-"target": {
-    "id": "10|doajarticles::022409068174087a003647ff46070f7f",
-    "type": "datasource"
-}
+"target": "doajarticles::022409068174087a003647ff46070f7f"
+```
+
+### targetType
+_Type: String &bull; Cardinality: ONE_
+
+Graph node type.
+
+```json
+"target": "datasource"
 ```
 
 ### reltype
@@ -71,30 +83,7 @@ Indicates the validation date of the relation - applies only when the validated 
 "validationDate": "2022-09-02"
 ```
 
---- 
-
-## The `Node` object
-
-The Node data type contains the minimum information needed to identify a graph node, its identifier and entity type.
-
-
-### id
-_Type: String &bull; Cardinality: ONE_
-
-OpenAIRE identifier of the node in the graph.
-
-```json
-"id": "10|doajarticles::022409068174087a003647ff46070f7f"
-```
-    
-### type
-_Type: String &bull; Cardinality: ONE_
-
-Graph node type.
-
-```json
-"type": "datasource"
-```
+---
 
 ## The `RelType` object
 

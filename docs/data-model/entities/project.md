@@ -16,7 +16,7 @@ _Type: String &bull; Cardinality: ONE_
 Main entity identifier, created according to the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers).
 
 ```json
-"id": "40|corda__h2020::70ea22400fd890c5033cb31642c4ae68"
+"id": "corda__h2020::70ea22400fd890c5033cb31642c4ae68"
 ```
 
 ### code

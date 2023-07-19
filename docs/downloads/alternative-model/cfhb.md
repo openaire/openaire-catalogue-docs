@@ -16,7 +16,7 @@ _Type: String &bull; Cardinality: ONE_
 the OpenAIRE identifier of the data source
 	
 ```json
-"key":"10|openaire____::081b82f96300b6a6e3d282bad31cb6e2"
+"key":"openaire____::081b82f96300b6a6e3d282bad31cb6e2"
 ```
 
 ### value
