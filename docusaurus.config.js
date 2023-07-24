@@ -142,7 +142,15 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      matomo: {
+        matomoUrl: 'https://analytics.openaire.eu/',
+        siteId: '373',
+        phpLoader: 'piwik.php',
+      },
     }),
+  plugins: [
+    'docusaurus-plugin-matomo',
+  ],
 };
 
 module.exports = config;
