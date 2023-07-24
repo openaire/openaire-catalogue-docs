@@ -20,7 +20,7 @@ This section documents all notable changes for each graph version.
 ---
 
 ### v6.0.0
-_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **yes**_
+_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **no**_
 
 #### Added
 - Citations imported from Crossref & MAG
