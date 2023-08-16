@@ -41,6 +41,10 @@
   background-color: yellow;
 }
 
+.bip-indicator-names {
+  color: #B9BBB6;
+}
+
 @media (min-width: 996px) {
 
   .left-badge {
