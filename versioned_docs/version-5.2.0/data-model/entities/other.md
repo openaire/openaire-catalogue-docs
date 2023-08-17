@@ -201,55 +201,6 @@ Scheme of reference for access right code. Currently, always set to COAR access 
 "scheme": "http://vocabularies.coar-repositories.org/documentation/access_rights/"
 ```
 
-## BipIndicator
-
-The different impact indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
-
-
-### indicator
-_Type: String &bull; Cardinality: ONE_
-
-The name of indicator; it can be either one of: 
-* `influence`: it reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-* `influence_alt`: it is an alternative to the "Influence" indicator, which also reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-* `popularity`: it reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
-* `popularity_alt`: it is an alternative to the "Popularity" indicator, which also reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
-* `impulse`: it reflects the initial momentum of an article directly after its publication, based on the underlying citation network.
-
-For more details on how these indicators are calculated, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
-
-```json
-"influence": {
-    "score": "123",
-    "class": "C2"
-} 
-```
-
-### class
-_Type: String &bull; Cardinality: ONE_
-
-The impact class assigned based on the indicator score. 
-
-To facilitate comprehension, BIP! also offers impact classes for articles, to group together those that have similar impact. The following 5 classes are provided:
-* `C1`: Top 0.01%
-* `C2`: Top 0.1%
-* `C3`: Top 1%
-* `C4`: Top 10%
-* `C5`: Bottom 90%
-
-```json
-"class": "C2"
-```
-
-### score
-_Type: String &bull; Cardinality: ONE_
-
-The actual indicator score.
-
-```json
-"score": "1234"
-```
-
 ## Container
 This field has information about the conference or journal where the result has been presented or published.
 
@@ -659,49 +610,42 @@ These are indicators computed for a specific OpenAIRE result.
 
 Each Indicator object is composed of the following properties:
 
-### bipIndicators
-_Type: [BipIndicator](#bipindicator) &bull; Cardinality: MANY_
+### impactMeasures
+_Type: [ImpactMeasures](#impactmeasures-1) &bull; Cardinality: ONE_
 
 These impact-based indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the impact of a result. 
 
 For details about their calculation, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
 
 ```json
-"bipIndicators": [
-        {
-                "indicator": "influence",
+"impactMeasures": {
+        "influence": {
                 "score": "123",
                 "class": "C2"
         },
-        {
-                "indicator": "influence_alt",
-                "score": "456",
-                "class": "C3"
+        "influence_alt" : {
+               "score": "456",
+               "class": "C3"
         },
-        {
-                "indicator": "popularity",
-                "score": "234",
-                "class": "C1"
+        "popularity": {
+               "score": "234",
+               "class": "C1"
         },
-        {
-                "indicator": "popularity_alt",
-                "score": "345",
-                "class": "C5"
+        "popularity_alt": {
+               "score": "345",
+               "class": "C5"
         },
-        {
-                "indicator": "impulse",
+        "impulse": {
                 "score": "987",
                 "class": "C3"
         }
-]
+}
 ```
 
 ### usageCounts
 _Type: [UsageCounts](#usagecounts-1) &bull; Cardinality: ONE_
 
 These measures, computed by the [UsageCounts Service](https://usagecounts.openaire.eu/), are based on usage statistics.
-
-Please refer [here](/graph-production-workflow/indicators-ingestion/usage-counts) for more details.
 
 ```json
 "usageCounts":{
@@ -730,6 +674,76 @@ Language label in English.
 "label": "English"
 ```
 
+## ImpactMeasures
+
+The different impact-based indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
+
+### influence
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+This indicator reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#pagerank-pr).
+
+```json
+"influence": {
+    "score": "123",
+    "class": "C2"
+} 
+```
+
+### influence_alt
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+This is an alternative to the "Influence" indicator, which also reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#citation-count-cc).
+
+```json
+"influence_alt" :{
+    "score": "456",
+    "class": "C3"
+}
+```
+
+### popularity
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+This indicator reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#attrank).
+
+```json
+"popularity":{
+    "score": "234",
+    "class": "C1"
+}
+                
+```
+
+### popularity_alt
+_Type: [Score](#score) &bull; Cardinality: ONE_
+
+This is an alternative to the "Popularity" indicator, which also reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#ram).
+
+```json
+"popularity_alt":{
+    "score": "345",
+    "class": "C5"
+}
+                
+```
+
+### impulse
+_Type: [Score](#score) &bull; Cardinality: ONE_ 
+
+This indicator reflects the initial momentum of an article directly after its publication, based on the underlying citation network.
+For more details please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators#incubation-citation-count-icc).
+
+```json
+"impulse":{
+    "score": "987",
+    "class": "C3"
+}
+```
 
 ## OrganizationPid	
 
@@ -813,6 +827,33 @@ The value expressed in the scheme (i.e. 10.1000/182).
 "value": "10.21511/bbs.13(3).2018.13"
 ```
 
+## Score
+The specific score object for each calculated impact measure calculated by [BIP!](https://bip.imsi.athenarc.gr/). 
+
+### score
+_Type: String &bull; Cardinality: ONE_
+
+The actual indicator score.
+
+```json
+"score": "1234"
+```
+
+### class
+_Type: String &bull; Cardinality: ONE_
+
+The impact class assigned based on the indicator score. 
+
+To facilitate comprehension, BIP! also offers impact classes for articles, to group together those that have similar impact. The following 5 classes are provided:
+* `C1`: Top 0.01%
+* `C2`: Top 0.1%
+* `C3`: Top 1%
+* `C4`: Top 10%
+* `C5`: Bottom 90%
+
+```json
+"class": "C2"
+```
 ## Subject
 Represents keywords associated to the result.
 

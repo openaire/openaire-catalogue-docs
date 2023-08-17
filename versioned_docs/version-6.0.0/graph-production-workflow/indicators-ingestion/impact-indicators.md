@@ -1,12 +1,12 @@
 # Impact indicators
 
-This page summarises all calculated impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the [impactMeasures](/data-model/entities/other#impactmeasures) property (found under the [indicators](/data-model/entities/result#indicators) property of the result).
+This page summarises all calculated impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the [bipIndicators](/data-model/entities/other#bipindicators) property (found under the [indicators](/data-model/entities/result#indicators) property of the result).
 
 It should be noted that the impact indicators are being calculated on the level of the research output.
 Below we explain their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.
 
 
-## Citation Count (CC)
+## Citation Count (CC) <small><span className="bip-indicator-names">&bull; influence_alt</span></small>
 
 ***Short description:***
 This is the most widely used scientific impact indicator, which sums all citations received by each article.
@@ -31,7 +31,7 @@ Also, since some indicators require the publication year for their calculation, 
 ***Authority:*** ATHENA RC &bull; ***License:*** GPL-2.0 &bull; ***Code:*** [BIP! Ranker](https://github.com/athenarc/Bip-Ranker)
 
 
-## "Incubation" Citation Count (iCC)
+## "Incubation" Citation Count (iCC) <small><span className="bip-indicator-names">&bull; impulse</span></small>
 
 ***Short description:***
 This measure is essentially a time-restricted version of the citation count, where the time window is distinct for each paper, i.e., 
@@ -58,7 +58,7 @@ Also, since some indicators require the publication year for their calculation, 
 ***Authority:*** ATHENA RC &bull; ***License:*** GPL-2.0 &bull; ***Code:*** [BIP! Ranker](https://github.com/athenarc/Bip-Ranker)
 
 
- ## PageRank (PR)
+ ## PageRank (PR) <small><span className="bip-indicator-names">&bull; influence</span></small>
 
 ***Short description:***
 Originally developed to rank Web pages, PageRank has been also widely used to rank publications in citation
@@ -97,7 +97,7 @@ Also, since some indicators require the publication year for their calculation, 
 ***Authority:*** ATHENA RC &bull; ***License:*** GPL-2.0 &bull; ***Code:*** [BIP! Ranker](https://github.com/athenarc/Bip-Ranker)
  
 
-## RAM
+## RAM <small><span className="bip-indicator-names">&bull; popularity_alt</span></small>
 
 ***Short description:***
 RAM is essentially a modified Citation Count, where recent citations are considered of higher importance compared to older ones.
@@ -131,7 +131,7 @@ Also, since some indicators require the publication year for their calculation, 
 ***Authority:*** ATHENA RC &bull; ***License:*** GPL-2.0 &bull; ***Code:*** [BIP! Ranker](https://github.com/athenarc/Bip-Ranker)
 
 
-## AttRank
+## AttRank <small><span className="bip-indicator-names">&bull; popularity</span></small>
 
 ***Short description:***
 AttRank is a PageRank variant that alleviates its bias against recent publications (i.e., it is tailored to capture popularity). 

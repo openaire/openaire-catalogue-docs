@@ -184,35 +184,43 @@ Date when the embargo ends and this result turns Open Access.
 ```
 
 ### indicators
-_Type: [Indicator](other#indicator) &bull; Cardinality: ONE_
+_Type: [Indicator](other#indicator-1) &bull; Cardinality: ONE_
 
 The indicators computed for this result;
-currently, the following two types of indicators are supported: [impact indicators](/graph-production-workflow/indicators-ingestion/impact-indicators) and [usage statistics indicators](/graph-production-workflow/indicators-ingestion/usage-counts).
+currently, the following types of indicators are supported: 
+
+* [Impact indicators by BIP!](other#bipindicators)
+* [Usage Statistics indicators](other#usagecounts)
 
 ```json
 "indicators": {
-        "impactMeasures": {
-                "influence": {
+        "bipIndicators": [
+                {
+                        "indicator": "influence",
                         "score": "123",
                         "class": "C2"
                 },
-                "influence_alt" : {
+                {
+                        "indicator": "influence_alt",
                         "score": "456",
                         "class": "C3"
                 },
-                "popularity": {
+                {
+                        "indicator": "popularity",
                         "score": "234",
                         "class": "C1"
                 },
-                "popularity_alt": {
+                {
+                        "indicator": "popularity_alt",
                         "score": "345",
                         "class": "C5"
                 },
-                "impulse": {
+                {
+                        "indicator": "impulse",
                         "score": "987",
                         "class": "C3"
                 }
-        },
+        ],
         "usageCounts": {
                 "downloads": "10",
                  "views": "20"

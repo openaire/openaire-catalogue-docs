@@ -20,6 +20,22 @@ This section documents all notable changes for each graph version.
 ---
 
 ### v6.0.0
+_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
+
+#### Changed
+
+- [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
+- BIP! indicators are now serialised as an array; see the updated model [here](/data-model/entities/other#bipindicators) 
+- Crossref dump from June 2023
+- ORCID works without a DOI from June 2023
+- Usage counts from June 2023
+- Datacite contents from June 2023
+- OpenCitations relations from January 2023
+- BIP! indicators from June 2023
+- New Datasources/Services were added, collected from an updated EOSC Service catalogue endpoint
+
+
+### v5.2.0
 _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **no**_
 
 #### Added
@@ -28,7 +44,6 @@ _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **n
 
 #### Changed
 
-- [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
 - Removed the numerical prefix from the OpenAIRE identifiers (```"20|openorgs____::..." --> "openorgs____::..."```)
 - Dataset file names in the Zenodo depositions changed from `dump` to `dataset`
 - Crossref dump from May 2023
