@@ -19,7 +19,7 @@ This section documents all notable changes for each graph version.
 
 ---
 
-### v6.0.0
+### v5.2.0
 _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **no**_
 
 #### Added
@@ -28,7 +28,6 @@ _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **n
 
 #### Changed
 
-- [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
 - Removed the numerical prefix from the OpenAIRE identifiers (```"20|openorgs____::..." --> "openorgs____::..."```)
 - Dataset file names in the Zenodo depositions changed from `dump` to `dataset`
 - Crossref dump from May 2023
