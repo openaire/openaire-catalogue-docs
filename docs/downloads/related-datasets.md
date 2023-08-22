@@ -6,7 +6,7 @@ sidebar_position: 4
 
 In this page, we list other related datasets; please refer to their respective schema definitions for the data model they follow.
 
-## The dump of ScholeXplorer
+## The dataset of ScholeXplorer
 
  Dataset: https://doi.org/10.5281/zenodo.6338616
  
@@ -15,11 +15,11 @@ In this page, we list other related datasets; please refer to their respective s
  Schema (Scholix version 4): https://doi.org/10.5281/zenodo.6351557
 
 This dataset is licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
-The dataset contains the GZ-compressed dump of the Scholix links exposed by the OpenAIRE ScholeXplorer service.
+The dataset contains the GZ-compressed dataset of the Scholix links exposed by the OpenAIRE ScholeXplorer service.
 
-## The OpenAIRE LOD dump
+## The OpenAIRE LOD dataset
 
-Dataset (RDF dump): https://doi.org/10.5281/zenodo.609943
+Dataset (RDF): https://doi.org/10.5281/zenodo.609943
 
 LOD Ontology: http://lod.openaire.eu/vocab
 
