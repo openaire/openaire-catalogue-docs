@@ -8,7 +8,7 @@ In this page, we list other related datasets; please refer to their respective s
 
 ## The dataset of ScholeXplorer
 
- Dataset: https://doi.org/10.5281/zenodo.6338616
+ Dataset: https://zenodo.org/records/8074885
  
  Schema (Scholix version 3): https://doi.org/10.5281/zenodo.1120275
  
