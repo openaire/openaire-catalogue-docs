@@ -19,6 +19,20 @@ This section documents all notable changes for each graph version.
 
 ---
 
+### v6.1.1
+_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
+
+#### Added 
+- Affiliation (result to organization) relations from Crossref 
+- Links to the full text of research products
+
+#### Changed
+- Crossref dump from July 2023
+- ORCID works without a DOI from March 2023
+- Usage counts from July 2023
+- Datacite contents from early July 2023
+- OpenCitations relations from December 2022
+
 ### v6.0.0
 _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
 
