@@ -25,8 +25,10 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **y
 #### Added 
 - Affiliation (result to organization) relations from Crossref 
 - Links to the full text of research products
+- Cleaning for author and publisher names (get rid of tabs, CR characters, \n(s), escape double quotes)
 
 #### Changed
+- Projects without a grant code are removed
 - Crossref dump from July 2023
 - ORCID works without a DOI from March 2023
 - Usage counts from July 2023
