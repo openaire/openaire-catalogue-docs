@@ -1,6 +1,6 @@
 # Citation matching
 
-***Short description:*** During a citation matching task, bibliographic entries are linked to the documents that they reference. The citation matching module - one of the modules of the Information Inference Service (IIS) - receives as an input a list of documents accompanied by their metadata and bibliography. Among them, it discovers links described above and returns them as a list. It is worth mentioning that the implemented algorithm has been described in detail in [arXiv:1303.6906](https://arxiv.org/abs/1303.6906).
+***Short description:*** During a citation matching task, bibliographic entries are linked to the documents that they reference. The citation matching module - one of the modules of the Information Inference Service (IIS) - receives as an input a list of documents accompanied by their metadata and bibliography. Among them, it discovers links described above and returns them as a list. It is worth mentioning that the implemented algorithm has been described in detail in [arXiv:1303.6906](https://arxiv.org/abs/1303.6906)[1].
 
 ***Algorithmic details:***
 
@@ -35,6 +35,7 @@ names, we have taken longest common subsequence (LCS) of two strings into consid
 ***Environment:***
 Java, Spark
 
-***References:*** -
+***References:***
+* Fedoryszak, M., Tkaczyk, D., Bolikowski, Ł. (2013). Large Scale Citation Matching Using Apache Hadoop. In: Aalberg, T., Papatheodorou, C., Dobreva, M., Tsakonas, G., Farrugia, C.J. (eds) Research and Advanced Technology for Digital Libraries. TPDL 2013. Lecture Notes in Computer Science, vol 8092. Springer, Berlin, Heidelberg. [https://doi.org/10.1007/978-3-642-40501-3_37](https://doi.org/10.1007/978-3-642-40501-3_37)
 
 ***Authority:*** ICM &bull; ***License:*** AGPL-3.0 &bull; ***Code:*** [CoAnSys/citation-matching](https://github.com/CeON/CoAnSys/tree/master/citation-matching)

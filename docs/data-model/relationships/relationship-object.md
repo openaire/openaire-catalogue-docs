@@ -45,7 +45,7 @@ Graph node type.
 ### reltype
 _Type: [RelType](#the-reltype-object) &bull; Cardinality: ONE_
 
-Represent the semantics of the relation between two nodes of the graph.
+Represent the semantics of the relationship between two nodes of the graph.
 
 ```json
 "reltype": {
@@ -68,7 +68,7 @@ Indicates the process that produced (or provided) the information.
 ### validated
 _Type: Boolean &bull; Cardinality: ONE_
 
-Indicates weather or not the relation was validated.
+Indicates weather or not the relationship was validated.
 
 ```json
 "validated": true
@@ -77,7 +77,7 @@ Indicates weather or not the relation was validated.
 ### validationDate
 _Type: String &bull; Cardinality: ONE_
 
-Indicates the validation date of the relation - applies only when the validated flag is set to true.
+Indicates the validation date of the relationship - applies only when the validated flag is set to true.
 
 ```json
 "validationDate": "2022-09-02"
@@ -92,7 +92,7 @@ The RelType data type models the semantic of the relationship among two nodes.
 ### type
 _Type: String &bull; Cardinality: ONE_
 
-Relation category, e.g. affiliation, citation, see table Relation typologies.
+The relationship category, e.g. affiliation, citation.  (see [relationship types](./relationship-types)).
 
 ```json
 "name": "provides"
@@ -101,7 +101,7 @@ Relation category, e.g. affiliation, citation, see table Relation typologies.
 ### name
 _Type: String &bull; Cardinality: ONE_
 
-Further specifies the relation semantic, indicating the relation direction, e.g. Cites, isCitedBy.
+Further specifies the relationship semantic, indicating the relationship direction, e.g. Cites, isCitedBy.
 
 ```json
 "type": "provision"
