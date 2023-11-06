@@ -20,7 +20,7 @@ This section documents all notable changes for each graph version.
 ---
 
 ### v6.1.1
-_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
+_Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **no**_
 
 #### Added 
 - Affiliation (result to organization) relations from Crossref 

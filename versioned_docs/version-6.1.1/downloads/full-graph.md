@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Full graph dataset
 
+:::caution
+This version is not accompanied with public dump files, hence the files in this section are based on [v6.0.0](/docs/6.0.0/) of the Graph. The current data are only exposed via the [OpenAIRE Graph API](https://graph.openaire.eu/develop/) and added-value services that are built on top of this version of the Graph (e.g., the [OpenAIRE Explore](https://explore.openaire.eu/)). If you are interested to get bulk access to our latest data, please contact us via our [helpdesk](https://graph.openaire.eu/support).
+:::
+
 You can download the full OpenAIRE Graph Dataset as well as its schema from the following links: 
 
  Dataset: https://doi.org/10.5281/zenodo.3516917
