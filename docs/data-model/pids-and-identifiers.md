@@ -21,7 +21,7 @@ Such a policy defines a list of data sources that are considered authoritative f
 | uniprot   | [Protein Data Bank](http://www.pdb.org/)                                                            |
 | ena       | [Protein Data Bank](http://www.pdb.org/)                                                            |
 | pdb       | [Protein Data Bank](http://www.pdb.org/)                                                            |
-
+| swhid       | [Software Heritage](https://www.softwareheritage.org/)                                                            |
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
 In all other cases, PIDs are be included in the graph as alternate Identifiers.
