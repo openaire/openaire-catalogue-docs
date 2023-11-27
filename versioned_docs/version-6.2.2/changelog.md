@@ -6,7 +6,7 @@ sidebar_position: 12
 
 ## Versioning
 
-Our versioning policy follows the [Semantic Versioning specification](https://semver.org/). 
+Our versioning policy follows the [Semantic Versioning specification](https://semver.org/).
 In our case, given a version `MAJOR.MINOR.PATCH`, we increment the:
 
 * `MAJOR` version when the data model of the Graph changes
@@ -41,8 +41,8 @@ _Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dump release: **n
 ### v6.1.1
 _Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **no**_
 
-#### Added 
-- Affiliation (result to organization) relations from Crossref 
+#### Added
+- Affiliation (result to organization) relations from Crossref
 - Links to the full text of research products
 - Cleaning for author and publisher names (get rid of tabs, CR characters, \n(s), escape double quotes)
 
@@ -60,7 +60,7 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **y
 #### Changed
 
 - [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
-- BIP! indicators are now serialised as an array; see the updated model [here](/data-model/entities/other#bipindicators) 
+- BIP! indicators are now serialised as an array; see the updated model [here](/data-model/entities/other#bipindicators)
 - Crossref dump from June 2023
 - ORCID works without a DOI from June 2023
 - Usage counts from June 2023
