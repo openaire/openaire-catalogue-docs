@@ -22,18 +22,16 @@ This section documents all notable changes for each graph version.
 ### v6.2.2
 _Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dump release: **no**_
 
-#### Coverage
+#### Added
 - Imported Opencitation's POCI dataset, containing citations among publications in PubMed
 - Imported Affiliations from Crossref and from PubMed
 - Imported Software Heritage identifiers for Software records
 - Extended coverage of Irish funders imported from Crossref
 - Peer reviewed material identified with a revised heuristic that allowed to improve the coverage
-
-#### Enrichment
 - Project references identified by TDM increased by ~10%
 - Introduced new Field of Science classifications for ~40Mi publications
 
-#### Update
+#### Changed
 - Updated Crossref publications to include contents until October 2023
 - Updated Datacite contents until October 2023
 - Indicators regarding data source downloads and views taken by usage counts from September 2023
