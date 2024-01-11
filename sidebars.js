@@ -54,9 +54,37 @@ const sidebars = {
       ]
     },
     {
-      type: "link",
-      label: "Public API",
-      href: "https://graph.openaire.eu/develop/overview.html"
+      type: 'category', 
+      label: "Public APIs",
+      link: {type: 'doc', id: 'apis/home'},
+      items: [
+        {
+          type: 'category', 
+          label: "Search API",
+          link: { type: 'doc', id: 'apis/search-api/search-api' },
+          items: [
+            { type: 'doc', id: 'apis/search-api/results' },
+            { type: 'doc', id: 'apis/search-api/projects' },
+            { type: 'doc', id: 'apis/search-api/response-metadata-format' },
+          ]
+        }, 
+        {      
+          type: "link",
+          label: "ScholeXplorer API",
+          href: "https://api.scholexplorer.openaire.eu/swagger-ui/index.html?urls.primaryName=Scholexplorer%20API%20V2.0"
+        },
+        {      
+          type: "doc",
+          id: "apis/dspace-eprints-api",
+        },
+        {      
+          type: "doc",
+          id: "apis/broker-api"
+        },
+        { type: 'doc', id: 'apis/terms' },
+        { type: 'doc', id: 'apis/authenticated-requests' },
+        { type: 'doc', id: 'apis/specification-changelog' },
+      ]
     },
     {
       type: 'category', 
