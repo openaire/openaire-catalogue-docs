@@ -47,7 +47,7 @@ OpenAIRE assigns internal identifiers for each object it collects.
 By default, the internal identifier is generated as `sourcePrefix::md5(localId)` where:
 
 * `sourcePrefix` is a namespace prefix of 12 chars assigned to the data source at registration time
-* `localid` is the identifier assigned to the object by the data source
+* `localΙd` is the identifier assigned to the object by the data source
 
 After years of operation, we can say that:
 

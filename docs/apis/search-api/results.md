@@ -8,7 +8,7 @@ By specific type:
 * publications: https://api.openaire.eu/search/publications 
 * research data: https://api.openaire.eu/search/datasets 
 * research software: https://api.openaire.eu/search/software 
-* other research products: http://api.openaire.eu/search/other 
+* other research products: https://api.openaire.eu/search/other 
 
 
 ## General parameters
