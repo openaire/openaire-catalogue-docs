@@ -126,7 +126,7 @@ Also, since some indicators require the publication year for their calculation, 
 ***Environment:*** PySpark
 
 ***References:*** 
-* Ghosh, R., Kuo, T. T., Hsu, C. N., Lin, S. D., & Lerman, K. (2011, December). Time-aware ranking in dynamic citation networks. In 2011 ieee 11^{th} international conference on data mining workshops (pp. 373-380). IEEE.
+* Ghosh, R., Kuo, T. T., Hsu, C. N., Lin, S. D., & Lerman, K. (2011, December). Time-aware ranking in dynamic citation networks. In 2011 ieee 11^\{th\} international conference on data mining workshops (pp. 373-380). IEEE.
 
 ***Authority:*** ATHENA RC &bull; ***License:*** GPL-2.0 &bull; ***Code:*** [BIP! Ranker](https://github.com/athenarc/Bip-Ranker)
 

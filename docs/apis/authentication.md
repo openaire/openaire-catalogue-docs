@@ -119,12 +119,12 @@ Once your service is created, the _Client ID_ and _Client Secret_ will appear on
 
 To make an access token request use the _Client ID_ and _Client Secret_ of your service.
 ```js
-curl -u {CLIENT_ID}:{CLIENT_SECRET} \
+curl -u \{CLIENT_ID\}:\{CLIENT_SECRET\} \
 -X POST 'https://aai.openaire.eu/oidc/token' \
 -d 'grant_type=client_credentials'
 ```
 
-where **{CLIENT_ID}** and **{CLIENT_SECRET}** are the _Client ID_ and _Client Secret_ assigned to your service upon registration.
+where **\{CLIENT_ID\}** and **\{CLIENT_SECRET\}** are the _Client ID_ and _Client Secret_ assigned to your service upon registration.
 
 The response is:
 ```json
@@ -281,9 +281,9 @@ To make an access token request use the _signed JWT_ that you created in **Step 
 	curl -k -X POST "https://aai.openaire.eu/oidc/token" \
 	-d "grant_type=client_credentials" \
 	-d "client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer" \
-	-d "client_assertion={signedJWT}"
+	-d "client_assertion=\{signedJWT\}"
 ```
-where **{signedJWT}** is the signed JWT created in **Step 1**.
+where **\{signedJWT\}** is the signed JWT created in **Step 1**.
 
 The response is:
 ```json
