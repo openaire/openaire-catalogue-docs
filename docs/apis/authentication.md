@@ -119,7 +119,7 @@ Once your service is created, the _Client ID_ and _Client Secret_ will appear on
 
 To make an access token request use the _Client ID_ and _Client Secret_ of your service.
 ```js
-curl -u \{CLIENT_ID\}:\{CLIENT_SECRET\} \
+curl -u {CLIENT_ID}:{CLIENT_SECRET} \
 -X POST 'https://aai.openaire.eu/oidc/token' \
 -d 'grant_type=client_credentials'
 ```
