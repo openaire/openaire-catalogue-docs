@@ -72,3 +72,53 @@
   height: var(--ifm-navbar-height);
 }
 
+/* custom css classes to embed publications pages in an iframel; adjusts look and feel with docusaurus-data-x query-string parameters */
+html[data-embed-publications='true'] .navbar {
+  display: none;
+}
+
+html[data-embed-publications='true'] .theme-doc-toc-desktop {
+  display: none;
+}
+
+html[data-embed-publications='true'] .theme-doc-sidebar-container {
+  display: none;
+}
+
+html[data-embed-publications='true'] .theme-doc-breadcrumbs{
+  display: none;
+}
+
+html[data-embed-publications='true'] .theme-doc-version-badge  {
+  display: none;
+}
+
+/* intended to remove header in publications */
+html[data-embed-publications='true'] .theme-doc-markdown h1  {
+  display: none;
+}
+
+html[data-embed-publications='true'] .theme-doc-toc-mobile  {
+  display: none;
+}
+
+html[data-embed-publications='true'] .pagination-nav  {
+  display: none;
+}
+
+html[data-embed-publications='true'] .footer  {
+  display: none;
+}
+
+html[data-embed-publications='true'] .container > .row > .col--3 {
+  display: none;
+}
+
+html[data-embed-publications='true'] {
+  --ifm-background-color: #fff;
+}
+
+
+html[data-embed-publications='true'] .theme-admonition-note {
+  background-color: #f5f5f5;
+}

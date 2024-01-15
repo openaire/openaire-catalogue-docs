@@ -141,6 +141,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: [
+          'json'
+        ]
       },
       matomo: {
         matomoUrl: 'https://analytics.openaire.eu/',
