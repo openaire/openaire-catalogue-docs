@@ -47,4 +47,4 @@ APIs are free-to-use (no sign-up needed) by any third-party service
 
 **Quality of Service**: all API services are running in production 24/7 within the OpenAIRE infrastructure premises deployed at the [data center](http://icm.edu.pl/en/centre-of-technology/) facilities of the [Interdisciplinary Centre for Mathematical and Computational Modelling](http://icm.edu.pl/en/) (ICM).
 
-**APIs rate limits**: please check [here](./authenticated-requests).
+**APIs rate limits**: please check [here](./authentication).
