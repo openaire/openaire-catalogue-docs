@@ -82,7 +82,7 @@ const sidebars = {
           id: "apis/broker-api"
         },
         { type: 'doc', id: 'apis/terms' },
-        { type: 'doc', id: 'apis/authenticated-requests' },
+        { type: 'doc', id: 'apis/authentication' },
         { type: 'doc', id: 'apis/specification-changelog' },
       ]
     },
