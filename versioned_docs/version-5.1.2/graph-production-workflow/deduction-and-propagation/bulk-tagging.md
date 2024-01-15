@@ -18,8 +18,8 @@ As of November 2022, three procedures are in place to relate a research product 
 </p>
 
  When only some results collected from a datasource are relevant for the RC/RI, it is possible to specify a set of selection constraints (SC) that have to be verified before linking the result to the 
-community. The selection constraint has the form <strong>SC = S1 or S2 or ... or Sn</strong>. The generic Si has the form <strong>Si = s<sub>i1</sub> and s<sub>i2</sub> and ...and s<sub>in</sub></strong> and each s<sub>ij</sub> is a condition on a specific field of the result. The set of fields that can be specified is <strong>F={title, author, contributor, description, orcid}</strong>, 
-while the set of condition can be among <strong>V={contains, equals, not_contains, not_equals, contains_ignorecase, equals_ignorecase, not_contains_ignorecase, not_equal_ignorecase}</strong>, and the value is free text.
+community. The selection constraint has the form <strong>SC = S1 or S2 or ... or Sn</strong>. The generic Si has the form <strong>Si = s<sub>i1</sub> and s<sub>i2</sub> and ...and s<sub>in</sub></strong> and each s<sub>ij</sub> is a condition on a specific field of the result. The set of fields that can be specified is <strong>F=\{title, author, contributor, description, orcid\}</strong>, 
+while the set of condition can be among <strong>V=\{contains, equals, not_contains, not_equals, contains_ignorecase, equals_ignorecase, not_contains_ignorecase, not_equal_ignorecase\}</strong>, and the value is free text.
 A possible selection criteria can be: “All the products whose contributor contains DARIAH “
 
 <p align="center">
