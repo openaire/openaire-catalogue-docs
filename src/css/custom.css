@@ -122,3 +122,10 @@ html[data-embed-publications='true'] {
 html[data-embed-publications='true'] .theme-admonition-note {
   background-color: #f5f5f5;
 }
+
+html[data-embed-publications='true'] .theme-doc-markdown {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
