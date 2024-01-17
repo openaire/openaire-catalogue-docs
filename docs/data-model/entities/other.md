@@ -20,7 +20,7 @@ Indicates the OpenAccess status. Values are set according to the [Unpaywall meth
 ```
 
 ## AlternateIdentifier
-Type used to represent the information associated to persistent identifiers associated to the result that have not been forged by an authority for that pid type. For example we collect metadata from an institutional repository that provides as identifier for the result also the doi.
+Type used to represent the information associated to persistent identifiers associated to the research product that have not been forged by an authority for that pid type. For example we collect metadata from an institutional repository that provides as identifier for the research product also the DOI.
 
 ### scheme 
 _Type: String &bull; Cardinality: ONE_
@@ -63,7 +63,7 @@ The quantity of money.
 
 ## Author
 
-Represents the result author.
+Represents the research product author.
 
 ### fullname
 _Type: String &bull; Cardinality: ONE_
@@ -95,7 +95,7 @@ Author's family name.
 ### rank
 _Type: String &bull; Cardinality: ONE_
 
-Author's order in the list of authors for the given result.
+Author's order in the list of authors for the given research product.
 
 ```json
 "rank": 1
@@ -167,7 +167,7 @@ The author's pid value in that scheme.
 ```
 
 ## BestAccessRight
-Indicates the most open access rights \*available among the result Instances.
+Indicates the most open access rights \*available among the research product instances.
 
 \* where the openness is defined by the ordering of the access right terms in the following.
 ```
@@ -251,7 +251,7 @@ The actual indicator score.
 ```
 
 ## Container
-This field has information about the conference or journal where the result has been presented or published.
+This field has information about the conference or journal where the research product has been presented or published.
 
 ### name
 _Type: String &bull; Cardinality: ONE_
@@ -533,7 +533,7 @@ The description of the programme.
 ```
 
 ## Instance
-An instance is one specific materialization or version of the result. For example, you can have one result with three instances as result of deduplication:
+An instance is one specific materialization or version of the research product. For example, you can have one research product with three instances due to deduplication:
 
 * one is the pre-print
 * one is the post-print
@@ -558,7 +558,7 @@ Maps [dc:rights](https://www.dublincore.org/specifications/dublin-core/dcmi-term
 ### alternateIdentifier
 _Type: [AlternateIdentifier](#alternateidentifier) &bull; Cardinality: MANY_
 
-All the identifiers associated to the result other than the authoritative ones.
+All the identifiers associated to the research product other than the authoritative ones.
 
 ```json
 "alternateIdentifier": [
@@ -655,14 +655,14 @@ URLs to the instance. They may link to the actual full-text or to the landing pa
 
 ## Indicator
 
-These are indicators computed for a specific OpenAIRE result.
+These are indicators computed for a specific OpenAIRE research product.
 
 Each Indicator object is composed of the following properties:
 
 ### bipIndicators
 _Type: [BipIndicator](#bipindicator) &bull; Cardinality: MANY_
 
-These impact-based indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the impact of a result. 
+These impact-based indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the impact of a research product. 
 
 For details about their calculation, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
 
@@ -710,7 +710,7 @@ Please refer [here](/graph-production-workflow/indicators-ingestion/usage-counts
 }
 ```
 ## Language
-Represents information for the language of the result
+Represents information for the language of the research product.
 
 ### code
 _Type: String &bull; Cardinality: ONE_
@@ -775,13 +775,13 @@ Trust, expressed as a number in the range [0-1].
 ```
 
 ## ResultCountry
-It is for the country associated to the result. 
+This is the country associated to the research product. 
 It is a subclass of [Country](#country) and extends it with provenance information.
 
 ### provenance
 _Type: [Provenance](#provenance-2) &bull; Cardinality: ONE_
 
-Indicates the reason why this country is associated to this result.
+Indicates the reason why this country is associated to this research product.
 
 ```json
 "provenance": {
@@ -791,14 +791,14 @@ Indicates the reason why this country is associated to this result.
 ```
 
 ## ResultPid
-Type used to represent the information associated to persistent identifiers for the result that have been forged by an authority for that pid type.
+Type used to represent the information associated to persistent identifiers for the research product that have been forged by an authority for that pid type.
 
 <!-- <span className="todo">Seems to be similar to the AlternateIdentifier. What is the difference?</span> -->
 
 ### scheme
 _Type: String &bull; Cardinality: ONE_
 
-The scheme of the persistent identifier for the result (i.e. doi). If the pid is here it means the information for the pid has been collected from an authority for that pid type (i.e. Crossref/Datacite for doi). The set of authoritative pid is: `doi` when collected from Crossref or Datacite, `pmid` when collected from EuroPubmed, `arxiv` when collected from arXiv, `handle` from the repositories.
+The scheme of the persistent identifier for the research product (i.e. doi). If the pid is here it means the information for the pid has been collected from an authority for that pid type (i.e. Crossref/Datacite for doi). The set of authoritative pid is: `doi` when collected from Crossref or Datacite, `pmid` when collected from EuroPubmed, `arxiv` when collected from arXiv, `handle` from the repositories.
 
 ```json
 "scheme": "doi"
@@ -814,7 +814,7 @@ The value expressed in the scheme (i.e. 10.1000/182).
 ```
 
 ## Subject
-Represents keywords associated to the result.
+Represents keywords associated to the research product.
 
 ### subject
 _Type: [SubjectSchemeValue](#subjectschemevalue) &bull; Cardinality: ONE_
@@ -863,12 +863,12 @@ The value for the subject in the selected scheme. When the scheme is 'keyword', 
 
 ## UsageCounts
 
-The usage counts indicator computed for this result.
+The usage counts indicator computed for this research product.
 
 ### views
 _Type: String &bull; Cardinality: ONE_
 
-The number of views for this result.
+The number of views for this research product.
 
 ```json
 "views": "10"
@@ -877,7 +877,7 @@ The number of views for this result.
 ### downloads
 _Type: String &bull; Cardinality: ONE_
 
-The number of downloads for this result.
+The number of downloads for this research product.
 
 ```json
 "downloads": "5"

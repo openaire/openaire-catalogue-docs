@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 
-# Results
+# Research products
 
-Results are intended as digital objects, described by metadata, resulting from a scientific process.
-In this page, we descibe the properties of the `Result` object.
+Research products are intended as digital objects, described by metadata, resulting from a scientific process.
+In this page, we descibe the properties of the `ResearchProduct` object.
 
-Moreover, there are the following sub-types of a `Result`, that inherit all its properties and further extend it:
+Moreover, there are the following sub-types of a `ResearchProduct`, that inherit all its properties and further extend it:
 * [Publication](#publication)
 * [Dataset](#dataset)
 * [Software](#software)
@@ -15,7 +15,7 @@ Moreover, there are the following sub-types of a `Result`, that inherit all its 
 
 --- 
 
-## The `Result` object 
+## The `ResearchProduct` object 
 
 ### id
 _Type: String &bull; Cardinality: ONE_
@@ -29,7 +29,7 @@ Main entity identifier, created according to the [OpenAIRE entity identifier and
 ### type
 _Type: String  &bull; Cardinality: ONE_
 
-Type of the result. Possible types: 
+Type of the research products. Possible types: 
 
 * `publication`
 * `dataset`
@@ -59,7 +59,7 @@ Identifiers of the record at the original sources.
 ### maintitle
 _Type: String &bull; Cardinality: ONE_
 
-A name or title by which a scientific result is known. May be the title of a publication, of a dataset or the name of a piece of software.
+A name or title by which a research product is known. May be the title of a publication, of a dataset or the name of a piece of software.
 
 ```json
 "maintitle": "The fall of the innovation empire and its possible rise through open science"
@@ -69,7 +69,7 @@ A name or title by which a scientific result is known. May be the title of a pub
 
 _Type: String &bull; Cardinality: ONE_
 
-Explanatory or alternative name by which a scientific result is known.
+Explanatory or alternative name by which a research product is known.
 
 ```json
 "subtitle": "An analysis of cases from 1980 - 2020"
@@ -104,7 +104,7 @@ The main researchers involved in producing the data, or the authors of the publi
 ### bestaccessright
 _Type: [BestAccessRight](other#bestaccessright) &bull; Cardinality: ONE_
 
-The most open access right associated to the manifestations of this research results.
+The most open access right associated to the manifestations of this research product.
 
 ```json
 "bestaccessright": {
@@ -131,8 +131,8 @@ The institution or person responsible for collecting, managing, distributing, or
 ### country
 _Type: [ResultCountry](other#resultcountry) &bull; Cardinality: MANY_
 
-Country associated with the result because it is the country of the organisation that manages the institutional repository or national aggregator or CRIS system from which this record was collected
-Country of affiliations of authors can be found instead in the affiliation rel.
+Country associated with the research product: it is the country of the organisation that manages the institutional repository or national aggregator or CRIS system from which this record was collected.
+Country of affiliations of authors can be found instead in the affiliation relation.
 
 ```json
 "country": [
@@ -177,7 +177,7 @@ A brief description of the resource and the context in which the resource was cr
 ### embargoenddate
 _Type: String &bull; Cardinality: ONE_
 
-Date when the embargo ends and this result turns Open Access.
+Date when the embargo ends and this research product turns Open Access.
 
 ```json
 "embargoenddate": "2017-01-01"
@@ -186,7 +186,7 @@ Date when the embargo ends and this result turns Open Access.
 ### indicators
 _Type: [Indicator](other#indicator-1) &bull; Cardinality: ONE_
 
-The indicators computed for this result;
+The indicators computed for this research product;
 currently, the following types of indicators are supported: 
 
 * [Impact indicators by BIP!](other#bipindicators)
@@ -231,7 +231,7 @@ currently, the following types of indicators are supported:
 ### instance
 _Type: [Instance](other#instance) &bull; Cardinality: MANY_
 
-Specific materialization or version of the result. For example, you can have one result with three instances: one is the pre-print, one is the post-print, one is the published version.
+Specific materialization or version of the research product. For example, you can have one research product with three instances: one is the pre-print, one is the post-print, one is the published version.
 
 ```json
 "instance": [
@@ -296,7 +296,7 @@ Timestamp of last update of the record in OpenAIRE.
 ### pid
 _Type: [ResultPid](other#resultpid) &bull; Cardinality: MANY_
 
-Persistent identifiers of the result. See also the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers) to learn more.
+Persistent identifiers of the research product. See also the [OpenAIRE entity identifier and PID mapping policy](../pids-and-identifiers) to learn more.
 
 ```json
 "pid": [
@@ -315,7 +315,7 @@ Persistent identifiers of the result. See also the [OpenAIRE entity identifier a
 ### publicationdate
 _Type: String &bull; Cardinality: ONE_
 
-Main date of the research product: typically the publication or issued date. In case of a research result with different versions with different dates, the date of the result is selected as the most frequent well-formatted date. If not available, then the most recent and complete date among those that are well-formatted. For statistics, the year is extracted and the result is counted only among the result of that year. Example: Pre-print date: 2019-02-03, Article date provided by repository: 2020-02, Article date provided by Crossref: 2020, OpenAIRE will set as date 2019-02-03, because it’s the most recent among the complete and well-formed dates. If then the repository updates the metadata and set a complete date (e.g. 2020-02-12), then this will be the new date for the result because it becomes the most recent most complete date. However, if OpenAIRE then collects the pre-print from another repository with date 2019-02-03, then this will be the “winning date” because it becomes the most frequent well-formatted date.
+Main date of the research product: typically the publication or issued date. In case of a research product with different versions with different dates, the date of the research product is selected as the most frequent well-formatted date. If not available, then the most recent and complete date among those that are well-formatted. For statistics, the year is extracted and the research product is counted only among the research products of that year. Example: Pre-print date: 2019-02-03, Article date provided by repository: 2020-02, Article date provided by Crossref: 2020, OpenAIRE will set as date 2019-02-03, because it’s the most recent among the complete and well-formed dates. If then the repository updates the metadata and set a complete date (e.g. 2020-02-12), then this will be the new date for the research product because it becomes the most recent most complete date. However, if OpenAIRE then collects the pre-print from another repository with date 2019-02-03, then this will be the “winning date” because it becomes the most frequent well-formatted date.
 
 ```json
 "publicationdate": "2021-03-18"
@@ -376,7 +376,7 @@ Metadata records about research literature (includes types of publications liste
 #### container 
 _Type: [Container](other#container) &bull; Cardinality: ONE_
 
-Container has information about the conference or journal where the result has been presented or published.
+Container has information about the conference or journal where the research product has been presented or published.
 
 ```json
 "container": {

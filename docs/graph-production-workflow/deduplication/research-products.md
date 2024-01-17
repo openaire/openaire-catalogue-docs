@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 
-# Research results
+# Research products
 
-Duplicates among research results are identified among results of the same type (publications, datasets, software, other research products). If two duplicate results are aggregated one as a dataset and one as a software, for example, they will never be compared and they will never be identified as duplicates.
+Duplicates among research products are identified among results of the same type (publications, datasets, software, other research products). If two duplicate research products are aggregated one as a dataset and one as a software, for example, they will never be compared and they will never be identified as duplicates.
 OpenAIRE supports different deduplication strategies based on the type of results.
 
-The next sections describe how each stage of the deduplication workflow is faced for research results.
+The next sections describe how each stage of the deduplication workflow is faced for research products.
 
 ### Candidate identification (clustering)
 

@@ -1,4 +1,4 @@
-# Searching for research results
+# Searching for research products
 
 ## Endpoints 
 

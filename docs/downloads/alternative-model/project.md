@@ -9,7 +9,7 @@ sidebar_position: 1
 # Project
 
 
-The information about the projects related to the result.
+The information about the projects related to a research product.
 
 
 ### id
@@ -99,7 +99,7 @@ Information about the funder funding the project.
 _Type [Provenance](../../data-model/entities/other#provenance-2)  &bull; Cardinality: ONE_
 
 
-The reason why the project is associated to the result.
+The reason why the project is associated to the research product.
 
 
 ```json
@@ -119,7 +119,7 @@ The reason why the project is associated to the result.
 _Type [Validated](validated.md)  &bull; Cardinality: ONE_
 
 
-Specifies it the association between the project and the result was validated.
+Specifies whether the association between the project and the research product was validated.
 
 
 ```json

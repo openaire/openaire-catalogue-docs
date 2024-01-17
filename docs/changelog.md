@@ -30,12 +30,12 @@ _Start Date: 2023-12-18 &bull; Release Date: 2024-01-06 &bull; Dataset release: 
 
 #### Changed
 
-This graph release also introduces new indicators to identify results published using specific open access models, in diamond journals, and those that received public funding. These indicators will also be added to the graph dataset in Zenodo. In details:
+This graph release also introduces new fields to identify reseach products published using specific open access models, in diamond journals, and those that received public funding. These fields will also be added to the graph dataset in Zenodo. In details:
 
-- `result.isGreen (true, false)`: indicates whether or not the scientific result was published following the green open access model;
-- `result.openAccesColor (bronze, gold, hybrid)`: indicates the specific open access model used for the publication;
-- `result.isInDiamondJournal (true, false)`: indicates whether or not the result was published in a diamond journal;
-- `result.publicly-funded (true, false)`: indicates whether or not the grants acknowledged by the publication come from public funds.
+- `ResearchProduct.isGreen (true, false)`: indicates whether or not the researh product was published following the green open access model;
+- `ResearchProduct.openAccesColor (bronze, gold, hybrid)`: indicates the specific open access model used for the publication;
+- `ResearchProduct.isInDiamondJournal (true, false)`: indicates whether or not the research product was published in a diamond journal;
+- `ResearchProduct.publicly-funded (true, false)`: indicates whether or not the grants acknowledged by the publication come from public funds.
 
 ### v6.2.2
 _Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dataset release: **no**_
@@ -58,7 +58,7 @@ _Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dataset release: 
 _Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dataset release: **no**_
 
 #### Added
-- Affiliation (result to organization) relations from Crossref
+- Affiliation (research product to organization) relations from Crossref
 - Links to the full text of research products
 - Cleaning for author and publisher names (get rid of tabs, CR characters, \n(s), escape double quotes)
 
@@ -75,8 +75,8 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dataset release: 
 
 #### Changed
 
-- [Relationship data model](/data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
-- BIP! indicators are now serialised as an array; see the updated model [here](/data-model/entities/other#bipindicators)
+- [Relationship data model](./data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
+- BIP! indicators are now serialised as an array; see the updated model [here](./data-model/entities/other#bipindicators)
 - Crossref dump from June 2023
 - ORCID works without a DOI from June 2023
 - Usage counts from June 2023
@@ -139,8 +139,8 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dataset release: 
 - Revised SDG classification: improved coverage (+600K classified DOIs)
 - General increase of the funded scientific outputs, thanks to the full text mining scanning new OpenAccess publications
 - Integrated contents from
-  - [EMBL-EBIs Protein Data Bank in Europe](/graph-production-workflow/aggregation/non-compatible-sources/ebi)
-  - [UniProtKB/Swiss-Prot](/graph-production-workflow//aggregation/non-compatible-sources/uniprot)
+  - [EMBL-EBIs Protein Data Bank in Europe](./graph-production-workflow/aggregation/non-compatible-sources/ebi)
+  - [UniProtKB/Swiss-Prot](./graph-production-workflow/aggregation/non-compatible-sources/uniprot)
 
 #### Changed
 
@@ -172,14 +172,14 @@ _Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dataset release: 
 
 #### Added
 
-- [Impact & Usage indicators](/data-model/entities/result#indicators) at the level of the Result
-- [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
+- [Impact & Usage indicators](./data-model/entities/research-product.md#indicators) at the level of the research product
+- [Beginner's kit](./downloads/beginners-kit) in the Downloads section
+- New relationship types were introduced; see the complete list [here](./data-model/relationships/relationship-types)
 
 #### Changed
 
-- FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
-- Measures were removed from the [result instance](/data-model/entities/result#instance)
+- FOS and SDGs were removed from the [ResearchProduct.subjects](./data-model/entities/research-product#subjects)
+- Measures were removed from the [ResearchProduct.instance](./data-model/entities/research-product#instance)
 - Updated DOIBoost to include publications from Crossref and the works from ORCID with a DOI until November 2022
 - Added ORCID works without a DOI from November 2022
 

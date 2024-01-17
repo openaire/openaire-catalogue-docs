@@ -31,7 +31,7 @@ const sidebars = {
             description: 'The main entities of the OpenAIRE Graph are listed below.'
           },
           items: [
-            { type: 'doc', id: 'data-model/entities/result' },
+            { type: 'doc', id: 'data-model/entities/research-product' },
             { type: 'doc', id: 'data-model/entities/data-source' },
             { type: 'doc', id: 'data-model/entities/organization' },
             { type: 'doc', id: 'data-model/entities/project' },

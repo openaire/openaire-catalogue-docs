@@ -11,13 +11,13 @@ across the various datasources.
 This phase is therefore responsible to compensate for such inconsistencies and performs
 a global grouping of every record available in the graph:
 
-- entities are grouped by [`id`](../data-model/entities/result#id)
+- entities are grouped by [`id`](../data-model/entities/research-product#id)
 - relations are grouped by [`source`, `target`, `reltype`](../data-model/relationships/relationship-object)
 
 This ensures that the same record, possibly assigned to different types by different 
 mappings, appears only once in the graph and under a single typing. In case of clashing 
 identifiers, the properties are merged (including the provencance information), considering 
-the following precedence order for the result typing:
+the following precedence order for the research product typing:
 
 ```
 publication > dataset > software > other

@@ -22,7 +22,7 @@
 | 2021-02-01T08:55:35.496938Z | OAI-PMH shutdown announced for the end of April 2021 |
 | 2021-01-15T18:56:04.748404Z | Updated documentation on OpenAIRE Research Graph Datasets |
 | 2021-01-15T16:57:08.569766Z | Announcing the shutdown of the OAI-PMH publisher |
-| 2019-01-25T15:36:27.264313Z | Added new parameter country for research results |
+| 2019-01-25T15:36:27.264313Z | Added new parameter country for research products |
 | 2018-10-17T10:39:56.570815Z | Software and Other research products are available via HTTP API. Documentation has been updated. |
 | 2018-04-09T09:20:24.763966Z | Added section on terms of services and SLA in the specific API pages |
 | 2018-04-09T08:26:18.897089Z | Added section for terms of use and SLA in the home page |
@@ -80,7 +80,7 @@
 | 2014-04-30T10:41:14.539090Z | Added and commented property to generate output in chunks |
 | 2014-04-30T10:40:30.012256Z | mvn generates output with no chunks in a single file: api-doc.html |
 | 2014-04-30T10:39:37.875730Z | Main docbook file renamed from book.xml to api-doc.xml |
-| 2014-04-30T10:34:16.576722Z | updated OAI-PMH sets: now delivering only results and no other entities. |
+| 2014-04-30T10:34:16.576722Z | updated OAI-PMH sets: now delivering only research products and no other entities. |
 | 2014-04-15T09:53:22.158487Z | copied dnet-api-http-doc to new dnet40 codebase |
 | 2014-04-10T09:55:41.690052Z | ignore |
 | 2014-04-10T09:53:59.192401Z | removed target/*classes from svn |

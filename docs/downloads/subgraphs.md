@@ -61,10 +61,10 @@ Please refer [here](#alternative-sub-graph-data-model) for details on the data m
 
 It should be noted that the datasets for research communities, infrastructures, and products related to projects do not strictly follow the main data model of the OpenAIRE Graph. In particular, they differ in the following:
 
-* only research products are included (no relations, and entities different from results)
-* the results are extended with information that can be inferred in the whole dataset namely:
+* only research products are included (no relations or other entities)
+* the research products are extended with information that can be inferred in the whole dataset namely:
   * funding information if present
   * associated research community/infrastructure 
   * associated data sources 
 
-So they have just one entity type, that is the [Extended Result](alternative-model/extendedresult.md).
+So they have just one entity type, that is the [Extended Research Product](./alternative-model/extended-research-product.md).

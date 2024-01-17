@@ -7,7 +7,7 @@ sidebar_position: 1
 # Validated
 
 
-Information about the validtion of the association between the result and the funding information.
+Information about the validtion of the association between the research product and the funding information.
 
 
 ### validationDate
@@ -15,7 +15,7 @@ Information about the validtion of the association between the result and the fu
 _Type: String &bull; Cardinality: ONE_
 
 
-When OpenAIRE collected the association between the funding and the result from an authoritative source (i.e. Sygma).
+When OpenAIRE collected the association between the funding and the research product from an authoritative source (i.e. Sygma).
 
 
 ```json

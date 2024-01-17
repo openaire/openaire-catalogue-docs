@@ -64,7 +64,7 @@ The datasource type; see the vocabulary [dnet:datasource_typologies](https://api
 ### openairecompatibility
 _Type: String &bull; Cardinality: ONE_
 
-The OpenAIRE compatibility of the ingested results, indicates which guidelines they are compliant according to the vocabulary [dnet:datasourceCompatibilityLevel](https://api.openaire.eu/vocabularies/dnet:datasourceCompatibilityLevel).
+The OpenAIRE compatibility of the ingested research products, indicates which guidelines they are compliant according to the vocabulary [dnet:datasourceCompatibilityLevel](https://api.openaire.eu/vocabularies/dnet:datasourceCompatibilityLevel).
 
 ```json
 "openairecompatibility": "collected from a compatible aggregator"

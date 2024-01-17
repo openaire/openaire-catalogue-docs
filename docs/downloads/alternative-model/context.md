@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Context
 
-Information related to research initiative/community (RI/RC) related to the result.
+Information related to research initiative/community (RI/RC) related to the research product.
 
 ### code 
 _Type: String &bull; Cardinality: ONE_
@@ -31,7 +31,7 @@ Label of the RI/RC.
 ### provenance 
 _Type: [Provenance](/data-model/entities/other#provenance-2)  &bull; Cardinality: MANY_
 
-Why this result is associated to the RI/RC.
+Why this research product is associated to the RI/RC.
 
 ```json
 

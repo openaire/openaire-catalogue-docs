@@ -74,7 +74,7 @@ We filter all the target links with pid type **ena**, **pdb** or **uniprot**
 For each target we construct a Bioentity with the following mapping
 
 
-| OpenAIRE Result field path  | EBI record field xpath                                   | Notes                                                         |
+| OpenAIRE Research Product field path  | EBI record field xpath                                   | Notes                                                         |
 |-----------------------------|----------------------------------------------------------|---------------------------------------------------------------|
 | `id`                        | `target/identifier/ID` and  `target/identifier/IDScheme` | id in the form `SCHEMA_________::md5(pid)`                    |
 | `pid`                       | `target/identifier/ID` and  `target/identifier/IDScheme` | `classid = classname = schema`                                |
@@ -91,4 +91,4 @@ For each target we construct a Bioentity with the following mapping
 ### Relation Mapping
 | OpenAIRE Relation Semantic and inverse | Source/Target type  | Notes                                                                    |
 |----------------------------------------|---------------------|--------------------------------------------------------------------------|
-| `IsRelatedTo`                          | `result/result`     | we create relationships between the BioEntity and the pubmed publication |
+| `IsRelatedTo`                          | `ResearchProduct/ResearchProduct`     | we create relationships between the BioEntity and the pubmed publication |

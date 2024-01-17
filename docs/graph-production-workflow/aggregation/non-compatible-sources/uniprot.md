@@ -10,7 +10,7 @@ From this dataset, only the protein records linked to a PubMed publication are e
 The table below describes the mapping from the TEXT metadata format to the OpenAIRE Graph Dataset format.
 You can check an example of the text metadata [here](https://rest.uniprot.org/uniprotkb/A0A0C5B5G6.txt)
 
-| OpenAIRE Result field path   | FASTA record field xpath                                                 | Notes                                                                                    |
+| OpenAIRE Research Product field path   | FASTA record field xpath                                                 | Notes                                                                                    |
 |------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | **BIOEntity Mapping**        |                                                                          |                                                                                          |
 | `id`                         | `LINE Starts with AC`                                                    | id in the form `uniprot_____::md5(id)`                                                   |

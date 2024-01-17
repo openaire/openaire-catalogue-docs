@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # CommunityInstance
 
-It is a subclass of [Instance](../../data-model/entities/result#instance) extended with information regarding the collection and hosting source for this materialization of the result.
+It is a subclass of [Instance](../../data-model/entities/research-product#instance) extended with information regarding the collection and hosting source for this materialization of the research product.
 
 ### hostedby
 _Type: [CfHbKeyValue](./cfhb) &bull; Cardinality: ONE_

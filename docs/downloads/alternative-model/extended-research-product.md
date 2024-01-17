@@ -5,11 +5,10 @@ sidebar_position: 1
 ---
 
 
-# Extended Result
+# Extended Research Product
 
 
-It is a subclass of [Result](/data-model/entities/result) extended with information regarding projects (and funders), research communities/infrastructure and related data sources.
-
+It is a subclass of [ResearchProduct](../../data-model/entities/research-product) extended with information regarding projects (and funders), research communities/infrastructure and related data sources.
 
 
 ### projects
@@ -17,7 +16,7 @@ It is a subclass of [Result](/data-model/entities/result) extended with informat
 _Type: [Project](project.md)  &bull; Cardinality: MANY_
 
 
-List of projects (i.e. grants) that (co-)funded the production of the research results.
+List of projects (i.e. grants) that (co-)funded the production of the research products.
 
 
 ```json

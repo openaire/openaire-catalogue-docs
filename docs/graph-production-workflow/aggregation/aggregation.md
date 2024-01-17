@@ -38,7 +38,7 @@ Objects and relationships in the OpenAIRE Graph are extracted from information p
 - *Hybrid repositories/archives*: information systems where scientists deposit metadata and file of any kind of scientific products, incuding scientific literature, research data and research software (e.g. Zenodo)
 - *Aggregator services*: Information systems that collect descriptive metadata about publications or datasets from multiple sources in order to enable cross-data source discovery of given research products. Examples are DataCite, BASE, DOAJ;
 - *Entity Registries*: Information systems created with the intent of maintaining authoritative registries of given entities in the scholarly communication, such as OpenDOAR for the institutional repositories, re3data for the data repositories, CORDA and other funder databases for projects and funding information;
-- *CRIS*: Information systems adopted by research and academic organizations to keep track of their research administration records and relative results; examples of CRIS content are articles or datasets funded by projects, their principal investigators, facilities acquired thanks to funding, etc..
+- *CRIS*: Information systems adopted by research and academic organizations to keep track of their research administration records and relative research products; examples of CRIS content are articles or datasets funded by projects, their principal investigators, facilities acquired thanks to funding, etc..
 - *Research Graphs*: services that maintain an information space of (possibly interlinked) scholalrly communication objects. Examples are CrossRef, ScholeXplorer and OpenAIRE itself.
 
 ## How does OpenAIRE collect metadata records?
