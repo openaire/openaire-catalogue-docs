@@ -10,17 +10,17 @@
 | 2022-09-28T20:35:13.116653Z | updated URLs to the broker swagger UI |
 | 2022-07-28T12:02:06.271154Z | Updated list of funders supported by the API for bulk access to projects: EC Horizon Europe also included |
 | 2022-05-11T10:01:33.969973Z | New end point for researchProducts in selective access! FOS and SDG classifications available for publication requests |
-| 2022-03-29T15:03:29.583536Z | Graph dumps: add new Scholix version 4 |
+| 2022-03-29T15:03:29.583536Z | Graph dataset: add new Scholix version 4 |
 | 2021-11-12T12:04:52.900385Z | originalId parameter added |
 | 2021-10-18T15:31:18.446582Z | OAI-PMH publisher completely dismissed as announced in January 2021 |
 | 2021-10-12T07:46:48.032978Z | orcid parameter added in selective access |
 | 2021-04-08T10:28:02.371361Z | Authenticated requests to our APIs are now enabled. |
-| 2021-02-26T16:28:15.364435Z | NEWS: new dump available with research products with project funding information |
+| 2021-02-26T16:28:15.364435Z | NEWS: new dataset available with research products with project funding information |
 | 2021-02-17T07:39:46.051129Z | WIP: broker API documentation |
 | 2021-02-11T09:06:41.608115Z | Broker API documentation |
 | 2021-02-10T10:17:39.504429Z | Authentication documentation added + broker card + broker dummy page |
 | 2021-02-01T08:55:35.496938Z | OAI-PMH shutdown announced for the end of April 2021 |
-| 2021-01-15T18:56:04.748404Z | Updated documentation on OpenAIRE Research Graph dumps |
+| 2021-01-15T18:56:04.748404Z | Updated documentation on OpenAIRE Research Graph Datasets |
 | 2021-01-15T16:57:08.569766Z | Announcing the shutdown of the OAI-PMH publisher |
 | 2019-01-25T15:36:27.264313Z | Added new parameter country for research results |
 | 2018-10-17T10:39:56.570815Z | Software and Other research products are available via HTTP API. Documentation has been updated. |

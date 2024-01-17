@@ -20,7 +20,7 @@ This section documents all notable changes for each graph version.
 ---
 
 ### v7.0.0
-_Start Date: 2023-12-18 &bull; Release Date: 2024-01-06 &bull; Dump release: **yes**_
+_Start Date: 2023-12-18 &bull; Release Date: 2024-01-06 &bull; Dataset release: **yes**_
 
 #### Added
 
@@ -38,7 +38,7 @@ This graph release also introduces new indicators to identify results published 
 - `result.publicly-funded (true, false)`: indicates whether or not the grants acknowledged by the publication come from public funds.
 
 ### v6.2.2
-_Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dump release: **no**_
+_Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dataset release: **no**_
 
 #### Added
 - Imported Opencitation's POCI dataset, containing citations among publications in PubMed
@@ -55,7 +55,7 @@ _Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dump release: **n
 - Indicators regarding data source downloads and views taken by usage counts from September 2023
 
 ### v6.1.1
-_Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **no**_
+_Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dataset release: **no**_
 
 #### Added
 - Affiliation (result to organization) relations from Crossref
@@ -71,7 +71,7 @@ _Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **n
 - OpenCitations relations from December 2022
 
 ### v6.0.0
-_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
+_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dataset release: **yes**_
 
 #### Changed
 
@@ -87,7 +87,7 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **y
 
 
 ### v5.2.0
-_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **no**_
+_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dataset release: **no**_
 
 #### Added
 - Citations imported from Crossref & MAG
@@ -106,7 +106,7 @@ _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **n
 - Avoid duplicated organisation PIDs
 
 ### v5.1.3
-_Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **no**_
+_Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dataset release: **no**_
 
 #### Added
 - Datasource and project level usage counts
@@ -121,7 +121,7 @@ _Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **n
 - Deduplication of the datasource
 
 ### v5.1.2
-_Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **no**_
+_Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dataset release: **no**_
 
 #### Changed
 
@@ -132,7 +132,7 @@ _Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **n
 - OpenCitations relations from January 2023
 
 ### v5.1.1
-_Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **no**_
+_Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dataset release: **no**_
 
 #### Added
 
@@ -151,7 +151,7 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **n
 - OpenCitations relations from December 2022
 
 ### v5.1.0
-_Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dump release: **no**_
+_Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dataset release: **no**_
 
 #### Added
 
@@ -168,7 +168,7 @@ _Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dump release: **n
 
 ### v5.0.0
 
-_Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **yes**_
+_Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dataset release: **yes**_
 
 #### Added
 
