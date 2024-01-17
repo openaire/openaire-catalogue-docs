@@ -25,7 +25,7 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **y
 #### Changed
 
 - [Relationship data model](./data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
-- BIP! indicators are now serialised as an array; see the updated model [here](/data-model/entities/other#bipindicators) 
+- BIP! indicators are now serialised as an array; see the updated model [here](./data-model/entities/other#bipindicators) 
 - Crossref dump from June 2023
 - ORCID works without a DOI from June 2023
 - Usage counts from June 2023

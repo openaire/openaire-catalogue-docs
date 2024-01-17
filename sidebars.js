@@ -63,7 +63,7 @@ const sidebars = {
           label: "Search API",
           link: { type: 'doc', id: 'apis/search-api/search-api' },
           items: [
-            { type: 'doc', id: 'apis/search-api/results' },
+            { type: 'doc', id: 'apis/search-api/research-products' },
             { type: 'doc', id: 'apis/search-api/projects' },
             { type: 'doc', id: 'apis/search-api/response-metadata-format' },
           ]

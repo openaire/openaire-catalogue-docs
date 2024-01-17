@@ -6,7 +6,7 @@ sidebar_position: 12
 
 ## Versioning
 
-Our versioning policy follows the [Semantic Versioning specification](https://semver.org/). 
+Our versioning policy follows the [Semantic Versioning specification](https://semver.org/).
 In our case, given a version `MAJOR.MINOR.PATCH`, we increment the:
 
 * `MAJOR` version when the data model of the Graph changes
@@ -19,11 +19,46 @@ This section documents all notable changes for each graph version.
 
 ---
 
-### v6.1.1
-_Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **no**_
+### v7.0.0
+_Start Date: 2023-12-18 &bull; Release Date: 2024-01-06 &bull; Dataset release: **yes**_
 
-#### Added 
-- Affiliation (result to organization) relations from Crossref 
+#### Added
+
+- the scientific products increased by ~3Mi records (+1.26%)
+- the number of relations increased by 28.6Mi (+1%)
+- the funded contents increased by 5%, from 3.6Mi to 3,8Mi. Funders that recorded the highest increase include, for example, EC with +120K linked research products, and SFI with +1K products.
+
+#### Changed
+
+This graph release also introduces new fields to identify reseach products published using specific open access models, in diamond journals, and those that received public funding. These fields will also be added to the graph dataset in Zenodo. In details:
+
+- `ResearchProduct.isGreen (true, false)`: indicates whether or not the researh product was published following the green open access model;
+- `ResearchProduct.openAccesColor (bronze, gold, hybrid)`: indicates the specific open access model used for the publication;
+- `ResearchProduct.isInDiamondJournal (true, false)`: indicates whether or not the research product was published in a diamond journal;
+- `ResearchProduct.publicly-funded (true, false)`: indicates whether or not the grants acknowledged by the publication come from public funds.
+
+### v6.2.2
+_Start Date: 2023-11-07 &bull; Release Date: 2023-11-23 &bull; Dataset release: **no**_
+
+#### Added
+- Imported Opencitation's POCI dataset, containing citations among publications in PubMed
+- Imported Affiliations from Crossref and from PubMed
+- Imported Software Heritage identifiers for Software records
+- Extended coverage of Irish funders imported from Crossref
+- Peer reviewed material identified with a revised heuristic that allowed to improve the coverage
+- Project references identified by TDM increased by ~10%
+- Introduced new Field of Science classifications for ~40Mi publications
+
+#### Changed
+- Updated Crossref publications to include contents until October 2023
+- Updated Datacite contents until October 2023
+- Indicators regarding data source downloads and views taken by usage counts from September 2023
+
+### v6.1.1
+_Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dataset release: **no**_
+
+#### Added
+- Affiliation (research product to organization) relations from Crossref
 - Links to the full text of research products
 - Cleaning for author and publisher names (get rid of tabs, CR characters, \n(s), escape double quotes)
 
@@ -36,12 +71,12 @@ _Start Date: 2023-09-11 &bull; Release Date: 2023-10-15 &bull; Dump release: **n
 - OpenCitations relations from December 2022
 
 ### v6.0.0
-_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **yes**_
+_Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dataset release: **yes**_
 
 #### Changed
 
 - [Relationship data model](./data-model/relationships/relationship-object): flattened properties source, sourceType, target, targetType
-- BIP! indicators are now serialised as an array; see the updated model [here](./data-model/entities/other#bipindicators) 
+- BIP! indicators are now serialised as an array; see the updated model [here](./data-model/entities/other#bipindicators)
 - Crossref dump from June 2023
 - ORCID works without a DOI from June 2023
 - Usage counts from June 2023
@@ -52,7 +87,7 @@ _Start Date: 2023-07-26 &bull; Release Date: 2023-08-16 &bull; Dump release: **y
 
 
 ### v5.2.0
-_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **no**_
+_Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dataset release: **no**_
 
 #### Added
 - Citations imported from Crossref & MAG
@@ -71,7 +106,7 @@ _Start Date: 2023-07-03 &bull; Release Date: 2023-07-17 &bull; Dump release: **n
 - Avoid duplicated organisation PIDs
 
 ### v5.1.3
-_Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **no**_
+_Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dataset release: **no**_
 
 #### Added
 - Datasource and project level usage counts
@@ -86,7 +121,7 @@ _Start Date: 2023-05-22 &bull; Release Date: 2023-06-12 &bull; Dump release: **n
 - Deduplication of the datasource
 
 ### v5.1.2
-_Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **no**_
+_Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dataset release: **no**_
 
 #### Changed
 
@@ -97,7 +132,7 @@ _Start Date: 2023-03-20 &bull; Release Date: 2023-04-04 &bull; Dump release: **n
 - OpenCitations relations from January 2023
 
 ### v5.1.1
-_Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **no**_
+_Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dataset release: **no**_
 
 #### Added
 
@@ -105,7 +140,7 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **n
 - General increase of the funded scientific outputs, thanks to the full text mining scanning new OpenAccess publications
 - Integrated contents from
   - [EMBL-EBIs Protein Data Bank in Europe](./graph-production-workflow/aggregation/non-compatible-sources/ebi)
-  - [UniProtKB/Swiss-Prot](./graph-production-workflow//aggregation/non-compatible-sources/uniprot)
+  - [UniProtKB/Swiss-Prot](./graph-production-workflow/aggregation/non-compatible-sources/uniprot)
 
 #### Changed
 
@@ -116,7 +151,7 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **n
 - OpenCitations relations from December 2022
 
 ### v5.1.0
-_Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dump release: **no**_
+_Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dataset release: **no**_
 
 #### Added
 
@@ -133,18 +168,18 @@ _Start Date: 2023-01-16 &bull; Release Date: 2023-01-30 &bull; Dump release: **n
 
 ### v5.0.0
 
-_Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **yes**_
+_Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dataset release: **yes**_
 
 #### Added
 
-- [Impact & Usage indicators](./data-model/entities/result#indicators) at the level of the Result
+- [Impact & Usage indicators](./data-model/entities/research-product.md#indicators) at the level of the research product
 - [Beginner's kit](./downloads/beginners-kit) in the Downloads section
 - New relationship types were introduced; see the complete list [here](./data-model/relationships/relationship-types)
 
 #### Changed
 
-- FOS and SDGs were removed from the [result subjects](./data-model/entities/result#subjects)
-- Measures were removed from the [result instance](./data-model/entities/result#instance)
+- FOS and SDGs were removed from the [ResearchProduct.subjects](./data-model/entities/research-product#subjects)
+- Measures were removed from the [ResearchProduct.instance](./data-model/entities/research-product#instance)
 - Updated DOIBoost to include publications from Crossref and the works from ORCID with a DOI until November 2022
 - Added ORCID works without a DOI from November 2022
 
