@@ -98,7 +98,9 @@ The Advanced Authentication method allows the OpenAIRE AAI server to verify that
 
 To have access to the following functionalities you need to login to OpenAIRE. In case you are not already a member you will need to register first and provide your [Personal information](https://develop.openaire.eu/personal-info).
 
-New! The registration process has been updated! In order to visit the Personal Token and Registered Services functionalities you need to fill in the Personal Information form available [here](https://develop.openaire.eu/personal-info). This update will not affect the operation of your existing services. However, if you want to register a new service or access/modify an existing one, you will need to provide your personal information first.
+:::info New!
+The registration process has been updated! In order to visit the Personal Token and Registered Services functionalities you need to fill in the Personal Information form available [here](https://develop.openaire.eu/personal-info). This update will not affect the operation of your existing services. However, if you want to register a new service or access/modify an existing one, you will need to provide your personal information first.
+:::
 
 For the **Basic Authentication** method the OpenAIRE AAI server generates a pair of _Client ID_ and _Client Secret_ for your service upon its registration. The service uses the client id and client secret to obtain the access token for the OpenAIRE APIs. The OpenAIRE AAI server checks whether the client id and client secret sent is valid.
 
