@@ -17,6 +17,7 @@ Its main entities are described in brief below:
 responsible for operating data sources or consisting the affiliations of Product creators.
 * [Projects](./entities/project) are research project grants funded by a Funding Stream of a Funder.
 * [Communities](./entities/community) are groups of people with a common research intent (e.g. research infrastructures, university alliances).
+* Persons correspond to individual researchers who are involved in the design, creation or maintenance of research products. Currently, this is a non-materialized entity type in the Graph, which means that the respective metadata (and relationships) are encapsulated in the author field of the respective research products.
 
 :::note Further reading
 

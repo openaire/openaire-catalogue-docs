@@ -41,14 +41,14 @@ _Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **y
 
 #### Added
 
-- [Impact & Usage indicators](/data-model/entities/result#indicators) at the level of the Result
-- [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
+- [Impact & Usage indicators](./data-model/entities/result#indicators) at the level of the Result
+- [Beginner's kit](./downloads/beginners-kit) in the Downloads section
+- New relationship types were introduced; see the complete list [here](./data-model/relationships/relationship-types)
 
 #### Changed
 
-- FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
-- Measures were removed from the [result instance](/data-model/entities/result#instance)
+- FOS and SDGs were removed from the [result subjects](./data-model/entities/result#subjects)
+- Measures were removed from the [result instance](./data-model/entities/result#instance)
 - Updated DOIBoost to include publications from Crossref and the works from ORCID with a DOI until November 2022
 - Added ORCID works without a DOI from November 2022
 

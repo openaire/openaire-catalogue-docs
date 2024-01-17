@@ -1,6 +1,6 @@
 # Impact indicators
 
-This page summarises all calculated impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the [impactMeasures](/data-model/entities/other#impactmeasures) property (found under the [indicators](/data-model/entities/result#indicators) property of the result).
+This page summarises all calculated impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the It is a subclass of [Result](../../data-model/entities/result) extended with information regarding p[impactMeasures](/data-model/entities/other#impactmeasures) property (found under the [indicators](../../data-model/entities/result#indicators)rojects (and funders) property of the result).
 
 It should be noted that the impact indicators are being calculated on the level of the research output.
 Below we explain their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.

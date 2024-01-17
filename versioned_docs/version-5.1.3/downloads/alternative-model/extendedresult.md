@@ -8,7 +8,7 @@ sidebar_position: 1
 # Extended Result
 
 
-It is a subclass of [Result](/data-model/entities/result) extended with information regarding projects (and funders), research communities/infrastructure and related data sources.
+It is a subclass of [Result](../../data-model/entities/result) extended with information regarding projects (and funders), research communities/infrastructure and related data sources.
 
 
 

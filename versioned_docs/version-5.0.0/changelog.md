@@ -24,12 +24,12 @@ This section will document all notable changes for each graph version.
 
 #### Added
 
-- [Impact indicators](/data-model/entities/result#indicators) at the level of the Result
-- [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
+- [Impact indicators](./data-model/entities/result#indicators) at the level of the Result
+- [Beginner's kit](./downloads/beginners-kit) in the Downloads section
+- New relationship types were introduced; see the complete list [here](./data-model/relationships/relationship-types)
 
 #### Changed
 
-- FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
-- Measures were removed from the [result instance](/data-model/entities/result#instance)
+- FOS and SDGs were removed from the [result subjects](./data-model/entities/result#subjects)
+- Measures were removed from the [result instance](./data-model/entities/result#instance)
 

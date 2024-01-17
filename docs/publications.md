@@ -8,7 +8,7 @@ Open Science services are open and transparent and survive thanks to your active
 
 :::note How to cite
 
-Manghi P., Atzori C., Bardi A., Baglioni M., Schirrwagen J., Dimitropoulos H., La Bruzzo S., Foufoulas I., Mannocci A., Horst M., Czerniak A., Iatropoulou K., Kokogiannaki A., De Bonis M., Artini M., Lempesis A., Ioannidis A., Manola N., Principe P., Vergoulis T.,  Chatzopoulos S., Pierrakos D. (2022). "OpenAIRE Research Graph Dump", *Dataset*, Zenodo. [doi:10.5281/zenodo.3516917](https://doi.org/10.5281/zenodo.3516917) ([BibTex](/bibtex/OpenAIRE_Research_Graph_dump.bib))
+Manghi P., Atzori C., Bardi A., Baglioni M., Schirrwagen J., Dimitropoulos H., La Bruzzo S., Foufoulas I., Mannocci A., Horst M., Czerniak A., Iatropoulou K., Kokogiannaki A., De Bonis M., Artini M., Lempesis A., Ioannidis A., Manola N., Principe P., Vergoulis T.,  Chatzopoulos S., Pierrakos D. (2022). "OpenAIRE Research Graph Dataset", *Dataset*, Zenodo. [doi:10.5281/zenodo.3516917](https://doi.org/10.5281/zenodo.3516917) ([BibTex](/bibtex/OpenAIRE_Research_Graph_dump.bib))
 :::
 
 ## Other relevant research products

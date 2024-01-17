@@ -38,8 +38,8 @@ _Start Date: 2023-02-13 &bull; Release Date: 2023-03-01 &bull; Dump release: **n
 - Revised SDG classification: improved coverage (+600K classified DOIs)
 - General increase of the funded scientific outputs, thanks to the full text mining scanning new OpenAccess publications
 - Integrated contents from
-  - [EMBL-EBIs Protein Data Bank in Europe](/graph-production-workflow/aggregation/non-compatible-sources/ebi)
-  - [UniProtKB/Swiss-Prot](/graph-production-workflow//aggregation/non-compatible-sources/uniprot)
+  - [EMBL-EBIs Protein Data Bank in Europe](./graph-production-workflow/aggregation/non-compatible-sources/ebi)
+  - [UniProtKB/Swiss-Prot](./graph-production-workflow//aggregation/non-compatible-sources/uniprot)
 
 #### Changed
 
@@ -71,14 +71,14 @@ _Start Date: 2022-12-19 &bull; Release Date: 2022-12-28 &bull; Dump release: **y
 
 #### Added
 
-- [Impact & Usage indicators](/data-model/entities/result#indicators) at the level of the Result
-- [Beginner's kit](/downloads/beginners-kit) in the Downloads section
-- New relationship types were introduced; see the complete list [here](/data-model/relationships/relationship-types)
+- [Impact & Usage indicators](./data-model/entities/result#indicators) at the level of the Result
+- [Beginner's kit](./downloads/beginners-kit) in the Downloads section
+- New relationship types were introduced; see the complete list [here](./data-model/relationships/relationship-types)
 
 #### Changed
 
-- FOS and SDGs were removed from the [result subjects](/data-model/entities/result#subjects)
-- Measures were removed from the [result instance](/data-model/entities/result#instance)
+- FOS and SDGs were removed from the [result subjects](./data-model/entities/result#subjects)
+- Measures were removed from the [result instance](./data-model/entities/result#instance)
 - Updated DOIBoost to include publications from Crossref and the works from ORCID with a DOI until November 2022
 - Added ORCID works without a DOI from November 2022
 

@@ -27,7 +27,7 @@ A vocabulary is a data structure that defines a list of terms, and for each term
             [...]
 ```
 
-Each vocabulary is typically used to control and harmonise the values available in a specific field characterising the bibliographic records. The example above provides a preview of the vocabulary used to clean the [result's instance typology](/data-model/entities/result#instance).
+Each vocabulary is typically used to control and harmonise the values available in a specific field characterising the bibliographic records. The example above provides a preview of the vocabulary used to clean the [result's instance typology](../data-model/entities/result#instance).
 
 The content of the vocabularies can be accessed on [api.openaire.eu/vocabularies](https://api.openaire.eu/vocabularies/).
 
