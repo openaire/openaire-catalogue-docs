@@ -20,7 +20,7 @@ The dataset contains the GZ-compressed dataset of the Scholix links exposed by t
 ## The OpenAIRE LOD dataset
 
 :::caution
- The OpenAIRE LOD dataset has been discontinued. The SPARQL Endpoint is not longer supported bu old LOD datasets can be found in the link below. 
+ The OpenAIRE LOD dataset has been discontinued. The SPARQL Endpoint is no longer supported but old LOD datasets can be found in the link below. 
 :::
 
 Dataset (RDF): https://doi.org/10.5281/zenodo.609943
