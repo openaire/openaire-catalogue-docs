@@ -1,6 +1,6 @@
 # Relationship types
 
-The following table lists all the possible relation semantics found in the graph dump.
+The following table lists all the possible relation semantics found in the Graph Dataset.
 
 Note: the labels used to specify the semantic of the relationships are (for the large) inherited from the [DataCite metadata kernel](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf), which provides a description for them.
 

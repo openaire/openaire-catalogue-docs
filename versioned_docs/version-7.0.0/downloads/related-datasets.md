@@ -19,12 +19,16 @@ The dataset contains the GZ-compressed dataset of the Scholix links exposed by t
 
 ## The OpenAIRE LOD dataset
 
+:::caution
+ The OpenAIRE LOD dataset has been discontinued. The SPARQL Endpoint is not longer supported bu old LOD datasets can be found in the link below. 
+:::
+
 Dataset (RDF): https://doi.org/10.5281/zenodo.609943
 
-LOD Ontology: http://lod.openaire.eu/vocab
+<!-- LOD Ontology: http://lod.openaire.eu/vocab
 
-SPARQL Endpoint: http://lod.openaire.eu/sparql
+SPARQL Endpoint: http://lod.openaire.eu/sparql -->
 
 
 The OpenAIRE Linked Open Data (LOD) Services and their integration with the OpenAIRE information space have been released as a beta version. The LOD exporting process started with a specification of the OpenAIRE data model as an RDF vocabulary, and then mapping of the OpenAIRE data to the graph-based RDF data model. To interlink the OpenAIRE data with related data on the Web, we have identified a list of potential datasets to interlinked with, including the DBpedia dataset extracted from Wikipedia and the publication databases DBLP and CiteSeer.
-Please refer [here](http://lod.openaire.eu/documentation) for more details on the LOD documentation.
+<!-- Please refer [here](http://lod.openaire.eu/documentation) for more details on the LOD documentation. -->
