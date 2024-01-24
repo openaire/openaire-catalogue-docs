@@ -212,6 +212,11 @@ const sidebars = {
       label: "Helpdesk",
       href: "https://graph.openaire.eu/support"
     },
+    {
+      type: "link",
+      label: "User forum",
+      href: "https://openaire.flarum.cloud/"
+    }
   ]
 };
 
