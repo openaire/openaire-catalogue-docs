@@ -369,7 +369,7 @@ _Type: Boolean &bull; Cardinality: ONE_
 
 Indicates whether or not the scientific result was published following the green open access model.
 
-### openAccesColor
+### openAccessColor
 _Type: String &bull; Cardinality: ONE_
 
 
@@ -378,12 +378,12 @@ Indicates the specific open access model used for the publication; possible valu
 ### isInDiamondJournal
 _Type: Boolean &bull; Cardinality: ONE_
 
-Indicates whether or not the result was published in a diamond journal.
+Indicates whether or not the publication was published in a diamond journal.
 
-### openAccesColor
+### publiclyFunded
 _Type: String &bull; Cardinality: ONE_
 
-Indicates whether or not the grants acknowledged by the publication come from public funds.
+Discloses whether the publication acknowledges grants from public sources.
 
 --- 
 
