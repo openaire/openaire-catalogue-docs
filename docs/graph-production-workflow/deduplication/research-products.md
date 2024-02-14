@@ -53,7 +53,8 @@ entity types:
   etc.), divided by 10, and (iii) a string obtained as an alternation of the
   function prefix(3) and suffix(3) (and vice versa) on the first 3 words (2
   words if the title only has 2).
-  <br>For example, a product composed by 197 authors and
+  <br />
+  For example, a product composed by 197 authors and
   titled ``Search for the Standard Model Higgs Boson``
   becomes the two keys ``21-0-seaardmod`` and ``21-0-rchstadel``
 
@@ -67,7 +68,7 @@ Local information about matching records is kept and possibly used to prune
 unneeded comparisons, for example once it is known that A equals to both B and
 C, B will not be compared against C because the A,B,C group will be anyway
 discovered by the global transitive closure step later.
-<br>
+<br />
 A different decision tree is adopted depending on the type of the entity being
 processed.
 Similarity relations drawn in this stage will be consequently used to perform
