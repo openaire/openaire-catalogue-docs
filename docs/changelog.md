@@ -30,6 +30,8 @@ _Start Date: 2024-01-30 &bull; Release Date: 2024-02-20 &bull; Dataset release: 
 
 - A refined version of the deduplication strategy allowed to catch more duplicates among the scientific products, implying 
   a decrease of their total number of ~3.2Mi (-1.35%). More details about the deduplication algorithm are available [here](graph-production-workflow/deduplication/research-products).
+- Updated Crossref publications to include contents until November 2023
+- Updated Datacite contents until December 2023
 
 ### v7.0.0
 _Start Date: 2023-12-18 &bull; Release Date: 2024-01-06 &bull; Dataset release: **yes**_
