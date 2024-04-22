@@ -2,9 +2,9 @@
 
 The OpenAIRE Graph is populated by aggregating metadata records from distinct data sources whose content typically overlaps. For example, the collection of article metadata records from publisher' archives (e.g. Frontiers, Elsevier, Copernicus) and from pre-print platforms (e.g. ArXiv.org, UKPubMed, BioarXiv.org). In order to support monitoring of science, the OpenAIRE Graph implements record deduplication and merge strategies, in such a way the scientific production can be consistently statistically represented. Such strategies reflect the following intuition behind OpenAIRE monitoring: "Two metadata records are equivalent when they describe the same research product, hence they feature compatible resource types, have the same title, the same authors, or, alternatively, the same PID". Finally, groups of duplicates can be whitelisted or blacklisted, in order to manually refine the quality of this strategy. 
 
-It should be noticed that publication dates do not make a difference, as different versions of the same product can be published at different times; e.g. the pre-print and a published version of a scientific article, which should be counted as one object; abstracts, subjects, and other possible related fields, are not used to strenghten similarity, due to their heterogeneity or absence across different data sources. Moreover, even when two products are indicated as one a new version of the other, the presence of different authors will not bring them into the same group, to avoid unfair distribution of scientific reward. 
+It should be noticed that publication dates do not make a difference, as different versions of the same product can be published at different times; e.g. the pre-print and a published version of a scientific article, which should be counted as one object; abstracts, subjects, and other possible related fields, are not used to strengthen similarity, due to their heterogeneity or absence across different data sources. Moreover, even when two products are indicated as one a new version of the other, the presence of different authors will not bring them into the same group, to avoid unfair distribution of scientific reward.
 
-Groups of duplicates are finally merged into a new "dedup" record that embeds all properties of the merged records and carries provenance information about the data sources and the relative "instances", i.e. manifestations of the products, together with their resource type, access rights, and publishing date.
+Groups of duplicates are finally merged into a new "representative record", having its own id, embedding properties of the merged records and carrying provenance information about the data sources and the relative "instances", i.e. manifestations of the products, together with their resource type, access rights, and publishing date.
 
 ## Methodology overview
 
@@ -37,7 +37,7 @@ To further limit the number of comparisons, a sliding window mechanism is used: 
 
 ### Duplicates grouping (transitive closure)
 
-Once the similarity relations between pairs of records are drawn, the groups of equivalent records are obtained (transitive closure, i.e. “mesh”). From such sets a new representative object is obtained, which inherits all properties from the merged records and keeps track of their provenance. 
+Once the similarity relations between pairs of records are drawn, the groups of equivalent records are obtained (transitive closure, i.e. “mesh”). From such sets a new **representative record** is obtained, which inherits properties from the merged records and keeps track of their provenance.
 
 ### Relation redistribution
 
