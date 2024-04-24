@@ -19,26 +19,6 @@ This section documents all notable changes for each graph version.
 
 ---
 
-### v7.1.3
-_Start Date: 2024-04-10 &bull; Release Date: 2024-04-22 &bull; Dataset release: **no**_
-
-#### Added
-
-- Introduced new Field of Science classifications, reaching a total of ~73Mi publications classified
-- General increase of the funded scientific outputs, thanks to the full-text mining scanning new OpenAccess publications, some examples:
- - European Commission - EC +7% (from 1.52Mi to 1.62Mi)
- - Irish Research Council - IRC +7% (from 12.7K to 13.5K)
- - French National Research Agency - ANR +5.8% (from 91.5K to 96.8K)
- - National Institute of Health - NIH +5% (from 594K to 626K)
- - UK Research and Innovation - UKRI +3.7% (from 434K to 450K)
-- General increase of the scientific products with author affiliation information +2% (from 83.12Mi to 84.88Mi)
-
-#### Changed
-
-- Updated Crossref publications to include contents until March 2023
-- Updated Datacite contents until March 2024
-- Updated ORCID contents until March 2024
-
 ### v7.1.2
 _Start Date: 2024-03-15 &bull; Release Date: 2024-03-27 &bull; Dataset release: **no**_
 
