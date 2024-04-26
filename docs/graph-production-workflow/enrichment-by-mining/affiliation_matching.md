@@ -85,13 +85,13 @@ If multiple matches are found above the desired similarity thresholds, the algor
 * input
 	* source of affiliations: JSON Crossref or XML Pubmed or Parquet DataCite files.
 
-	* organizations: [dix_acad.pkl](https://github.com/mkallipo/affiliation-matching/blob/main/dictionaries/dix_acad.pkl), [dix_mult](https://github.com/mkallipo/affiliation-matching/blob/main/dictionaries/dix_mult.pkl, [dix_city](https://github.com/mkallipo/affiliation-matching/blob/main/dictionaries/dix_city.pkl), [dix_country](https://github.com/mkallipo/affiliation-matching/blob/main/dictionaries/dix_country.pkl)  (four pickled dictionaries with keys legalnames and alternativenames of organizations in the ROR database.)
+	* organizations: [dix_acad.pkl](https://github.com/openaire/affro/blob/main/dictionaries/dix_acad.pkl), [dix_mult](https://github.com/openaire/affro/blob/main/dictionaries/dix_mult.pkl), [dix_city](https://github.com/openaire/affro/blob/main/dictionaries/dix_city.pkl), [dix_country](https://github.com/openaire/affro/blob/main/dictionaries/dix_country.pkl)  (four pickled dictionaries with keys legalnames and alternativenames of organizations in the ROR database.)
 
 	* similarity thresholds: simU for universities, simG for other organizations (default values are simU = 0.64, simG = 0.87).
     cument-organization pairs which are used as a hint for matching affiliations
     
 * output
-	* [MatchedOrganization](https://github.com/openaire/iis/blob/master/iis-wf/iis-wf-affmatching/src/main/resources/eu/dnetlib/iis/wf/affmatching/model/MatchedOrganization.avdl) avro datastore location with matched publications with organizations.
+	* JSON file with ROR ids of organizations and corresponding similarity scores for each DOI.  
     
     
 ***Limitations:*** -
