@@ -203,17 +203,17 @@ Scheme of reference for access right code. Currently, always set to COAR access 
 
 ## BipIndicator
 
-The different impact indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
+The different citation-based impact indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
 
 
 ### indicator
 _Type: String &bull; Cardinality: ONE_
 
 The name of indicator; it can be either one of: 
-* `influence`: it reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-* `influence_alt`: it is an alternative to the "Influence" indicator, which also reflects the overall/total impact of an article in the research community at large, based on the underlying citation network (diachronically).
-* `popularity`: it reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
-* `popularity_alt`: it is an alternative to the "Popularity" indicator, which also reflects the "current" impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
+* `influence`: it reflects the overall/total (citation-based) impact of an article in the research community at large, based on the underlying citation network (diachronically).
+* `influence_alt`: it is an alternative to the "Influence" indicator, which also reflects the overall/total (citation-based) impact of an article in the research community at large, based on the underlying citation network (diachronically).
+* `popularity`: it reflects the "current" (citation-based) impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
+* `popularity_alt`: it is an alternative to the "Popularity" indicator, which also reflects the "current" (citation-based) impact/attention (the "hype") of an article in the research community at large, based on the underlying citation network.
 * `impulse`: it reflects the initial momentum of an article directly after its publication, based on the underlying citation network.
 
 For more details on how these indicators are calculated, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
