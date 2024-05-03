@@ -189,7 +189,7 @@ _Type: [Indicator](other#indicator-1) &bull; Cardinality: ONE_
 The indicators computed for this research product;
 currently, the following types of indicators are supported: 
 
-* [Impact indicators by BIP!](other#bipindicators)
+* [Citation-based impact indicators by BIP!](other#bipindicators)
 * [Usage Statistics indicators](other#usagecounts)
 
 ```json
