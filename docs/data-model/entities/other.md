@@ -662,7 +662,7 @@ Each Indicator object is composed of the following properties:
 ### bipIndicators
 _Type: [BipIndicator](#bipindicator) &bull; Cardinality: MANY_
 
-These impact-based indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the impact of a research product. 
+These indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), estimate the citation-based impact of a research product. 
 
 For details about their calculation, please refer [here](/graph-production-workflow/indicators-ingestion/impact-indicators).
 
