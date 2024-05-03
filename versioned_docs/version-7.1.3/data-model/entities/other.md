@@ -203,7 +203,7 @@ Scheme of reference for access right code. Currently, always set to COAR access 
 
 ## BipIndicator
 
-The different impact indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
+The different citation-based impact indicators as computed by [BIP!](https://bip.imsi.athenarc.gr/).
 
 
 ### indicator

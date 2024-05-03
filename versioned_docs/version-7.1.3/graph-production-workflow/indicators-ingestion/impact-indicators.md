@@ -1,8 +1,8 @@
-# Impact indicators
+# Citation-based impact indicators
 
-This page summarises all calculated impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the [bipIndicators](../../data-model/entities/other#bipindicators) property (found under the [indicators](../../data-model/entities/research-product#indicators) property of the reseach product).
+This page summarises all calculated citation-based impact indicators, provided by [BIP!](https://bip.imsi.athenarc.gr/), which are included in the [bipIndicators](../../data-model/entities/other#bipindicators) property (found under the [indicators](../../data-model/entities/research-product#indicators) property of the reseach product).
 
-It should be noted that the impact indicators are being calculated on the level of the research output.
+It should be noted that the citation-based impact indicators are being calculated on the level of the research output.
 Below we explain their main intuition, the way they are calculated, and their most important limitations, in an attempt help avoiding common pitfalls and misuses.
 
 
