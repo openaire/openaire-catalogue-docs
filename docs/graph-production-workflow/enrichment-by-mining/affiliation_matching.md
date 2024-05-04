@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # Affiliation matching
 
-***Short description:***  The goal of the affiliation matching module is to pair affiliations with organizations listed in either OpenAIRE or ROR organization database. 
+***Short description:***  The goal of the affiliation matching module is to match affiliation strings (identified in full-text PDFs or in scholarly databases, such as Crossref) with persistent organization identifiers (e.g., ROR identifiers). 
 Depending on the data source, we currently employ two distinct methodologies:
 
-	* The first method revolves around affiliations extracted from PDF and XML documents, which are subsequently matched with organizations within the OpenAIRE database.
-	* The second concerns affiliations retrieved from platforms such as Crossref, PubMed, and Datacite, and are matched to organizations of the ROR database. 
+- The [first](#algorithmic-details-of-the-first-method) method revolves around affiliations extracted from PDF and XML documents, which are subsequently matched with organizations within the OpenAIRE database.
+- The [second](#algorithmic-details-of-the-second-method) concerns affiliations retrieved from platforms such as Crossref, PubMed, and Datacite, and are matched to organizations of the ROR database. 
 
 
-***Algorithmic details of the first method:***
+## Algorithmic details of the first method
 
 *The buckets concept*
 
@@ -62,7 +62,7 @@ Java, Spark
 ***Authority:*** ICM &bull; ***License:*** AGPL-3.0 &bull; ***Code:*** [CoAnSys/affiliation-organization-matching](https://github.com/CeON/CoAnSys/tree/master/affiliation-organization-matching)
 
 
-***Algorithmic details of the second method:***
+## Algorithmic details of the second method
 
 *Categorization*
 
@@ -101,7 +101,7 @@ Python
 
 ***References:*** -
 
-***Authority:*** OpenAIRE &bull; ***License:***AGPL-3.0   &bull; ***Code:*** [AffRo](https://github.com/mkallipo/affiliation-matching)
+***Authority:*** OpenAIRE &bull; ***License:*** AGPL-3.0   &bull; ***Code:*** [AffRo](https://github.com/openaire/affro)
 
 
 
