@@ -35,10 +35,10 @@ assigns PIDs to their scientific products from a given PID minter.
 
 This "selection" can be performed when the entities in the graph sharing the same identifier are grouped together. The list of the delegated authorities currently includes
 
-| Datasource delegated                 | Datasource delegating            | Pid Type  |
-|--------------------------------------|----------------------------------|-----------|
-| [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | doi       |
-| [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | w3id      |
+| Datasource delegated                 | Datasource delegating            | Pid Type |
+|--------------------------------------|----------------------------------|----------|
+| [Zenodo](https://zenodo.org)         | [Datacite](https://datacite.org) | doi      |
+| [RoHub](https://reliance.rohub.org/) | [W3ID](https://w3id.org/)        | w3id     |
 
 
 ## Identifiers in the Graph
@@ -66,16 +66,16 @@ When the record is collected from a source which is not authoritative for any ty
 
 Currently, the following data sources are used as "PID authorities":
 
-| PID Type  | Prefix (12 chars)      | Authority                             	 |
-|-----------|------------------------|-------------------------------------------|
-| doi       | `doi_________`      	  | Crossref, Datacite, Zenodo            	 |
-| pmc       | `pmc_________`      	  | Europe PubMed Central, PubMed Central 	 |
-| pmid      | `pmid________`      	  | Europe PubMed Central, PubMed Central 	 |
-| arXiv     | `arXiv_______`      	  | arXiv.org e-Print Archive             	 |
-| handle    | `handle______`      	  | any repository                        	 |
-| ena       | `ena_________`      	  | EMBL-EBI                            	 |
-| pdb       | `pdb_________`      	  | EMBL-EBI                            	 |
-| uniprot   | `uniprot_____`      	  | EMBL-EBI                            	 |
+| PID Type | Prefix (12 chars)     | Authority                             	 |
+|----------|-----------------------|-----------------------------------------|
+| doi      | `doi_________`      	 | Crossref, Datacite, Zenodo            	 |
+| pmc      | `pmc_________`      	 | Europe PubMed Central, PubMed Central 	 |
+| pmid     | `pmid________`      	 | Europe PubMed Central, PubMed Central 	 |
+| arXiv    | `arXiv_______`      	 | arXiv.org e-Print Archive             	 |
+| handle   | `handle______`      	 | any repository                        	 |
+| ena      | `ena_________`      	 | EMBL-EBI                            	   |
+| pdb      | `pdb_________`      	 | EMBL-EBI                            	   |
+| uniprot  | `uniprot_____`      	 | EMBL-EBI                            	   |
 
 OpenAIRE also perform duplicate identification (see the [dedicated section for details](/graph-production-workflow/deduplication)).
-All duplicates are **merged** together in a **representative record** which must be assigned a dedicated OpenAIRE identifier (i.e. it cannot have the identifier of one of the aggregated record).
+All duplicates are **merged** together in a **representative record** which must be assigned a [dedicated OpenAIRE identifier](/graph-production-workflow/deduplication/research-products#openaire-identifier-of-the-representative-record) (i.e. it cannot have the identifier of one of the aggregated record).

@@ -149,22 +149,85 @@ The comparison goes through different stages:
 
 ### Duplicates grouping
 
-The aim of the final stage is the creation of objects that group all the equivalent
-entities discovered by the previous step. This is done in two phases. 
+The aim of the final stage is the creation of records that group all the
+equivalent entities discovered pairwise by the previous step. This is done in
+multiple phases.
 
 #### Transitive closure
-As a final step of duplicate identification a transitive closure
-is run against similarity relations to find groups of duplicates not directly 
-caught by the previous steps. If a group is larger than 200 elements only the 
-first 200 elements will be included in the group, while the remaining will be
-kept ungrouped.
 
-#### Creation of representative record (dedup record)
+As the concluding step of duplicate identification, a transitive closure is
+performed against similarity relations to identify complete groups of duplicated
+records (cliques). If a group exceeds 200 elements, only the first 200 elements
+are included in the group, while the remaining elements are kept ungrouped.
 
-The general concept is that the field coming from the record with higher "trust"
-value is used as reference for the field of the representative record.
+#### Selection of the pivot record
 
-The IDs of the representative records are obtained by prepending the
-prefix ``dedup_`` to the MD5 of the first ID (given their lexicographical
-ordering). If the group of merged records contains a trusted ID type (i.e. the
-DOI), also the type keyword (i.e. ``DOI``) is added to the prefix.
+Each group of duplicate records needs to be identified in the final graph with
+an OpenAIRE identifier, derived from a record of the group known as the _pivot
+record_. It is determined after sorting the group of duplicate records by the 
+following criteria:
+
+1. Records previously chosen as pivot records in the graph's previous
+   generations.
+2. Records with identifiers from a [PID authority](/data-model/pids-and-identifiers#pid-authorities).
+3. Publications from CrossRef or datasets from DataCite.
+4. Records with an earlier date of acceptance.
+5. Records with smaller IDs in lexicographical order.
+
+The first sorting criterion is possible because a state table, called "pivot
+history", is maintained across graph generations. It keeps track of which
+records were used as pivot records in what graph, guaranteed to retain data for
+the last 12 months.
+
+#### Creation of representative records
+
+The representative record, also known as the "dedup record", replaces the group
+of deduplicated records in the graph.
+
+##### OpenAIRE identifier of the representative record
+
+The OpenAIRE identifier of the representative record is generated based on the
+identifier of the record chosen as the pivot of the group:
+
+- if the pivot record comes from a "PID authority", the identifier of the
+  representative record is the same, but the "PID Type Prefix" part of the
+  identifier is modified to append ``_dedup``.<br/>
+  For example ```doi_________::d5021b53204e4fdeab6ff5d5bc468032``` will
+  become ```doi_dedup___::d5021b53204e4fdeab6ff5d5bc468032```
+- otherwise the "PID Type Prefix" part will be set to the fixed value
+  ``dedup_wf_002``, and the following hash will be calculated as the MD5 hash of
+  the entire raw id of the pivot record.<br/>
+  For example ``DansKnawCris::0829b5191605bdbea36d6502b8c1ce1g`` will
+  become ``dedup_wf_002::345e5d1b80537b0d0e0a49241ae9e516``
+
+##### Content of the representative record
+
+The representative records inherits properties from the records it merges
+and tracks their provenance. Whenever possible, it preserves all data from the
+merged records, such as the ``instance`` field. In cases where a specific value
+must be chosen, the most representative one is selected. For example, for the
+"dateofacceptance" field, the earliest value is chosen.
+
+##### Merged and singleton representative record
+
+Changes in metadata content or graph construction may lead to cases where
+representative records disappear from the graph:
+
+1. When two or more representative records are merged into one representative
+   record. Put it other terms this happens when a group of duplicated records
+   contains multiple records formerly used as pivot record.
+2. When a record chosen as a pivot record leaves its group and remains alone.
+3. When a record chosen as a pivot record is no longer published by its data
+   source (deletion of the metadata record).
+
+To address these cases, the pivot history table ensures the visibility of
+disappearing representative records for the first two cases. Specifically:
+
+1. In the case of merged representative records, the new representative record
+   and the ones that would be lost are generated and linked as part of the new
+   representative record.
+2. In the case of a record no longer serving as a pivot, a representative record
+   is generated and linked only with that record.
+
+This approach ensures that users can access representative records that would
+otherwise be lost.
