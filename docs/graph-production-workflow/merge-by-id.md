@@ -16,7 +16,7 @@ a global grouping of every record available in the graph:
 
 This ensures that the same record, possibly assigned to different types by different 
 mappings, appears only once in the graph and under a single typing. In case of clashing 
-identifiers, the properties are merged (including the provencance information), considering 
+identifiers, the properties are merged (including the provenance information), considering 
 the following precedence order for the research product typing:
 
 ```
