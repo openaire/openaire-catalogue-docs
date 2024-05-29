@@ -167,9 +167,8 @@ an OpenAIRE identifier, derived from a record of the group known as the _pivot
 record_. It is determined after sorting the group of duplicate records by the 
 following criteria:
 
-1. Records previously chosen as pivot records in the graph's previous
-   generations.
-2. Records with identifiers from a [PID authority](/data-model/pids-and-identifiers#pid-authorities).
+1. Records with identifiers from a [PID authority](/data-model/pids-and-identifiers#pid-authorities).
+2. Records chosen as pivots in the graph's previous generations.
 3. Publications from CrossRef or datasets from DataCite.
 4. Records with an earlier date of acceptance.
 5. Records with smaller IDs in lexicographical order.
