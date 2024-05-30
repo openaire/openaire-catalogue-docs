@@ -24,7 +24,7 @@ Such a policy defines a list of data sources that are considered authoritative f
 
 
 There is an exception though: Handle(s) are minted by several repositories; as listing them all would not be a viable option, to avoid losing them as PIDs, Handles bypass the PID authority filtering rule.
-In all other cases, PIDs are be included in the graph as alternate Identifiers.
+In all other cases, PIDs are included in the graph as alternate Identifiers.
 
 ## Delegated authorities
 
@@ -72,7 +72,6 @@ Currently, the following data sources are used as "PID authorities":
 | pmc      | `pmc_________`      	 | Europe PubMed Central, PubMed Central 	 |
 | pmid     | `pmid________`      	 | Europe PubMed Central, PubMed Central 	 |
 | arXiv    | `arXiv_______`      	 | arXiv.org e-Print Archive             	 |
-| handle   | `handle______`      	 | any repository                        	 |
 | ena      | `ena_________`      	 | EMBL-EBI                            	   |
 | pdb      | `pdb_________`      	 | EMBL-EBI                            	   |
 | uniprot  | `uniprot_____`      	 | EMBL-EBI                            	   |
