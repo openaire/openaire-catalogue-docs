@@ -27,7 +27,7 @@ Endpoint: https://api.openaire.eu/search/researchProducts
 | funder | WT \| EC \| ARC \| ANDS \| NSF \| FCT \| NHMRC | Search for entities by funder. |
 | fundingStream | ... | Search for entities by funding stream. |
 | FP7scientificArea | ... | Search for FP7 entities by scientific area. |
-| keywords | White-space separated list of keywords. | N/A |
+| keywords | White-space separated list of keywords. | This parameter is used to support a keyword search functionality in various fields (e.g., for research products the keywords are used to search in the product’s title, description, authors, etc). Regarding the semantics, when you provide multiple keywords, all keywords should be present, hence the correct interpretation is `kwd1 AND kw2`. |
 | doi | Comma separated list of DOIs.  <br/>Alternatively, it is possible to repeat the parameter for each requested doi. | Gets the research products with the given DOIs, if any. |
 | orcid | Comma separated list of ORCID iDs of authors.  <br/>Alternatively, it is possible to repeat the parameter for each author ORCID iD. | Gets the research products linked to the given ORCID iD of an author, if any. |
 | fromDateAccepted | Date formatted as `YYYY-MM-DD` | Gets the research products whose date of acceptance is greater than or equal the given date. |
